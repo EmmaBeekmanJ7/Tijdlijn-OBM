@@ -1,4 +1,4 @@
-﻿# OBM-Tijdlijn
+﻿# Tijdlijn: Officiële Bekendmakingen
 
 Dit project bestaat uit twee hoofdmodules: een **scraper** en een **summarizer**.  
 De scraper haalt documenten op en slaat ze op in OpenSearch.  
