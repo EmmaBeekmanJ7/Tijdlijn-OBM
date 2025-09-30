@@ -45,8 +45,8 @@ Daarnaast heb je ook een Mistral key nodig. Deze kan je verkrijgen via: https://
 2. Clone de repository:
 
 ```bash
-git clone https://github.com/EmmaBeekmanJ7/OBM-Tijdlijn.git
-cd OBM-Tijdlijn
+git clone https://github.com/EmmaBeekmanJ7/Tijdlijn-OBM
+cd Tijdlijn-OBM
 ```
 
 3. Voeg een .env bestand toe met je OpenSearch-gegevens:
