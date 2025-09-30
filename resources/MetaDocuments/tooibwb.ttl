@@ -1,0 +1,1278 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooibwb: <https://identifier.overheid.nl/tooi/def/thes/bwb/> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://identifier.overheid.nl/tooi/def/thes/bwb> a owl:Ontology ;
+  rdfs:label "tooibwb"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "De TOOI-thesaurus voor Bwb (tooibwb) is een thesaurus die taxonomieën vastlegt die gebruikt worden voor het Basiswettenbestand (Bwb)."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-thes-bwb/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language language:NLD ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-07-01"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "TOOI-thesaurus voor Bwb"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/THESAURUS> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - 1 april 2021 - Initiële versie"@nl ;
+  owl:versionInfo "v1.0.1 - 19 juni 2023 - Betere metadata en formattering"@nl ;
+  owl:versionInfo "v1.0.2 - 18 januari 2024 - Gebruik dcterms:title. Feedback via GitLab."@nl ;
+  owl:versionInfo "v1.0.3 - 5 maart 2024 - Drie concepten en skos:notations toegevoegd. Betere metadata. Link naar beheerplan."@nl ;
+  owl:versionInfo "v1.0.4 - 18 juni 2024 - Alleen documentatie gewijzigd, fix versielinkjes."@nl ;
+  owl:versionInfo "v1.0.5 - 1 juli 2025 - Alleen documentatie gewijzigd, tooigeo toegevoegd."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.5> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb-1.0.5> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/bwb_v1.0> ;
+  pav:version "1.0.5" ;
+  tooiont:publicatiedatum "2025-07-01"^^xsd:date ;
+  vann:preferredNamespacePrefix "tooibwb" ;
+  vann:preferredNamespaceUri <https://identifier.overheid.nl/tooi/def/thes/tooibwb/> .
+
+tooibwb:c_003c1dd9 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:11.881+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_b26c78e3 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "15.2" ;
+  skos:prefLabel "ontwikkelingssamenwerking"@nl .
+
+tooibwb:c_02a7f1c4 a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:35.777+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5d8350bb ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22.1" ;
+  skos:prefLabel "echtscheiding"@nl .
+
+tooibwb:c_03d15325 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:53.853+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.7" ;
+  skos:prefLabel "verkeersrecht"@nl .
+
+tooibwb:c_052899f0 a skos:Concept ;
+  dcterms:created "2019-08-12T17:51:14.738+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_da370768 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "26.1" ;
+  skos:prefLabel "bestuursrecht"@nl .
+
+tooibwb:c_093f785e a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:02.389+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_82b0ce3b ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "23.3" ;
+  skos:prefLabel "strafprocesrecht"@nl .
+
+tooibwb:c_0aa457e4 a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:22.960+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_8ad05f6d ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "25.1" ;
+  skos:prefLabel "milieurecht"@nl .
+
+tooibwb:c_0c246a16 a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:27.977+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_1dbae688 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "19.1" ;
+  skos:prefLabel "fusies en overnames"@nl .
+
+tooibwb:c_0f0673b6 a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:06.980+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_6755aa64 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "18.2" ;
+  skos:prefLabel "vreemdelingenrecht"@nl .
+
+tooibwb:c_149a4823 a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:37.093+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.6" ;
+  skos:prefLabel "internationale regelingen"@nl .
+
+tooibwb:c_17f08b1f a skos:Concept ;
+  dcterms:created "2019-08-23T13:52:43.003+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "R" ;
+  skos:prefLabel "subsidies, uitkeringen en toeslagen"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_1c504a92 a skos:Concept ;
+  dcterms:created "2019-08-26T17:54:30.179+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "D" ;
+  skos:prefLabel "defensie"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_1dbae688 a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:19.031+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "19" ;
+  skos:prefLabel "ondernemingspraktijk"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_21e7f286 a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:06.710+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5d8350bb ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22.5" ;
+  skos:prefLabel "jeugdrecht (m.u.v. jeugdstrafrecht)"@nl .
+
+tooibwb:c_30e85e85 a skos:Concept ;
+  dcterms:created "2019-08-23T14:01:31.408+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "T" ;
+  skos:prefLabel "werk- en loopbaan"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_33cf4691 a skos:Concept ;
+  dcterms:created "2019-08-23T13:48:48.724+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "J" ;
+  skos:prefLabel "internationale- en ontwikkelingssamenwerking"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_3405e4a1 a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:38.081+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6" ;
+  skos:prefLabel "contracten, schade en aansprakelijkheid"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_3708ac5e a skos:Concept ;
+  dcterms:created "2019-08-23T13:44:06.598+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "B" ;
+  skos:prefLabel "bouwen, wonen en leefomgeving"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_3c8b7fa0 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:58.037+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_6755aa64 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "18.1" ;
+  skos:prefLabel "nationaliteitsrecht"@nl .
+
+tooibwb:c_3d087471 a skos:Concept ;
+  dcterms:created "2019-08-12T17:44:17.902+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-12T17:44:32.176+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_674c0ac7 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "13.1" ;
+  skos:prefLabel "faillissement"@nl .
+
+tooibwb:c_3dbe5325 a skos:Concept ;
+  dcterms:created "2019-08-12T17:53:48.139+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3e6b35e2 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "31.2" ;
+  skos:prefLabel "huurrecht"@nl .
+
+tooibwb:c_3e6b35e2 a skos:Concept ;
+  dcterms:created "2019-08-12T17:53:25.616+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "31" ;
+  skos:prefLabel "wonen, onroerend goed, bouwrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_4361689d a skos:Concept ;
+  dcterms:created "2019-08-12T17:44:47.690+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_674c0ac7 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "13.3" ;
+  skos:prefLabel "schuldsanering"@nl .
+
+tooibwb:c_43c42162 a skos:Concept ;
+  dcterms:created "2019-08-12T17:54:08.010+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3e6b35e2 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "31.3" ;
+  skos:prefLabel "onroerend goedrecht"@nl .
+
+tooibwb:c_459e5366 a skos:Concept ;
+  dcterms:created "2019-08-12T17:39:18.726+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_f381106e ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "4.3" ;
+  skos:prefLabel "financiering en zekerheden"@nl .
+
+tooibwb:c_4641d131 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:45.274+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.6" ;
+  skos:prefLabel "strafrecht (algemeen)"@nl .
+
+tooibwb:c_47a56149 a skos:Concept ;
+  dcterms:created "2019-08-12T17:39:49.461+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.1" ;
+  skos:prefLabel "BTW en accijns"@nl .
+
+tooibwb:c_4921283c a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:17.328+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.4" ;
+  skos:prefLabel "heffingen lokale overheden"@nl .
+
+tooibwb:c_49a0d743 a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:08.225+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.3" ;
+  skos:prefLabel "formeel belastingrecht"@nl .
+
+tooibwb:c_49cf6ea2 a skos:Concept ;
+  dcterms:created "2019-08-26T17:59:26.809+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "P" ;
+  skos:prefLabel "rechtspraak"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_4a3402ad a skos:Concept ;
+  dcterms:created "2019-08-12T17:44:00.693+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5092de31 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "12.2" ;
+  skos:prefLabel "telecomrecht"@nl .
+
+tooibwb:c_4b09a861 a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:54.308+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.8" ;
+  skos:prefLabel "invorderingsrecht"@nl .
+
+tooibwb:c_5090ae6f a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:03.783+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.9" ;
+  skos:prefLabel "loonbelasting en premieheffing"@nl .
+
+tooibwb:c_5092de31 a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:40.287+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "12" ;
+  skos:prefLabel "informatierecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_50a06faa a skos:Concept ;
+  dcterms:created "2019-08-12T17:32:40.949+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_7cca4bd5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3.1" ;
+  skos:prefLabel "arbeidsrecht"@nl .
+
+tooibwb:c_56a74243 a skos:Concept ;
+  dcterms:created "2019-08-23T13:48:36.850+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "I" ;
+  skos:prefLabel "immigratie, integratie en inburgering"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_5bbb3a9b a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:38.821+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "8" ;
+  skos:prefLabel "financieel en economisch recht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_5d8350bb a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:21.268+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22" ;
+  skos:prefLabel "personen- en familierecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_5f2f0b55 a skos:Concept ;
+  dcterms:created "2019-08-12T17:51:45.960+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27" ;
+  skos:prefLabel "strafrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_5fa8cb44 a skos:Concept ;
+  skos:broader tooibwb:c_3e6b35e2 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "31.4" ;
+  skos:prefLabel "internationaal onroerend goedrecht"@nl .
+
+tooibwb:c_60fb2eb8 a skos:Concept ;
+  skos:broader tooibwb:c_e98c35be ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "10.2" ;
+  skos:prefLabel "erfdienstbaarheid"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_638d8062 a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:31.528+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_8ad05f6d ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "25.2" ;
+  skos:prefLabel "omgevingsrecht"@nl .
+
+tooibwb:c_63c42465 a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:16.524+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3405e4a1 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6.5" ;
+  skos:prefLabel "verzekeringsrecht"@nl .
+
+tooibwb:c_65b2367c a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:06.144+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_674c0ac7 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "13.2" ;
+  skos:prefLabel "surseance"@nl .
+
+tooibwb:c_66ad74bd a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:25.144+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "24" ;
+  skos:prefLabel "privacy"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_674c0ac7 a skos:Concept ;
+  dcterms:created "2019-08-12T17:44:07.677+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "13" ;
+  skos:prefLabel "insolventierecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_6755aa64 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:50.229+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "18" ;
+  skos:prefLabel "migratierecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_67671688 a skos:Concept ;
+  dcterms:created "2019-08-23T13:48:59.563+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "K" ;
+  skos:prefLabel "landbouw, natuur en voedsel"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_69b82af6 a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:08.272+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3405e4a1 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6.4" ;
+  skos:prefLabel "verbintenissenrecht"@nl .
+
+tooibwb:c_6ac30ccf a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:45.490+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5d8350bb ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22.2" ;
+  skos:prefLabel "erfrecht"@nl .
+
+tooibwb:c_6bdc2b89 a skos:Concept ;
+  dcterms:created "2019-08-23T13:47:13.000+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "F" ;
+  skos:prefLabel "familie, jeugd en gezin"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_6e38f3bc a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:21.322+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.11" ;
+  skos:prefLabel "successie- en schenkingsrecht"@nl .
+
+tooibwb:c_771aa828 a skos:Concept ;
+  dcterms:created "2019-08-12T17:39:59.119+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.2" ;
+  skos:prefLabel "dividendbelasting"@nl .
+
+tooibwb:c_77eb3af8 a skos:Concept ;
+  dcterms:created "2019-08-12T17:51:34.779+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_da370768 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "26.3" ;
+  skos:prefLabel "staatsrecht"@nl .
+
+tooibwb:c_79f2c282 a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:29.357+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "7" ;
+  skos:prefLabel "cultureel recht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_7cca4bd5 a skos:Concept ;
+  dcterms:created "2019-08-12T17:30:44.973+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3" ;
+  skos:prefLabel "arbeidsrecht en sociaal-zekerheidsrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_7ed87355 a skos:Concept ;
+  dcterms:created "2019-08-12T17:53:15.608+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "30" ;
+  skos:prefLabel "vervoersrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_8054d6b3 a skos:Concept ;
+  dcterms:created "2019-08-12T17:30:35.110+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "1" ;
+  skos:prefLabel "agrarisch recht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_8173a6ff a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:25.879+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.5" ;
+  skos:prefLabel "inkomstenbelasting"@nl .
+
+tooibwb:c_825c930b a skos:Concept ;
+  dcterms:created "2019-08-12T17:30:53.801+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "2" ;
+  skos:prefLabel "arbitrage"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_8285b37e a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:44.346+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_1dbae688 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "19.3" ;
+  skos:prefLabel "stichtingen en verenigingen"@nl .
+
+tooibwb:c_82b0ce3b a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:32.922+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "23" ;
+  skos:prefLabel "procesrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_84d3929c a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:01.680+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "20" ;
+  skos:prefLabel "onderwijsrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_86b84a9d a skos:Concept ;
+  dcterms:created "2019-08-23T13:49:08.643+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "L" ;
+  skos:prefLabel "milieu, ruimte en water"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_8a460f2d a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:35.785+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.5" ;
+  skos:prefLabel "penitentiair recht"@nl .
+
+tooibwb:c_8a8c5620 a skos:Concept ;
+  dcterms:created "2019-08-12T17:53:38.569+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3e6b35e2 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "31.1" ;
+  skos:prefLabel "bouwrecht"@nl .
+
+tooibwb:c_8ad05f6d a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:12.316+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "25" ;
+  skos:prefLabel "ruimtelijke ordening en milieu"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_8b3782ea a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:23.590+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_a9160582 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "11.1" ;
+  skos:prefLabel "auteursrecht"@nl .
+
+tooibwb:c_8e783db5 a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:14.047+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_e98c35be ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "10.1" ;
+  skos:prefLabel "eigendomsrecht"@nl .
+
+tooibwb:c_8fbe4664 a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:51.143+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5092de31 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "12.1" ;
+  skos:prefLabel "ICT-recht"@nl .
+
+tooibwb:c_9153c2b4 a skos:Concept ;
+  dcterms:created "2019-08-23T14:00:45.996+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "S" ;
+  skos:prefLabel "verkeer en vervoer"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_96ed7748 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:27.746+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "16" ;
+  skos:prefLabel "levensmiddelenrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_9a7dd375 a skos:Concept ;
+  dcterms:created "2019-08-12T17:33:09.159+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_7cca4bd5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3.5" ;
+  skos:prefLabel "sociaal zekerheidsrecht"@nl .
+
+tooibwb:c_9fbcfc19 a skos:Concept ;
+  dcterms:created "2019-08-23T13:46:57.468+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "E" ;
+  skos:prefLabel "economie en ondernemen"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_a058394a a skos:Concept ;
+  dcterms:created "2019-08-23T13:49:20.041+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "N" ;
+  skos:prefLabel "onderwijs en wetenschap"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_a11eaa90 a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:53.454+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3405e4a1 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6.2" ;
+  skos:prefLabel "consumentenrecht"@nl .
+
+tooibwb:c_a1d2e8d4 a skos:Concept ;
+  dcterms:created "2019-08-12T17:40:45.282+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.7" ;
+  skos:prefLabel "invoer en douane"@nl .
+
+tooibwb:c_a9160582 a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:15.010+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "11" ;
+  skos:prefLabel "intellectuele eigendom"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_a93f5f66 a skos:Concept ;
+  dcterms:created "2019-08-12T17:39:27.619+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_f381106e ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "4.4" ;
+  skos:prefLabel "toezicht bank- en kredietwezen"@nl .
+
+tooibwb:c_a9b86d101 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T1" ;
+  skos:prefLabel "arbeid"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d102 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T2" ;
+  skos:prefLabel "arbitrage"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d103 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T3" ;
+  skos:prefLabel "belasting"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d104 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T4" ;
+  skos:prefLabel "burgerlijk procesrecht"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d105 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T5" ;
+  skos:prefLabel "burgerlijke stand"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d106 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T6" ;
+  skos:prefLabel "cultuur"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d107 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T7" ;
+  skos:prefLabel "diplomatieke en consulaire betrekkingen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d108 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T8" ;
+  skos:prefLabel "douane"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d109 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T9" ;
+  skos:prefLabel "economische samenwerking"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d110 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T10" ;
+  skos:prefLabel "eigendom, intellectuele en industriële"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d111 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T11" ;
+  skos:prefLabel "energie"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d112 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T12" ;
+  skos:prefLabel "flora en fauna"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d113 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T13" ;
+  skos:prefLabel "gerechtshoven, internationale"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d114 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T14" ;
+  skos:prefLabel "geschillenregeling"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d115 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T15" ;
+  skos:prefLabel "gezondheid"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d116 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T16" ;
+  skos:prefLabel "grenzen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d117 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T17" ;
+  skos:prefLabel "grondstoffen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d118 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T18" ;
+  skos:prefLabel "instellingen en organisaties"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d119 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T19" ;
+  skos:prefLabel "investeringen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d120 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T20" ;
+  skos:prefLabel "landbouw en visserij"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d121 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T21" ;
+  skos:prefLabel "luchtvaart"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d122 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T22" ;
+  skos:prefLabel "mensenrechten"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d123 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T23" ;
+  skos:prefLabel "milieu"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d124 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T24" ;
+  skos:prefLabel "militair"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d125 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T25" ;
+  skos:prefLabel "monetair"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d126 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T26" ;
+  skos:prefLabel "nationaliteit"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d127 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T27" ;
+  skos:prefLabel "nucleaire samenwerking"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d128 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T28" ;
+  skos:prefLabel "onderwijs"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d129 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T29" ;
+  skos:prefLabel "ontwikkelingssamenwerking"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d130 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T30" ;
+  skos:prefLabel "overname van personen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d131 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T31" ;
+  skos:prefLabel "personen- en familierecht"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d132 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T32" ;
+  skos:prefLabel "personenverkeer en migratie"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d133 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T33" ;
+  skos:prefLabel "post"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d134 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T34" ;
+  skos:prefLabel "privaatrecht"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d135 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T35" ;
+  skos:prefLabel "privileges en immuniteiten"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d136 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T36" ;
+  skos:prefLabel "rechtshulp"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d137 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T37" ;
+  skos:prefLabel "ruimte"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d138 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T38" ;
+  skos:prefLabel "scheepvaart"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d139 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T39" ;
+  skos:prefLabel "sociale zekerheid"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d140 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T40" ;
+  skos:prefLabel "spoorwegen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d141 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T41" ;
+  skos:prefLabel "strafrecht"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d142 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T42" ;
+  skos:prefLabel "technische samenwerking"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d143 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T43" ;
+  skos:prefLabel "telecommunicatie"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d144 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T44" ;
+  skos:prefLabel "terrorisme"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d145 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T45" ;
+  skos:prefLabel "toerisme"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d146 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T46" ;
+  skos:prefLabel "uitlevering"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d147 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T47" ;
+  skos:prefLabel "verdovende middelen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d148 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T48" ;
+  skos:prefLabel "verdragenrecht"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d149 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T49" ;
+  skos:prefLabel "vervoer"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d150 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T50" ;
+  skos:prefLabel "visa en reisdocumenten"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d151 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T51" ;
+  skos:prefLabel "vluchtelingen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d152 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T52" ;
+  skos:prefLabel "voortzetting van verdragen"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d153 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T53" ;
+  skos:prefLabel "vrede"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d154 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T54" ;
+  skos:prefLabel "vriendschapsverdrag"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d155 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T55" ;
+  skos:prefLabel "wapens"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d156 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T56" ;
+  skos:prefLabel "water"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d157 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T57" ;
+  skos:prefLabel "wegverkeer"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d158 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T58" ;
+  skos:prefLabel "wetenschappelijke samenwerking"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_a9b86d159 a skos:Concept ;
+  skos:inScheme tooibwb:verdragsthema ;
+  skos:notation "T59" ;
+  skos:prefLabel "zetelverdrag"@nl ;
+  skos:topConceptOf tooibwb:verdragsthema .
+
+tooibwb:c_b24639c1 a skos:Concept ;
+  dcterms:created "2019-08-12T17:32:50.113+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_7cca4bd5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3.3" ;
+  skos:prefLabel "militaire ambtenarenrecht"@nl .
+
+tooibwb:c_b26c78e3 a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:55.764+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "15" ;
+  skos:prefLabel "internationaal publiekrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_b47c724c a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:40.293+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_8ad05f6d ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "25.3" ;
+  skos:prefLabel "waterrecht"@nl .
+
+tooibwb:c_b52af7e9 a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:46.579+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_82b0ce3b ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "23.1" ;
+  skos:prefLabel "bestuursprocesrecht"@nl .
+
+tooibwb:c_b69dc535 a skos:Concept ;
+  dcterms:created "2019-08-12T17:32:29.888+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_7cca4bd5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3.2" ;
+  skos:prefLabel "ambtenarenrecht"@nl .
+
+tooibwb:c_b84f1591 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:27.353+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.4" ;
+  skos:prefLabel "milieustrafrecht"@nl .
+
+tooibwb:c_ba9504e5 a skos:Concept ;
+  dcterms:created "2019-08-12T17:39:38.510+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5" ;
+  skos:prefLabel "belastingrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_bc9292d4 a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:40.595+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_a9160582 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "11.3" ;
+  skos:prefLabel "octrooirecht"@nl .
+
+tooibwb:c_bed49b60 a skos:Concept ;
+  dcterms:created "2019-08-23T13:43:55.613+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "A" ;
+  skos:prefLabel "belastingen"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_c05c1523 a skos:Concept ;
+  dcterms:created "2019-08-12T17:38:43.467+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_f381106e ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "4.1" ;
+  skos:prefLabel "bankrecht"@nl .
+
+tooibwb:c_c06fcca1 a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:10.398+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "21" ;
+  skos:prefLabel "openbare orde en veiligheidsrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_c220f66c a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:31.223+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_a9160582 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "11.2" ;
+  skos:prefLabel "intellectueel eigendomsrecht"@nl .
+
+tooibwb:c_c2b43841 a skos:Concept ;
+  dcterms:created "2019-08-12T17:51:24.335+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_da370768 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "26.2" ;
+  skos:prefLabel "militair recht"@nl .
+
+tooibwb:c_c43a7334 a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:27.885+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_e98c35be ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "10.4" ;
+  skos:prefLabel "hypotheekrecht en pandrecht (zekerheidsrechten)"@nl .
+
+tooibwb:c_c4534511 a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:29.495+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.12" ;
+  skos:prefLabel "vennootschapsbelastingrecht"@nl .
+
+tooibwb:c_c531a512 a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:46.866+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3405e4a1 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6.1" ;
+  skos:prefLabel "aansprakelijkheidsrecht"@nl .
+
+tooibwb:c_c60b9092 a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:53.826+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_82b0ce3b ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "23.2" ;
+  skos:prefLabel "burgerlijk procesrecht"@nl .
+
+tooibwb:c_c70d3447 a skos:Concept ;
+  dcterms:created "2019-08-23T13:44:17.469+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "C" ;
+  skos:prefLabel "cultuur, sport, vrije tijd"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_c7ca5138 a skos:Concept ;
+  dcterms:created "2019-08-12T17:38:51.629+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_f381106e ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "4.2" ;
+  skos:prefLabel "effectenrecht"@nl .
+
+tooibwb:c_c95f4dd4 a skos:Concept ;
+  dcterms:created "2019-08-23T13:48:21.794+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "H" ;
+  skos:prefLabel "gezondheid en zorg"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_cc3cbecb a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:20.414+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_b26c78e3 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "15.3" ;
+  skos:prefLabel "volkenrecht"@nl .
+
+tooibwb:c_cf521795 a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:00.510+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_3405e4a1 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "6.3" ;
+  skos:prefLabel "internationaal contractrecht"@nl .
+
+tooibwb:c_cff13d68 a skos:Concept ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "Q" ;
+  skos:prefLabel "reizen, wonen en werken in het buitenland"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_d05d9921 a skos:Concept ;
+  dcterms:created "2019-08-12T17:49:15.988+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5d8350bb ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22.4" ;
+  skos:prefLabel "personenrecht"@nl .
+
+tooibwb:c_d14a17d5 a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:21.104+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_e98c35be ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "10.3" ;
+  skos:prefLabel "erfpacht, vruchtgebruik"@nl .
+
+tooibwb:c_da370768 a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:59.334+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "26" ;
+  skos:prefLabel "staats- en bestuursrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_dd17dae0 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:10.547+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.2" ;
+  skos:prefLabel "internationaal strafrecht"@nl .
+
+tooibwb:c_dfcf3a97 a skos:Concept ;
+  dcterms:created "2019-08-23T13:48:09.582+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "G" ;
+  skos:prefLabel "financiën"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_e1b8b455 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:19.663+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.3" ;
+  skos:prefLabel "jeugdstrafrecht"@nl .
+
+tooibwb:c_e49bce03 a skos:Concept ;
+  dcterms:created "2019-08-12T17:48:58.400+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5d8350bb ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "22.3" ;
+  skos:prefLabel "familierecht"@nl .
+
+tooibwb:c_e77951d0 a skos:Concept ;
+  dcterms:created "2019-08-12T17:32:59.973+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_7cca4bd5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "3.4" ;
+  skos:prefLabel "pensioenrecht"@nl .
+
+tooibwb:c_e79db34a a skos:Concept ;
+  dcterms:created "2019-08-12T17:41:13.794+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_ba9504e5 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "5.10" ;
+  skos:prefLabel "milieubelasting"@nl .
+
+tooibwb:c_e80b3672 a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:36.843+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_1dbae688 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "19.2" ;
+  skos:prefLabel "ondernemingsrecht"@nl .
+
+tooibwb:c_e8ff69cb a skos:Concept ;
+  dcterms:created "2019-08-23T13:49:28.950+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "M" ;
+  skos:prefLabel "openbare orde en veiligheid"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_e98c35be a skos:Concept ;
+  dcterms:created "2019-08-12T17:43:03.880+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "10" ;
+  skos:prefLabel "goederenrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_ea564774 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:03.670+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_b26c78e3 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "15.1" ;
+  skos:prefLabel "mensenrechten"@nl .
+
+tooibwb:c_ee165cc3 a skos:Concept ;
+  dcterms:created "2019-08-12T17:46:39.949+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "17" ;
+  skos:prefLabel "mededingingsrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_ef8758fb a skos:Concept ;
+  dcterms:created "2019-08-12T17:45:48.442+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "14" ;
+  skos:prefLabel "internationaal privaatrecht Inclusief internationaal procesrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_f0f885e5 a skos:Concept ;
+  dcterms:created "2019-08-12T17:52:02.281+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_5f2f0b55 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "27.1" ;
+  skos:prefLabel "financieel-economisch strafrecht"@nl .
+
+tooibwb:c_f3405203 a skos:Concept ;
+  dcterms:created "2019-08-12T17:47:53.650+02:00"^^xsd:dateTime ;
+  skos:broader tooibwb:c_1dbae688 ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "19.4" ;
+  skos:prefLabel "vennootschapsrecht"@nl .
+
+tooibwb:c_f381106e a skos:Concept ;
+  dcterms:created "2019-08-12T17:31:25.472+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "4" ;
+  skos:prefLabel "bank- en effectenrecht, financiering"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_f3d7c872 a skos:Concept ;
+  dcterms:created "2019-08-12T17:50:51.965+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "28" ;
+  skos:prefLabel "sportrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_f4d3b2e1 a skos:Concept ;
+  dcterms:created "2019-08-12T17:42:51.871+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "9" ;
+  skos:prefLabel "gezondheidsrecht en farmaceutisch recht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:c_fd285f2b a skos:Concept ;
+  dcterms:created "2019-08-23T13:49:42.076+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:overheidsthema ;
+  skos:notation "O" ;
+  skos:prefLabel "overheid, bestuur en koninkrijk"@nl ;
+  skos:topConceptOf tooibwb:overheidsthema .
+
+tooibwb:c_ff938556 a skos:Concept ;
+  dcterms:created "2019-08-12T17:53:05.110+02:00"^^xsd:dateTime ;
+  skos:inScheme tooibwb:rechtsgebied ;
+  skos:notation "29" ;
+  skos:prefLabel "tuchtrecht"@nl ;
+  skos:topConceptOf tooibwb:rechtsgebied .
+
+tooibwb:overheidsthema a skos:ConceptScheme ;
+  dcterms:created "2019-08-23T13:40:54.944+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-23T13:43:44.981+02:00"^^xsd:dateTime ;
+  skos:definition "De lijst met overheidsthema's zoals die op Wetten.nl wordt gebruikt. Kan niet door KOOP worden gewijzigd."@nl ;
+  skos:editorialNote "Deze lijst was gebaseerd op de themalijst van Rijksoverheid.nl, en had daarmee in sync moeten blijven, maar dat is niet gebeurd. De Rijksoverheid.nl-thema's zijn gewijzigd, maar deze lijst is hetzelfde gebleven. Koppelen van deze lijst aan wetten gebeurt door SDU, maar het veld is optioneel. "@nl ;
+  skos:prefLabel "overheidsthema"@nl .
+
+tooibwb:rechtsgebied a skos:ConceptScheme ;
+  dcterms:created "2019-08-12T17:16:33.299+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-23T11:22:34.910+02:00"^^xsd:dateTime ;
+  skos:definition "De BWB-rechtsgebiedlijst is vastgesteld door de BWB-redactie, en kan daarom niet door KOOP zelfstandig worden gewijzigd. "@nl ;
+  skos:prefLabel "rechtsgebied"@nl .
+
+tooibwb:verdragsthema a skos:ConceptScheme ;
+  skos:prefLabel "thema verdragen"@nl .
+
+

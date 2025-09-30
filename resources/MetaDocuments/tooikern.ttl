@@ -1,0 +1,3965 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix oorg: <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix tooikern: <https://identifier.overheid.nl/tooi/def/thes/kern/> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern> a owl:Ontology ;
+  rdfs:label "tooikern"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "De TOOI-thesaurus voor de TOOI-kern (tooikern) bevat domeinoverstijgende taxonomieën die nodig zijn voor het classificeren van overheidsinformatie."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-thes-kern/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language language:NLD ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-07-07"^^xsd:date ;
+  dcterms:publisher oorg:oorg10117 ;
+  dcterms:title "TOOI-thesaurus voor de TOOI-kern"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/THESAURUS> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2008/05/skos-xl> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports org: ;
+  owl:imports prov: ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - 1 april 2021 - Initiële versie."@nl ;
+  owl:versionInfo "v1.0.1 - 1 juni 2021 - Nieuwe releaseprocedure, geen inhoudelijke veranderingen."@nl ;
+  owl:versionInfo "v1.1 - 9 november 2021 - Aanpassingen PLOOI waardelijsten."@nl ;
+  owl:versionInfo "v1.2 - 12 mei 2022 - PLOOI documentsoort toegevoegd."@nl ;
+  owl:versionInfo "v1.3 - 25 juli 2022 - Schema's voor documentrelaties en betrokkenheden toegevoegd."@nl ;
+  owl:versionInfo "v1.4.0 – 22 januari 2024 - Schema’s toegevoegd: tooikern:betrokkenheid, tooikern:documentrelatie, tooikern:plooiBijzondereDocumentsoorten, tooikern:redenIntrekkingOfVervanging, tooikern:soortJuridischeBronpublicatie, tooikern:soortKennisgeving, tooikern:soortMededeling, tooikern:systeemarchitectuur, tooikern:tijdreis, tooikern:wooInformatiecategorieen. Alsmede een aantal wijzigingen en toevoegingen aan bestaande schema’s."@nl ;
+  owl:versionInfo "v1.4.1 - 7 maart 2024 - Beheerplan toegevoegd aan documentatie."@nl ;
+  owl:versionInfo "v1.4.2 - 20 juni 2024 - Skosxl altlabel voor openbaar lichaam. Fix versielinkjes in documentatie."@nl ;
+  owl:versionInfo "v1.5.0 - 15 mei 2025 - US265492: PUC: 2 nieuwe documentsoorten voor Natuurvergunningen; US240716-STOP: Uitbreiding waardelijst STOP mededelingsoorten; US248138-DiWoo 0.9.4:  Wijzigingen voor nieuwe informatiecategorie inspanningsverplichting; Metadata aangevuld; US 261990 Nieuwe documentsoorten voor PLOOI. Wijzigingen voor organisatieonderdelen, zie https://gitlab.com/koop/tooi/ontologie/tooiont/-/issues/4"@nl ;
+  owl:versionInfo "v1.5.1 - 17 juni 2025 - Definitie concept wettelijke classificatie verbeterd."@nl ;
+  owl:versionInfo "v1.6.0 - 7 juli 2025 - Toevoegen van concepten voor artikelsoorten, toevoegen van STOP collectiegebaseerde waardelijst voor artikelsoorten."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.6.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.0.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.4.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.4.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.4.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.5.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.5.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern-1.6.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/kern_v1.0> ;
+  pav:version "1.6.0" ;
+  tooiont:publicatiedatum "2025-07-07"^^xsd:date ;
+  vann:preferredNamespacePrefix "tooikern" ;
+  vann:preferredNamespaceUri <https://identifier.overheid.nl/tooi/def/thes/tooikern/> .
+
+tooikern:artikelsoort a skos:ConceptScheme ;
+  dcterms:created "2025-07-07T11:54:32+01:00"^^xsd:dateTime ;
+  dcterms:modified "2025-07-07T11:54:32+01:00"^^xsd:dateTime ;
+  skos:definition "classificatie van wetsartikelen zoals gebruikt in wet- en regelgeving" ;
+  skos:prefLabel "artikelsoort"@nl .
+
+tooikern:bestuursorgaan a skos:ConceptScheme ;
+  dcterms:created "2019-01-21T10:57:32.297+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-23T13:39:40.511+02:00"^^xsd:dateTime ;
+  skos:editorialNote "Dit is een apart schema, omdat het niet kan worden geïntegreerd met 'overheidsorganisatie'"@nl ;
+  skos:prefLabel "bestuursorgaan"@nl .
+
+tooikern:betrokkenheid a skos:ConceptScheme ;
+  skos:prefLabel "betrokkenheid"@nl .
+
+tooikern:bevoegdheidsoverdracht a skos:ConceptScheme ;
+  dcterms:created "2019-10-11T15:08:29.820+02:00"^^xsd:dateTime ;
+  skos:prefLabel "bevoegdheidsoverdracht"@nl .
+
+tooikern:c_002fc258 a skos:Concept ;
+  dcterms:created "2019-02-08T11:01:08.806+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:33:50.607+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:definition "Officiële toestemming van de overheid om een bepaalde activiteit uit te voeren, al dan niet onder bepaalde voorwaarden. "@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "vergunning"@nl .
+
+tooikern:c_00ec74cf a skos:Concept ;
+  dcterms:created "2019-05-03T15:37:11.859+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:41:30"^^xsd:dateTime ;
+  skos:inScheme tooikern:wegcategorie ;
+  skos:prefLabel "gebiedsontsluitingsweg buiten de bebouwde kom"@nl ;
+  skos:topConceptOf tooikern:wegcategorie .
+
+tooikern:c_01eb081b a skos:Concept ;
+  dcterms:created "2019-02-15T17:14:19.905+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-03-26T12:59:32.635+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2c4326b9 ;
+  skos:definition "Een technisch-specialistisch adviescollege adviseert over een specifiek beleidsterrein."@nl ;
+  skos:example "Autoriteit Persoonsgegevens"@nl ;
+  skos:example "Hoge Raad van Adel"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "technisch-specialistisch adviescollege"@nl .
+
+tooikern:c_01f138a7 a skos:Concept ;
+  dcterms:created "2019-01-21T14:59:12.224+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_5b0f318a ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "verdrag"@nl .
+
+tooikern:c_03c52ba0 a skos:Concept ;
+  dcterms:created "2019-04-04T10:46:41.856+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:23:29.943+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc6ba2eb ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Kamervraag zonder antwoord"@nl .
+
+tooikern:c_04262aa6 a skos:Concept ;
+  skos:definition "mededeling in het kader van een beroepsprocedure waarbij de rechter het beroep definitief gegrond heeft verklaard en het besluit gedeeltelijk heeft vernietigd"@nl ;
+  skos:inScheme tooikern:soortMededeling ;
+  skos:prefLabel "mededeling uitspraak rechter, gedeeltelijke vernietiging besluit"@nl ;
+  skos:scopeNote "Het beroep is gegrond en het besluit wordt gedeeltelijk vernietigd. Dit houdt in dat het beroepsorgaan een gedeelte van het besluit ongeldig verklaart. Het bevoegd gezag moet de geconsolideerde regelgeving dan naar aanleiding van de uitspraak aanpassen, tenzij de uitspraak alleen betrekking heeft op de personen die het beroep ingesteld hebben. Ook moet het BG een mededeling (volgens https://standaarden.overheid.nl/stop/doc/begrippenlijst_mededeling) publiceren over de uitspraak. Zie https://standaarden.overheid.nl/stop/doc/besluitproces_rechterlijkemacht_scenarios."@nl ;
+  skos:topConceptOf tooikern:soortMededeling ;
+  tooiont:prefLabelVoorGroepen "mededeling uitspraak rechter, gedeeltelijke vernietiging besluit"@nl .
+
+tooikern:c_047db726 a skos:Concept ;
+  skos:definition "kennisgeving van mogelijkheid tot participatie in de projectprocedure, in het voorbereidingsproces van een projectbesluit en een wijziging omgevingsplan voor project van publiek belang"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving participatie"@nl ;
+  skos:scopeNote "Een kennisgeving participatie kan gecombineerd worden met de kennisgeving voorgenomen besluit."@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen participatie" .
+
+tooikern:c_052d2121 a skos:Concept ;
+  dcterms:created "2019-01-17T14:11:25.033+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-06-14T18:16:45.144+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_6c8603d6 ;
+  skos:definition "Een bedrijfschap was een publiekrechtelijke organisatie in Nederland van de bedrijven die in eenzelfde branche werken. Een bedrijfschap werd ingesteld op verzoek van werkgevers- en werknemersorganiaties uit de betreffende sector. "@nl ;
+  skos:example "Bedrijfschap Horeca en Catering"@nl ;
+  skos:historyNote "Per 1 januari 2015 zijn alle productschappen en bedrijfschappen opgeheven"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "bedrijfschap"@nl .
+
+tooikern:c_055aa18b a skos:Concept ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0045754&hoofdstuk=2&artikel=2.2"^^xsd:anyURI ;
+  skos:definition "De organisatie valt onder de Wet open overheid."@nl ;
+  skos:inScheme tooikern:wettelijkeclassificatie ;
+  skos:prefLabel "Woo-plichtig"@nl ;
+  skos:topConceptOf tooikern:wettelijkeclassificatie .
+
+tooikern:c_056a75e1 a skos:Concept ;
+  dcterms:created "2019-04-04T10:44:57.570+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:22:43.500+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1986dbe5 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Kamerstuk"@nl .
+
+tooikern:c_05f4a5f3 a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:documentrelatie ;
+  skos:prefLabel "heeft bijlage"@nl ;
+  skos:topConceptOf tooikern:documentrelatie .
+
+tooikern:c_0670bae1 a skos:Concept ;
+  dcterms:created "2019-04-04T10:18:23.360+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:53:34"^^xsd:dateTime ;
+  skos:altLabel "Stcrt"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Staatscourant"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_06a67c95 a skos:Concept ;
+  dcterms:created "2019-11-25T15:43:31.591+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7ab92a02 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "bezwaarschrift"@nl .
+
+tooikern:c_06ef9159 a skos:Concept ;
+  dcterms:created "2019-02-01T11:36:20.716+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_65c8026e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving waterschap"@nl .
+
+tooikern:c_07748060 a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:documentrelatie ;
+  skos:prefLabel "is reactie op"@nl ;
+  skos:topConceptOf tooikern:documentrelatie .
+
+tooikern:c_0776061d a skos:Concept ;
+  dcterms:created "2020-09-11T16:56:50"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "omgevingsvisie"@nl .
+
+tooikern:c_07d0ec18 a skos:Concept ;
+  skos:definition "Een organisatieonderdeel is een identificeerbaar onderdeel van een (grotere) overheidsorganisatie, vaak met eigen verantwoordelijkheden, producten en/of diensten."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "organisatieonderdeel"@nl ;
+  skos:scopeNote "De lijst van organisatieonderdelen zoals die in het kennismodel van TOOI aanwezig is kán niet de uitputtend álle denkbare overheidsorganisatieonderdelen bevatten; TOOI is geen weerspiegeling van alle (versies van) organogrammen van alle opgenomen overheidsorganisaties. TOOI kent alleen die organisatieonderdelen waaraan bij TOOI gebruikende applicaties functionele behoefte bestaat."@nl ;
+  skos:scopeNote "Het concept 'organisatieonderdeel' is NIET disjunct met de andere concepten zoals opgenomen in het scheme van TOOI-organisatiesoorten. Zo kan een bijvoorbeeld een 'agentschap' (tooikern:c_81c05ccd) ook als 'organisatieonderdeel' worden geclassificeerd."@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_08494761 a skos:Concept ;
+  dcterms:created "2019-05-17T17:32:30.947+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_534c040a ;
+  skos:inScheme tooikern:geschilbeslechting ;
+  skos:prefLabel "oordeel klachtprocedure"@nl .
+
+tooikern:c_0887da8f a skos:Concept ;
+  dcterms:created "2020-09-11T16:56:14"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "omgevingsplan"@nl .
+
+tooikern:c_098c1346 a skos:Concept ;
+  skos:inScheme tooikern:redenIntrekkingOfVervanging ;
+  skos:prefLabel "correctie privacygevoelige gegevens"@nl ;
+  skos:topConceptOf tooikern:redenIntrekkingOfVervanging .
+
+tooikern:c_0b65df66 a skos:Concept ;
+  dcterms:created "2019-02-15T17:47:22.149+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:56:06.545+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "sociale media-uiting"@nl .
+
+tooikern:c_0b6ecea a skos:Concept ;
+  rdfs:label "artikel inzake citeertitel"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:modified "2025-06-19T12:51:51"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=4&paragraaf=4.5&aanwijzing=4.24"^^xsd:anyURI ;
+  skos:definition "Een artikel dat de citeertitel van een regeling vaststelt."@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake citeertitel"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_0c0b1044 a skos:Concept ;
+  dcterms:created "2019-02-15T17:47:30.411+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:55:25.876+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_0b65df66 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "post"@nl .
+
+tooikern:c_0cd62ed2 a skos:Concept ;
+  dcterms:created "2019-01-17T13:53:25.418+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:27:53.023+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar lichaam"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_0d0e9b52 a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nader rapport"@nl .
+
+tooikern:c_0d209822 a skos:Concept ;
+  skos:definition "officiële publicatie van een schriftelijke beslissing van een bestuursorgaan, inhoudende een publiekrechtelijke rechtshandeling"@nl ;
+  skos:inScheme tooikern:soortJuridischeBronpublicatie ;
+  skos:prefLabel "besluit"@nl ;
+  skos:scopeNote "Dit concept wordt gebruikt voor de publicatie van besluiten zoals bedoeld in de Awb (https://wetten.overheid.nl/jci1.3:c:BWBR0005537&hoofdstuk=1&titeldeel=1.1&artikel=1:3&z=2021-04-01&g=2021-04-01), niet voor dat besluit zelf."@nl ;
+  skos:topConceptOf tooikern:soortJuridischeBronpublicatie .
+
+tooikern:c_0d373555 a skos:Concept ;
+  dcterms:created "2019-05-03T15:37:22.854+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:41:48"^^xsd:dateTime ;
+  skos:inScheme tooikern:wegcategorie ;
+  skos:prefLabel "stroomweg"@nl ;
+  skos:topConceptOf tooikern:wegcategorie .
+
+tooikern:c_0d927287 a skos:Concept ;
+  dcterms:created "2019-05-09T10:36:20.490+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-12T16:39:50.119+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_56192790 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "eigenstandig zbo"@nl .
+
+tooikern:c_0dbe4c44 a skos:Concept ;
+  dcterms:created "2019-01-21T15:04:24.867+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-01-20T17:38:47.759+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_6209828e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "gemeentelijke verordening"@nl .
+
+tooikern:c_0e25b788 a skos:Concept ;
+  dcterms:created "2019-10-11T13:42:33.605+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:01:51.799+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan deelgemeente"@nl ;
+  skos:related tooikern:c_bf596767 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_0e425c23 a skos:Concept ;
+  dcterms:created "2019-05-17T17:22:48.508+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7051a61f ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "adviesvoorstel"@nl .
+
+tooikern:c_0fe7593d a skos:Concept ;
+  dcterms:created "2019-05-09T10:22:19.520+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-12T16:40:27.102+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_56192790 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "onderdeel zbo-cluster"@nl .
+
+tooikern:c_10b07260 a skos:Concept ;
+  dcterms:created "2019-02-01T11:36:54.519+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_65c8026e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving Caribisch openbaar lichaam"@nl .
+
+tooikern:c_10eb451d a skos:Concept ;
+  dcterms:created "2019-05-03T14:15:21.858+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "beleidsdocument"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_11305262 a skos:Concept ;
+  dcterms:created "2019-05-03T15:13:08.299+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "memorie van toelichting"@nl .
+
+tooikern:c_1202b046 a skos:Concept ;
+  dcterms:created "2019-01-17T14:09:34.747+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_29b489f7 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Algemene Rekenkamer"@nl .
+
+tooikern:c_128687a a skos:Concept ;
+  rdfs:label "artikel inzake begrippen"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=5&paragraaf=5.1&aanwijzing=5.1"^^xsd:anyURI ;
+  skos:definition "Een artikel dat definities vastlegt"@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake begrippen"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_12cd7b9b a skos:Concept ;
+  dcterms:created "2019-04-04T10:20:05.194+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:50:56"^^xsd:dateTime ;
+  skos:altLabel "Bgr"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Blad gemeenschappelijke regeling"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_1396528 a skos:Concept ;
+  rdfs:label "artikel inzake integrale tekstpublicatie"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=6&paragraaf=6.2&aanwijzing=6.22"^^xsd:anyURI ;
+  skos:definition "Een artikel dat vastlegt dat de tekst van een regeling integraal wordt gepubliceerd (tekstplaatsing)"@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake integrale tekstpublicatie"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_139c6280 a skos:Concept ;
+  dcterms:source "Artikel 3.3, eerste lid, onder a, Wet open overheid"@nl ;
+  shacl:order 1010 ;
+  skos:definition "wetten en andere algemeen verbindende voorschriften"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "wet of algemeen verbindend voorschrift"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "wetten en algemeen verbindende voorschriften"@nl .
+
+tooikern:c_141d8055 a skos:Concept ;
+  dcterms:created "2019-01-17T14:59:38.913+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Raad voor de rechtspraak"@nl .
+
+tooikern:c_1422b182 a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "memorie van antwoord"@nl .
+
+tooikern:c_1486c92d a skos:Concept ;
+  dcterms:created "2019-05-03T15:20:19.506+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:42:40"^^xsd:dateTime ;
+  skos:inScheme tooikern:weggebruiker ;
+  skos:prefLabel "bestuurder van een ongelede vrachtwagen of ongelede autobus"@nl ;
+  skos:topConceptOf tooikern:weggebruiker .
+
+tooikern:c_1511f262 a skos:Concept ;
+  dcterms:created "2019-01-31T15:27:03.244+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T15:31:47.699+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_01f138a7 ;
+  skos:definition "Verdrag gesloten tussen drie of meer landen."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "multilateraal verdrag"@nl .
+
+tooikern:c_16575277 a skos:Concept ;
+  dcterms:created "2019-04-04T10:38:17.872+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:03:01.918+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan gemeente"@nl ;
+  skos:related tooikern:c_49ea8180 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_177f538 a skos:Concept ;
+  rdfs:label "artikel inzake inwerkingtreding"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:modified "2025-06-19T12:51:51"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=4&paragraaf=4.4&aanwijzing=4.14"^^xsd:anyURI ;
+  skos:definition "Een artikel waarin wordt bepaald wanneer, hoe of onder welke omstandigheden de regeling, of onderdelen daarvan, in werking treedt/treden."@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake inwerkingtreding"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_1833c8aa a skos:Concept ;
+  dcterms:created "2019-02-08T12:31:53.685+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-08T12:34:43.222+01:00"^^xsd:dateTime ;
+  skos:altLabel "vrijstelling"@nl ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:definition "Besluit waarbij een uitzondering op een wettelijk verbod of gebod wordt gemaakt voor een categorie van gevallen."@nl ;
+  skos:definition "jci1.3:c:BWBR0005730&hoofdstuk=5&paragraaf=5.5&aanwijzing=5.17&lid=1"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "vrijstellingsbesluit"@nl .
+
+tooikern:c_1986dbe5 a skos:Concept ;
+  dcterms:created "2019-05-03T14:14:55.648+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "parlementair document"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_1a5a4398 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:53.488+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "kamerlid"@nl .
+
+tooikern:c_1c393f2f a skos:Concept ;
+  dcterms:created "2019-08-14T15:58:44.222+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-14T16:14:48.173+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8b92eab4 ;
+  skos:definition "Een rapport van de minister van Buitenlandse Zaken aan de minister voor Vreemdelingenzaken en Integratie, met informatie over de situatie in een land van herkomst van asielzoekers. "@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "algemeen ambtsbericht"@nl .
+
+tooikern:c_1c4446cb a skos:Concept ;
+  dcterms:created "2020-09-11T13:20:22"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_consolidatie.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde tekst van een regeling zoals die geldt op een bepaald moment"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "geconsolideerde regeling"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_1c457490 a skos:Concept ;
+  dcterms:created "2020-09-08T22:21:29"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "einde inzagetermijn"@nl .
+
+tooikern:c_1c7656ac a skos:Concept ;
+  dcterms:created "2019-02-08T11:27:46.706+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:32:57.906+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beschikking tot handhaving"@nl .
+
+tooikern:c_1cf18f83 a skos:Concept ;
+  skos:broader tooikern:c_8f6ef24c ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Wob-/Woo-verzoek"@nl .
+
+tooikern:c_1d008550 a skos:Concept ;
+  dcterms:created "2019-01-17T13:58:56.137+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:27:38.977+01:00"^^xsd:dateTime ;
+  skos:altLabel "kabinet van de koningin"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "kabinet van de koning"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_1f1af729 a skos:Concept ;
+  dcterms:created "2019-02-01T11:35:58.634+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_65c8026e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving provincie"@nl .
+
+tooikern:c_21bfb04e a skos:Concept ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2"^^xsd:anyURI ;
+  skos:definition "De organisatie is WNT-instelling in het kader van de Wet normering topinkomens (WNT)."@nl ;
+  skos:inScheme tooikern:wettelijkeclassificatie ;
+  skos:prefLabel "WNT-instelling"@nl ;
+  skos:topConceptOf tooikern:wettelijkeclassificatie .
+
+tooikern:c_2307a3ff a skos:Concept ;
+  dcterms:created "2020-09-11T13:19:53"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/begrippenlijst_besluit.html#besluit"^^xsd:anyURI ;
+  skos:altLabel "STOP-besluit"@nl ;
+  skos:definition "in STOP-XML gespecificeerde tekst die de vaststelling of wijziging van (de geldigheid van) een regeling of informatieobject beschrijft"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "besluit"@nl ;
+  skos:scopeNote "Niet te verwarren met het begrip besluit zoals bedoeld in de Algemene wet bestuursrecht. Zie https://koop.gitlab.io/STOP/standaard/2.0.0-rc/juridische-uitgangspunten.html#juridische-uitgangspunten."@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_232d2da9 a skos:Concept ;
+  dcterms:created "2019-02-08T12:12:16.998+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "ambtsdrager"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_23de8263 a skos:Concept ;
+  skos:definition "kennisgeving i.h.k.v. een procedure voor een definitief besluit waartegen beroep kan worden ingesteld"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving besluit met beroepstermijn"@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen besluit met beroepstermijn" .
+
+tooikern:c_245e0743 a skos:Concept ;
+  skos:definition "mededeling in het kader van een beroepsprocedure waarbij de rechter het beroep definitief gegrond heeft verklaard en het besluit heeft vernietigd met behoud van rechtsgevolgen"@nl ;
+  skos:inScheme tooikern:soortMededeling ;
+  skos:prefLabel "mededeling uitspraak rechter, vernietiging besluit met behoud rechtsgevolgen"@nl ;
+  skos:scopeNote "Het beroep is gegrond en het besluit wordt vernietigd maar de rechtsgevolgen van het besluit zijn in stand gebleven. Dit houdt in dat het beroepsorgaan de onderbouwing in het besluit onvoldoende vindt, maar dat het BG het besluit tijdens de beroepsprocedure alsnog voldoende heeft onderbouwd. In dit geval hoeft het bevoegd gezag de geconsolideerde regelgeving niet aan te passen, maar moet het wel een mededeling (volgens https://standaarden.overheid.nl/stop/doc/begrippenlijst_mededeling) publiceren over de uitspraak. Zie https://standaarden.overheid.nl/stop/doc/besluitproces_rechterlijkemacht_scenarios."@nl ;
+  skos:topConceptOf tooikern:soortMededeling ;
+  tooiont:prefLabelVoorGroepen "mededelingen uitspraak rechter, vernietiging besluit met behoud rechtsgevolgen" .
+
+tooikern:c_24ddfb9b a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:documentrelatie ;
+  skos:prefLabel "is uitwerking van"@nl ;
+  skos:topConceptOf tooikern:documentrelatie .
+
+tooikern:c_2527b4c6 a skos:Concept ;
+  dcterms:created "2019-05-21T17:09:24.092+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:10:06.669+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_86d0931f ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "veiligheidsregio"@nl .
+
+tooikern:c_25f6d91f a skos:Concept ;
+  dcterms:created "2019-02-08T14:40:52.345+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3c2f9b9c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "melding"@nl .
+
+tooikern:c_26fb182e a skos:Concept ;
+  dcterms:created "2019-01-31T16:44:00.724+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-12-05T16:56:00.535+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9d7f4a2e ;
+  skos:definition "Een besluit van algemene strekking niet zijnde een algemeen verbindend voorschrift."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "ander besluit van algemene strekking"@nl .
+
+tooikern:c_28778d85 a skos:Concept ;
+  dcterms:created "2019-05-03T15:05:54.868+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_674bc18a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "conclusie"@nl .
+
+tooikern:c_28ae4979 a skos:Concept ;
+  dcterms:created "2019-05-23T13:02:53.995+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-23T13:03:28.722+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_c7eb524c ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "grensoverschrijdend regionaal openbaar lichaam"@nl .
+
+tooikern:c_28c2e684 a skos:Concept ;
+  dcterms:created "2019-01-31T15:32:28.770+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_5b0f318a ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "briefwisseling"@nl .
+
+tooikern:c_28ecfd6d a skos:Concept ;
+  dcterms:created "2019-01-17T15:32:16.148+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-02-13T13:12:42.068+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_16575277 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "college van burgemeester en wethouders"@nl .
+
+tooikern:c_2977c34f a skos:Concept ;
+  dcterms:created "2021-06-18T14:17:49"^^xsd:dateTime ;
+  dcterms:modified "2021-06-18T14:18:24"^^xsd:dateTime ;
+  skos:broader tooikern:c_9376c730 ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "beslisnota"@nl .
+
+tooikern:c_29b489f7 a skos:Concept ;
+  dcterms:created "2019-01-17T13:52:30.101+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-18T11:48:05.749+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_54d333b0 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Hoog College van Staat"@nl .
+
+tooikern:c_2a7d8663 a skos:Concept ;
+  dcterms:created "2019-01-17T15:31:57.571+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:43:56.996+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_16575277 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "gemeenteraad"@nl .
+
+tooikern:c_2ab17960 a skos:Concept ;
+  dcterms:created "2019-02-08T12:37:54.408+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:32:09.576+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:definition "Beschikking waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet."@nl ;
+  skos:definition "jci1.3:c:BWBR0005730&hoofdstuk=5&paragraaf=5.5&aanwijzing=5.17&lid=4"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "erkenningsbeschikking"@nl .
+
+tooikern:c_2ac5725e a skos:Concept ;
+  dcterms:created "2019-01-21T15:59:03.615+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b1b7d4bf ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "Rijkswet"@nl .
+
+tooikern:c_2aedadff a skos:Concept ;
+  dcterms:created "2019-02-15T17:49:07.341+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:56:37.064+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "toespraak"@nl .
+
+tooikern:c_2b051ee2 a skos:Concept ;
+  skos:definition "officiële publicatie van een besluit met de status ‘ontwerp’"@nl ;
+  skos:inScheme tooikern:soortJuridischeBronpublicatie ;
+  skos:prefLabel "ontwerpbesluit"@nl ;
+  skos:scopeNote "bron: https://koop.gitlab.io/STOP/standaard/2.0.0-rc/uniforme-voorbereiding-besluit-stop.html en https://wetten.overheid.nl/jci1.3:c:BWBR0005537&hoofdstuk=3&afdeling=3.4&artikel=3:11&z=2021-04-01&g=2021-04-01"@nl ;
+  skos:topConceptOf tooikern:soortJuridischeBronpublicatie .
+
+tooikern:c_2bc28249 a skos:Concept ;
+  dcterms:created "2019-05-21T17:07:03.230+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:36:55.994+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_780eefbb ;
+  skos:example "centrumgemeente"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "centrumconstructie"@nl .
+
+tooikern:c_2c0438f4 a skos:Concept ;
+  dcterms:created "2019-02-08T13:18:18.586+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:33:17.014+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "instemmingsbeschikking"@nl .
+
+tooikern:c_2c4326b9 a skos:Concept ;
+  dcterms:created "2019-02-15T17:12:40.142+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_82c523bf ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "vast adviescollege"@nl .
+
+tooikern:c_2c4e7407 a skos:Concept ;
+  dcterms:created "2019-01-18T10:58:51.235+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:18:02"^^xsd:dateTime ;
+  skos:broader tooikern:c_16575277 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "burgemeester"@nl .
+
+tooikern:c_2c5e6d87 a skos:Concept ;
+  dcterms:created "2019-05-03T15:10:41.992+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_674bc18a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "beschikking"@nl .
+
+tooikern:c_2dfc961e a skos:Concept ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "schorsing"@nl .
+
+tooikern:c_2e014c24 a skos:Concept ;
+  dcterms:created "2019-05-23T13:00:45.966+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:49:14.466+01:00"^^xsd:dateTime ;
+  skos:definition "Een samenwerkingsorganisatie is een organisatie die is opgericht door meerdere overheidsorganisaties teneinde gezamenlijke beleidsdoelstellingen te realiseren"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "samenwerkingsorganisatie"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_2efdfa71 a skos:Concept ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "einde beroepsprocedures"@nl .
+
+tooikern:c_30441cf1 a skos:Concept ;
+  dcterms:created "2019-02-15T17:13:04.240+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:16:00.451+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2c4326b9 ;
+  skos:definition "Een strategische adviescollege adviseert over een breed beleidsterrein."@nl ;
+  skos:example "Raad voor het Openbaar Bestuur"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "strategisch adviescollege"@nl .
+
+tooikern:c_30e8b503 a skos:Concept ;
+  dcterms:created "2019-02-08T12:21:06.115+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-07T14:46:21.930+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:definition "Een concessie is een bij beschikking verleende vergunning van de overheid die anderen uitsluit."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "concessie"@nl .
+
+tooikern:c_31fea6d5 a skos:Concept ;
+  dcterms:created "2019-02-15T17:48:19.496+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:54:04.718+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "folder"@nl .
+
+tooikern:c_32c0b189 a skos:Concept ;
+  dcterms:created "2019-05-21T17:00:57.914+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-21T17:11:32.762+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a04c8796 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gemeenschappelijk orgaan"@nl .
+
+tooikern:c_3300f29a a skos:Concept ;
+  dcterms:created "2019-08-14T16:40:17.149+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-17T15:02:17.925+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:definition "Volgens opdracht of krachtens functie uitgebracht schriftelijk verslag over een gebeurtenis of een beschrijving van een toestand."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "rapport"@nl .
+
+tooikern:c_3311679e a skos:Concept ;
+  dcterms:created "2020-09-11T13:20:50"^^xsd:dateTime ;
+  skos:definition "in STOP-XML gespecificeerde gegevens die de wijziging van een informatieobject beschrijven"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "informatieobjectmutatie"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_3330eb99 a skos:Concept ;
+  dcterms:created "2019-05-21T17:01:12.652+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-21T17:12:09.551+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a04c8796 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "bedrijfsvoeringsorganisatie"@nl .
+
+tooikern:c_33d7570c a skos:Concept ;
+  dcterms:created "2019-05-03T15:13:19.801+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "voorstel van wet"@nl .
+
+tooikern:c_34cb528c a skos:Concept ;
+  skos:definition "de officiële publicatie met juridische inhoud, niet zijnde (ontwerp)besluit of rectificatie, zoals bijvoorbeeld beschreven in Artikel 8:80 Algemene wet bestuursrecht (de inhoud van een uitspraak van een beroepsorgaan)"@nl ;
+  skos:inScheme tooikern:soortJuridischeBronpublicatie ;
+  skos:prefLabel "mededeling"@nl ;
+  skos:scopeNote "bron: https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_mededeling.html en  https://wetten.overheid.nl/jci1.3:c:BWBR0005537&hoofdstuk=8&titeldeel=8.2&afdeling=8.2.6&artikel=8:80&z=2023-01-01&g=2023-01-01"@nl ;
+  skos:topConceptOf tooikern:soortJuridischeBronpublicatie .
+
+tooikern:c_34ee5ac0 a skos:Concept ;
+  dcterms:created "2019-05-03T10:50:15.372+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:02:32.712+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan Caribisch openbaar lichaam"@nl ;
+  skos:related tooikern:c_b4470cdd ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_3587557e a skos:Concept ;
+  dcterms:created "2019-01-17T14:12:08.382+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-18T11:18:00.020+01:00"^^xsd:dateTime ;
+  skos:altLabel "Staat"@nl ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Rijk"@nl .
+
+tooikern:c_358e6463 a skos:Concept ;
+  dcterms:created "2019-01-17T14:12:27.172+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:42:29.358+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:definition "Een provincie is een territoriaal openbaar lichaam met algemene bevoegdheden tussen gemeente en Rijk"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "provincie"@nl .
+
+tooikern:c_35b3b577 a skos:Concept ;
+  dcterms:created "2020-09-08T22:10:32"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "einde bezwaartermijn"@nl .
+
+tooikern:c_383f709a a skos:Concept ;
+  dcterms:created "2019-05-03T15:05:40.775+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_674bc18a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "vonnis"@nl .
+
+tooikern:c_386e74cb a skos:Concept ;
+  dcterms:created "2019-05-17T17:25:02.912+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-17T17:25:34.298+02:00"^^xsd:dateTime ;
+  skos:altLabel "beleidsovereenkomst"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "convenant"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_38ba44de a skos:Concept ;
+  dcterms:created "2019-05-17T17:28:04.522+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-08T11:11:59.388+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "evaluatierapport"@nl .
+
+tooikern:c_3a121159 a skos:Concept ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "formulier"@nl .
+
+tooikern:c_3a248e3a a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder d, Wet open overheid"@nl ;
+  shacl:order 1090 ;
+  skos:definition "agenda’s en besluitenlijsten van vergaderingen van de ministerraad, gedeputeerde staten, colleges van burgemeester en wethouders en dagelijkse besturen van waterschappen en dagelijkse besturen van openbare lichamen als bedoeld in de Wet gemeenschappelijke regelingen"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "agenda of besluitenlijst bestuurscollege"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "agenda’s en besluitenlijsten bestuurscolleges"@nl .
+
+tooikern:c_3a4f740d a skos:Concept ;
+  dcterms:created "2019-05-03T15:19:37.689+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:43:23"^^xsd:dateTime ;
+  skos:inScheme tooikern:weggebruiker ;
+  skos:prefLabel "voetganger"@nl ;
+  skos:topConceptOf tooikern:weggebruiker .
+
+tooikern:c_3aa96d08 a skos:Concept ;
+  dcterms:created "2020-09-11T12:51:18"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T12:51:51"^^xsd:dateTime ;
+  skos:inScheme tooikern:stopFormaatInformatieobject ;
+  skos:prefLabel "geo-informatieobject"@nl ;
+  skos:topConceptOf tooikern:stopFormaatInformatieobject .
+
+tooikern:c_3aaa4d12 a skos:Concept ;
+  dcterms:created "2019-01-18T11:40:56.451+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-12T13:00:19"^^xsd:dateTime ;
+  skos:broader tooikern:c_e5cd62ce ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "staatssecretaris"@nl .
+
+tooikern:c_3baef532 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder i, Wet open overheid"@nl ;
+  shacl:order 1140 ;
+  skos:definition "de inhoud van de schriftelijke verzoeken op grond van artikel 4.1, van de schriftelijke beslissingen op die verzoeken en de daarbij verstrekte informatie"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "Woo-verzoek of -besluit"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "Woo-verzoeken en -besluiten"@nl .
+
+tooikern:c_3bfa0a38 a skos:Concept ;
+  dcterms:created "2019-05-03T15:05:48.441+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_674bc18a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "arrest"@nl .
+
+tooikern:c_3c2f9b9c a skos:Concept ;
+  dcterms:created "2019-02-08T14:40:44.572+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "mededeling"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_3cf43d73 a skos:Concept ;
+  dcterms:created "2019-02-12T11:33:43.041+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-14T13:43:37.691+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "wet- en regelgeving"@nl ;
+  skos:related tooikern:c_e0dfdff9 ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_3d4e2255 a skos:Concept ;
+  dcterms:created "2019-01-17T14:11:33.138+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-06-14T18:17:02.612+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_6c8603d6 ;
+  skos:definition "Een productschap was een Nederlandse publiekrechtelijke organisatie van de bedrijven die eenzelfde grondstof in opeenvolgende stadia bewerken; bedrijven derhalve in dezelfde zogeheten 'productiekolom'. Een productschap had publiekrechtelijke status en daarmee doorgaans ook de bevoegdheid om belastingen te heffen en bepaalde regels vast te stellen, maar tegelijkertijd fungeerde het ook als belangenorganisatie voor bedrijven in de branche en als adviesorgaan voor de overheid."@nl ;
+  skos:example "Productschap Akkerbouw"@nl ;
+  skos:historyNote "Per 1 januari 2015 zijn alle productschappen en bedrijfschappen opgeheven"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "productschap"@nl .
+
+tooikern:c_3d782f30 a skos:Concept ;
+  dcterms:created "2019-02-08T11:18:47.834+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T15:17:19.900+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "jaarverslag"@nl .
+
+tooikern:c_3e620890 a skos:Concept ;
+  dcterms:created "2019-02-01T11:40:23.037+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:36:44.942+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving openbaar lichaam voor beroep en bedrijf"@nl .
+
+tooikern:c_3eb5572a a skos:Concept ;
+  dcterms:created "2019-08-14T16:29:50.631+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-08T16:58:33.676+01:00"^^xsd:dateTime ;
+  skos:altLabel "rondschrijven"@nl ;
+  skos:altLabel "rondzendbrief"@nl ;
+  skos:broader tooikern:c_7652d853 ;
+  skos:definition "Een brief die aan verschillende personen of instellingen wordt rondgestuurd. Kan zowel toelichtend als regelgevend van karakter zijn."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "circulaire"@nl ;
+  skos:relatedMatch tooikern:c_fbaa7e4b .
+
+tooikern:c_3eea6541 a skos:Concept ;
+  dcterms:created "2019-03-26T12:54:38.408+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_29b489f7 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Kanselarij der Nederlandse Orden"@nl .
+
+tooikern:c_3f0370ae a skos:Concept ;
+  dcterms:created "2019-02-12T13:59:47.579+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3c2f9b9c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "aankondiging"@nl .
+
+tooikern:c_3f423912 a skos:Concept ;
+  dcterms:created "2019-12-05T17:34:52.815+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "mandaatbesluit"@nl .
+
+tooikern:c_3f4ec90d a skos:Concept ;
+  dcterms:created "2020-09-11T16:57:40"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "programma"@nl .
+
+tooikern:c_40a05794 a skos:Concept ;
+  dcterms:source "Artikel 3.3, eerste lid, onder d, Wet open overheid"@nl ;
+  shacl:order 1040 ;
+  skos:definition "inzicht in zijn organisatie en werkwijze, waaronder de taken en bevoegdheden van de organisatieonderdelen"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "organisatie en werkwijze"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "organisatie en werkwijze"@nl .
+
+tooikern:c_411b4e4a a skos:Concept ;
+  dcterms:created "2019-01-18T11:30:13.244+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-02-13T13:16:09.907+01:00"^^xsd:dateTime ;
+  skos:altLabel "PS"@nl ;
+  skos:broader tooikern:c_9d4d78aa ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "provinciale staten"@nl .
+
+tooikern:c_41ac5574 a skos:Concept ;
+  skos:closeMatch tooikern:c_fbaa7e4b ;
+  skos:definition "beleidsregel"@nl ;
+  skos:editorialNote "Concept ten behoeve van de Kamerstukmodule (KSM). In de context van KSM wordt met richtlijn een beleidsregel bedoeld. Zie skos:exactMatch"@nl ;
+  skos:inScheme tooikern:plooiBijzondereDocumentsoorten ;
+  skos:prefLabel "richtlijn"@nl ;
+  skos:topConceptOf tooikern:plooiBijzondereDocumentsoorten .
+
+tooikern:c_428190f0 a skos:Concept ;
+  dcterms:created "2019-02-08T14:20:45.655+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "wijziging"@nl .
+
+tooikern:c_42e406dd a skos:Concept ;
+  dcterms:created "2019-05-17T17:16:13.418+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-17T17:21:18.687+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7f9dffa7 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "vergaderverslag"@nl ;
+  skos:related tooikern:c_a17ef403 .
+
+tooikern:c_43418c0b a skos:Concept ;
+  dcterms:created "2019-01-17T13:55:34.052+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:28:23.662+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechtspraak"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_43cbb495 a skos:Concept ;
+  dcterms:created "2019-02-15T17:52:23.538+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "overheid"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_43d8e132 a skos:Concept ;
+  dcterms:created "2020-09-11T13:22:10"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/regeling_artikelsgewijs_regelingdelen.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde geconsolideerde tekst van het tijdelijk regelingdeel dat juridisch gezien integraal onderdeel is van de hoofdregeling, zoals deze geldt op een bepaald moment"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "consolidatie van een tijdelijk regelingdeel"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_45be34e9 a skos:Concept ;
+  dcterms:created "2019-02-08T12:25:23.347+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:04:50.081+01:00"^^xsd:dateTime ;
+  skos:altLabel "administratieve boete"@nl ;
+  skos:altLabel "bestuurlijke boete"@nl ;
+  skos:broader tooikern:c_1c7656ac ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beschikking tot opleggen boete"@nl .
+
+tooikern:c_465163c9 a skos:Concept ;
+  dcterms:created "2019-01-31T16:37:08.014+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-12-04T17:28:40.779+01:00"^^xsd:dateTime ;
+  skos:altLabel "publiekrechtelijke rechtshandeling"@nl ;
+  skos:definition "Een besluit is in de Nederlandse wetgeving een schriftelijke beslissing van een bestuursorgaan, inhoudende een publiekrechtelijke rechtshandeling."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "besluit"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_46a1f04c a skos:Concept ;
+  dcterms:created "2020-09-11T13:20:07"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_consolidatie.html"^^xsd:anyURI ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_informatieobject.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde inhoud van een informatieobject zoals die geldig is op een bepaald moment"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "geconsolideerd informatieobject"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_46a81018 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder k, en artikel 3.3a, eerste en tweede lid, Wet open overheid"@nl ;
+  shacl:order 1160 ;
+  skos:definition "beschikkingen, met uitzondering van 21 categorieën."@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "beschikking"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "beschikkingen"@nl .
+
+tooikern:c_46d35a42 a skos:Concept ;
+  dcterms:created "2019-10-11T15:09:21.023+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "bestuursrechtelijke bevoegdheidsoverdracht"@nl ;
+  skos:topConceptOf tooikern:bevoegdheidsoverdracht .
+
+tooikern:c_49599e6c a skos:Concept ;
+  skos:broader tooikern:c_056a75e1 ;
+  skos:editorialNote "Dit is een naam en daarom met een hoofdletter geschreven."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Kamerbrief"@nl .
+
+tooikern:c_49ea8180 a skos:Concept ;
+  dcterms:created "2019-01-17T14:12:18.588+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:38:13.133+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:definition "Een gemeente is het kleinste territoriaal openbaar lichaam met algemene bevoegdheden"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gemeente"@nl .
+
+tooikern:c_49f9f3ab a skos:Concept ;
+  dcterms:description "Deze procedurestap markeert het einde van de periode waarin een of meer voorlopige voorziening van toepassing waren. "@nl ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005537&hoofdstuk=8&titeldeel=8.2&afdeling=8.2.6&artikel=8:72"^^xsd:anyURI ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:definition "De datum waarop de laatste voorlopige voorziening is opgeheven of vervallen"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "Voorlopige voorzieningen opgeheven/vervallen"@nl .
+
+tooikern:c_4a7c8543 a skos:Concept ;
+  dcterms:created "2019-02-15T17:52:10.019+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "media"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_4bb900b9 a skos:Concept ;
+  dcterms:created "2019-10-11T15:15:00.567+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T15:24:31.713+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_46d35a42 ;
+  skos:definition "Het overdragen door een bestuursorgaan van zijn bevoegdheid tot het nemen van besluiten aan een ander die deze onder eigen verantwoordelijkheid uitoefent. Artikel 10:13 Awb."@nl ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "delegatie"@nl .
+
+tooikern:c_4bc16d3f a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:betrokkenheid ;
+  skos:prefLabel "opdrachtgever"@nl ;
+  skos:topConceptOf tooikern:betrokkenheid .
+
+tooikern:c_4bd6c154 a skos:Concept ;
+  skos:broader tooikern:c_5b0f318a ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "diplomatieke verklaring"@nl .
+
+tooikern:c_4c175719 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:33.471+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechter"@nl .
+
+tooikern:c_4d1ea9ba a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:documentrelatie ;
+  skos:prefLabel "is bijlage bij"@nl ;
+  skos:topConceptOf tooikern:documentrelatie .
+
+tooikern:c_4dec446b a skos:Concept ;
+  dcterms:created "2019-02-15T17:12:23.619+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:18:21.413+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_82c523bf ;
+  skos:definition "Een tijdelijk adviescollege geeft maximaal vier jaar advies over een beleidsonderwerp."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "tijdelijk adviescollege"@nl .
+
+tooikern:c_4eaae4d5 a skos:Concept ;
+  dcterms:created "2019-10-10T11:58:58.118+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-10T12:00:33.029+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:definition "Wetsvoorstel dat moet leiden tot een tweede wet die samenhangt met een wetsvoorstel dat aanhangig is bij de Eerste Kamer. "@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "novelle"@nl .
+
+tooikern:c_4ebd2c40 a skos:Concept ;
+  dcterms:created "2019-10-11T11:46:57.139+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_780eefbb ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "regeling zonder meer"@nl .
+
+tooikern:c_4efe1293 a skos:Concept ;
+  dcterms:created "2019-10-08T11:08:21.594+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "inspectierapport"@nl .
+
+tooikern:c_4f02d1e9 a skos:Concept ;
+  dcterms:created "2019-02-05T15:08:13.549+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9ebdee40 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "territoriale eenheid"@nl .
+
+tooikern:c_4f50ca9c a skos:Concept ;
+  skos:broader tooikern:c_ab9e91fe ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beslissing op Wob-/Woo-verzoek"@nl .
+
+tooikern:c_50109c8c a skos:Concept ;
+  skos:definition "kennisgeving van in publicatieblad gepubliceerd ontwerpbesluit en terinzagelegging stukken"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving ontwerp"@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen ontwerp" .
+
+tooikern:c_507f38aa a skos:Concept ;
+  dcterms:created "2020-09-11T16:55:55"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving Omgevingswet"@nl .
+
+tooikern:c_5142a66a a skos:Concept ;
+  dcterms:created "2019-05-03T10:48:45.357+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:39:09.432+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_34ee5ac0 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "gezaghebber"@nl .
+
+tooikern:c_526e0a9f a skos:Concept ;
+  skos:broader tooikern:c_5cbd74c8 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "voorbeschermingsregels omgevingsverordening"@nl .
+
+tooikern:c_52cf9ee0 a skos:Concept ;
+  dcterms:created "2019-01-17T13:59:23.589+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-08T12:17:30.897+01:00"^^xsd:dateTime ;
+  skos:altLabel "staatshoofd"@nl ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:broader tooikern:c_91fb5e42 ;
+  skos:broader tooikern:c_f8c225c5 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "koning"@nl ;
+  skos:related tooikern:c_1d008550 ;
+  skos:related tooikern:c_e09e0233 .
+
+tooikern:c_534c040a a skos:Concept ;
+  dcterms:created "2019-05-17T17:32:10.388+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:geschilbeslechting ;
+  skos:prefLabel "klachtprocedure"@nl ;
+  skos:topConceptOf tooikern:geschilbeslechting .
+
+tooikern:c_545240d8 a skos:Concept ;
+  dcterms:created "2019-01-21T14:55:34.312+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:34:23.895+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "nationale regelgeving"@nl .
+
+tooikern:c_54d333b0 a skos:Concept ;
+  dcterms:created "2019-01-18T11:45:25.459+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Rijksoverheid"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_56192790 a skos:Concept ;
+  dcterms:created "2019-01-17T13:58:12.983+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:51:48.419+01:00"^^xsd:dateTime ;
+  skos:altLabel "zbo"@nl ;
+  skos:definition "Een zelfstandig bestuursorgaan is een bestuursorgaan van de centrale overheid dat niet direct onder het gezag van een minister valt"@nl ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "zelfstandig bestuursorgaan"@nl ;
+  skos:topConceptOf tooikern:bestuursorgaan ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_566a4430 a skos:Concept ;
+  dcterms:created "2019-02-08T12:42:11.386+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:04:30.368+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1c7656ac ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beschikking tot opleggen last onder dwangsom"@nl .
+
+tooikern:c_5824891d a skos:Concept ;
+  dcterms:created "2019-11-21T17:10:46.240+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b399a15e ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "subsidieaanvraag"@nl .
+
+tooikern:c_582e4c05 a skos:Concept ;
+  dcterms:created "2019-01-17T14:11:13.692+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-06-14T18:15:49.720+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ab4cf250 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar lichaam voor beroep"@nl .
+
+tooikern:c_58a8bb1a a skos:Concept ;
+  dcterms:created "2019-02-15T17:52:17.748+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "bedrijf"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_58c3f5db a skos:Concept ;
+  dcterms:source "https://iplo.nl/regelgeving/instrumenten/maatwerkvoorschrift/"^^xsd:anyURI ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:changeNote "2025-01-29 User Story 265492: PUC: 2 nieuwe documentsoorten voor Natuurvergunningen"@nl ;
+  skos:definition "besluit van een bestuursorgaan om in individuele gevallen algemene regels te specificeren voor activiteiten"@nl ;
+  skos:example "https://www.rvo.nl/sites/default/files/2024-06/Maatwerkvoorschriften%20Eindhoven%20Airport.pdf"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "maatwerkvoorschrift"@nl .
+
+tooikern:c_58cac51b a skos:Concept ;
+  dcterms:created "2019-05-03T15:36:46.226+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:40:59"^^xsd:dateTime ;
+  skos:inScheme tooikern:wegcategorie ;
+  skos:prefLabel "erftoegangsweg buiten de bebouwde kom"@nl ;
+  skos:topConceptOf tooikern:wegcategorie .
+
+tooikern:c_5953228b a skos:Concept ;
+  dcterms:created "2019-02-08T12:13:18.534+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "wethouder"@nl .
+
+tooikern:c_59e0259b a skos:Concept ;
+  dcterms:created "2020-09-11T13:21:55"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/regeling_artikelsgewijs_regelingdelen.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde geconsolideerde tekst van het tijdelijk regelingdeel dat juridisch gezien integraal onderdeel is van de hoofdregeling"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "tijdelijk regelingdeel"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_5afa5237 a skos:Concept ;
+  dcterms:created "2019-01-17T13:45:40.777+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T15:21:53.739+01:00"^^xsd:dateTime ;
+  skos:altLabel """
+
+koninkrijksdeel"""@nl ;
+  skos:broader tooikern:c_f8c225c5 ;
+  skos:definition "De landen binnen het Koninkrijk der Nederlanden"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "land"@nl .
+
+tooikern:c_5b0f318a a skos:Concept ;
+  dcterms:created "2019-01-21T14:55:13.659+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:37:13.633+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:definition "Regelgeving vastgesteld door een (orgaan van) een internationale organisatie of overeengekomen tussen twee of meer landen of internationale organisaties. 'Regelgeving' is in deze definitie een ruim begrip, en bevat zowel 'hard law' als 'soft law'. "@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "internationale regelgeving"@nl .
+
+tooikern:c_5b1055aa a skos:Concept ;
+  dcterms:created "2019-01-31T16:39:41.499+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T16:45:01.129+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "plan"@nl .
+
+tooikern:c_5be1ff63 a skos:Concept ;
+  dcterms:created "2019-05-03T10:57:27.490+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "eilandgedeputeerde"@nl .
+
+tooikern:c_5bea6262 a skos:Concept ;
+  dcterms:created "2021-02-24T22:03:58.391+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "toegangsbeperkingsbesluit"@nl .
+
+tooikern:c_5cbd74c8 a skos:Concept ;
+  dcterms:created "2020-09-11T16:57:28"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "voorbeschermingsregels"@nl .
+
+tooikern:c_5cc92c89 a skos:Concept ;
+  dcterms:created "2020-09-08T14:37:57"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:38:11"^^xsd:dateTime ;
+  skos:broader tooikern:c_a13976a4 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "dagelijks bestuur"@nl .
+
+tooikern:c_5cde5cec a skos:Concept ;
+  dcterms:created "2019-05-03T15:11:49.418+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_674bc18a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "uitspraak"@nl .
+
+tooikern:c_5d096fde a skos:Concept ;
+  dcterms:source "https://www.rijksoverheid.nl/documenten/kamerstukken/2024/06/14/kamerbrief-positieve-weigering-wnb-aanvraag-rotterdam-the-hague-airport-en-eindhoven-airport"^^xsd:anyURI ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:changeNote "2025-01-29 User Story 265492: PUC: 2 nieuwe documentsoorten voor Natuurvergunningen"@nl ;
+  skos:definition "besluit van een bestuursorgaan om een vergunningsaanvraag te weigeren omdat geen vergunning nodig is"@nl ;
+  skos:example "https://zoek.officielebekendmakingen.nl/stcrt-2024-19282.html"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "positieve weigering"@nl .
+
+tooikern:c_5e737918 a skos:Concept ;
+  dcterms:created "2019-05-03T15:42:49.658+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:40:12"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "tijdelijke verkeersmaatregel van langere duur dan 4 maanden"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_5f2cbf87 a skos:Concept ;
+  dcterms:created "2019-01-18T11:34:38.571+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-21T11:23:04.202+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_6a21a9e3 ;
+  skos:broader tooikern:c_91fb5e42 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "ministerraad"@nl .
+
+tooikern:c_60e23f89 a skos:Concept ;
+  dcterms:created "2019-02-08T12:13:36.340+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gedeputeerde"@nl .
+
+tooikern:c_61676cbc a skos:Concept ;
+  dcterms:created "2019-01-18T11:30:29.994+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-02-13T13:15:55.477+01:00"^^xsd:dateTime ;
+  skos:altLabel "GS"@nl ;
+  skos:altLabel "college van gedeputeerde staten"@nl ;
+  skos:broader tooikern:c_9d4d78aa ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "gedeputeerde staten"@nl .
+
+tooikern:c_61e3099a a skos:Concept ;
+  dcterms:created "2019-04-04T10:18:14.302+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:53:06"^^xsd:dateTime ;
+  skos:altLabel "Stb"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Staatsblad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_6209828e a skos:Concept ;
+  dcterms:created "2019-02-01T11:35:51.087+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_65c8026e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving gemeente"@nl .
+
+tooikern:c_6223425e a skos:Concept ;
+  skos:inScheme tooikern:conceptScheme_74dec40e ;
+  skos:prefLabel "vestigingsadres"@nl ;
+  skos:topConceptOf tooikern:conceptScheme_74dec40e .
+
+tooikern:c_622408c6 a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nadere memorie van antwoord"@nl .
+
+tooikern:c_640b009e a skos:Concept ;
+  skos:definition "kennisgeving i.h.k.v. een procedure voor een definitief besluit waartegen bezwaar kan worden gemaakt"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving besluit met bezwaartermijn"@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen besluit met bezwaartermijn" .
+
+tooikern:c_641ecd76 a skos:Concept ;
+  dcterms:created "2020-09-08T22:01:51"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "vaststelling"@nl .
+
+tooikern:c_64981328 a skos:Concept ;
+  dcterms:created "2020-09-11T13:22:19"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/begrippenlijst_kennisgeving.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde officiële publicatie, afkomstig van het bevoegd gezag, met zakelijke informatie over een besluit"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "kennisgeving"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_65c8026e a skos:Concept ;
+  dcterms:created "2019-01-21T14:57:37.190+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:35:54.179+01:00"^^xsd:dateTime ;
+  skos:altLabel "decentrale regelgeving"@nl ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving regionaal openbaar lichaam"@nl .
+
+tooikern:c_6604fe5b a skos:Concept ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "mediatekst"@nl .
+
+tooikern:c_664cd690 a skos:Concept ;
+  dcterms:created "2019-05-03T10:39:20.454+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:00:39.052+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_0e25b788 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "deelraad"@nl .
+
+tooikern:c_674bc18a a skos:Concept ;
+  dcterms:created "2019-05-03T15:05:28.501+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "rechterlijk document"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_68155603 a skos:Concept ;
+  dcterms:created "2019-02-08T14:54:59.636+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "aanvraag"@nl .
+
+tooikern:c_68c541a4 a skos:Concept ;
+  dcterms:created "2020-03-10T16:08:56.860+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-10T17:19:38.405+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7f9dffa7 ;
+  skos:definition "Een vergaderstuk dat is geschreven met het oog op inhoudelijke behandeling (discussie, besluitvorming) in de desbetreffende vergadering, maar niet noodzakelijkerwijs door het gremium dat de verantwoordelijkheid draagt voor de vergadering."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "vergaderdocument"@nl .
+
+tooikern:c_690094b5 a skos:Concept ;
+  dcterms:created "2019-02-15T17:12:31.696+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:17:18.534+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_82c523bf ;
+  skos:definition "Geeft eenmalig advies over een specifiek beleidsonderwerp. Wordt daarna opgeheven."@nl ;
+  skos:example "Commissie duurzame kustontwikkeling"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "eenmalig adviescollege"@nl .
+
+tooikern:c_695ab276 a skos:Concept ;
+  skos:inScheme tooikern:conceptScheme_74dec40e ;
+  skos:prefLabel "bezoekadres"@nl ;
+  skos:topConceptOf tooikern:conceptScheme_74dec40e .
+
+tooikern:c_6a21a9e3 a skos:Concept ;
+  dcterms:created "2019-01-18T11:39:23.337+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-18T11:50:14.947+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_54d333b0 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "kabinet"@nl .
+
+tooikern:c_6b572c33 a skos:Concept ;
+  dcterms:created "2021-02-24T22:03:06.771+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "aanwijzingsbesluit N2000"@nl .
+
+tooikern:c_6b9b0e52 a skos:Concept ;
+  dcterms:created "2020-09-08T14:53:03"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:50:02"^^xsd:dateTime ;
+  skos:inScheme tooikern:publicatie ;
+  skos:prefLabel "mededeling"@nl ;
+  skos:topConceptOf tooikern:publicatie .
+
+tooikern:c_6bbc9177 a skos:Concept ;
+  skos:definition "Restbegrip voor alles wat gepubliceerd kan worden, maar geen passend ander concept heeft."@nl ;
+  skos:editorialNote "Concept ten behoeve van de Kamerstukmodule (KSM). Alleen in bijzondere gevallen gebruiken, want is te algemeen"@nl ;
+  skos:inScheme tooikern:plooiBijzondereDocumentsoorten ;
+  skos:prefLabel "publicatie"@nl ;
+  skos:topConceptOf tooikern:plooiBijzondereDocumentsoorten .
+
+tooikern:c_6bd03d80 a skos:Concept ;
+  dcterms:created "2019-05-02T17:08:23.326+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "EU-regelgeving"@nl .
+
+tooikern:c_6c8603d6 a skos:Concept ;
+  dcterms:created "2019-06-14T18:16:17.125+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ab4cf250 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar lichaam voor bedrijf"@nl .
+
+tooikern:c_6d494ab6 a skos:Concept ;
+  dcterms:created "2019-04-04T10:46:07.694+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:23:42.705+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc6ba2eb ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Kamervraag met antwoord"@nl .
+
+tooikern:c_6f49bf34 a skos:Concept ;
+  dcterms:created "2019-11-25T14:59:55.461+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "onderzoeksrapport"@nl .
+
+tooikern:c_6f638c5e a skos:Concept ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/begrippenlijst_mededeling.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde officiële publicatie, afkomstig van het bevoegd gezag, met inhoudelijke informatie over een besluit of uitspraak"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "mededeling"@nl ;
+  skos:scopeNote "De officiële publicatie afkomstig van het bevoegd gezag die geldt als 'mededeling' zoals bijvoorbeeld beschreven in Artikel 8:80 Algemene wet bestuursrecht. De mededeling bevat inhoudelijke informatie over een besluit of uitspraak, zoals de inhoud van een uitspraak van een beroepsorgaan. De Algemene wet bestuursrecht stelt aanvullende eisen aan de inhoud van de mededeling."@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_7051a61f a skos:Concept ;
+  dcterms:created "2019-05-17T17:22:21.026+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "adviesdocument"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_70b93ded a skos:Concept ;
+  dcterms:created "2019-05-09T10:21:31.683+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-12T16:40:33.628+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_56192790 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "zbo-cluster"@nl .
+
+tooikern:c_70c87e3d a skos:Concept ;
+  dcterms:created "2020-09-08T14:37:36"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:37:49"^^xsd:dateTime ;
+  skos:broader tooikern:c_a13976a4 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "algemeen bestuur"@nl .
+
+tooikern:c_711f4f8e a skos:Concept ;
+  dcterms:created "2019-01-21T15:58:55.200+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b1b7d4bf ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "Statuut voor het Koninkrijk der Nederlanden"@nl .
+
+tooikern:c_72582187 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:10.067+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "minister van staat"@nl .
+
+tooikern:c_75007d14 a skos:Concept ;
+  dcterms:created "2019-05-03T14:11:53.246+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:13:52.432+02:00"^^xsd:dateTime ;
+  skos:altLabel "bekendmakingsblad"@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "communicatie-uiting"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_75029aa4 a skos:Concept ;
+  dcterms:created "2020-09-11T12:51:39"^^xsd:dateTime ;
+  skos:inScheme tooikern:stopFormaatInformatieobject ;
+  skos:prefLabel "PDF-document"@nl ;
+  skos:topConceptOf tooikern:stopFormaatInformatieobject .
+
+tooikern:c_75883ef9 a skos:Concept ;
+  dcterms:created "2019-01-18T11:38:33.206+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:21:43.112+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:broader tooikern:c_5f2cbf87 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "minister-president"@nl .
+
+tooikern:c_759721e2 a skos:Concept ;
+  dcterms:source "Artikel 3.3, eerste lid, onder c, Wet open overheid"@nl ;
+  shacl:order 1030 ;
+  skos:definition "ontwerpen van wetten, andere algemeen verbindende voorschriften en overige besluiten van algemene strekking waarover een extern advies is gevraagd, met inbegrip van de adviesaanvraag"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "ontwerp van wet- en regelgeving met adviesaanvraag"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "ontwerpen van wet- en regelgeving met adviesaanvraag"@nl .
+
+tooikern:c_7599fbf2 a skos:Concept ;
+  dcterms:created "2019-05-03T16:20:53.050+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9023bfae ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "geattribueerde functionaris"@nl .
+
+tooikern:c_75fac459 a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:documentrelatie ;
+  skos:prefLabel "verwijst naar"@nl ;
+  skos:topConceptOf tooikern:documentrelatie .
+
+tooikern:c_7652d853 a skos:Concept ;
+  dcterms:created "2019-02-15T17:50:52.644+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:53:37.957+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "brief"@nl .
+
+tooikern:c_77548398 a skos:Concept ;
+  skos:altLabel "Centrale Voorziening Decentrale Regelgeving"@nl ;
+  skos:inScheme tooikern:systeemarchitectuur ;
+  skos:prefLabel "CVDR"@nl ;
+  skos:topConceptOf tooikern:systeemarchitectuur .
+
+tooikern:c_77ca5135 a skos:Concept ;
+  dcterms:created "2019-05-17T16:27:23.360+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-17T16:29:33.611+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:definition "Bevat gegevens over de wijze waarop contact kan worden opgenomen met een organisatie of persoon."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "contactgegevens"@nl .
+
+tooikern:c_780eefbb a skos:Concept ;
+  dcterms:created "2019-01-18T16:17:31.404+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-23T13:01:10.507+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2e014c24 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gemeenschappelijke regeling"@nl ;
+  skos:related tooikern:c_a04c8796 .
+
+tooikern:c_788c65ad a skos:Concept ;
+  dcterms:created "2020-09-08T14:52:43"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:49:06"^^xsd:dateTime ;
+  skos:inScheme tooikern:publicatie ;
+  skos:prefLabel "bekendmaking"@nl ;
+  skos:topConceptOf tooikern:publicatie .
+
+tooikern:c_7ab92a02 a skos:Concept ;
+  dcterms:created "2019-11-21T17:08:46.968+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:22:17.019+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "document van burger"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_7ad2acee a skos:Concept ;
+  dcterms:created "2019-06-14T18:17:34.972+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-06-14T18:17:49.027+02:00"^^xsd:dateTime ;
+  skos:altLabel "SER"@nl ;
+  skos:broader tooikern:c_6c8603d6 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Sociaal-Economische Raad"@nl .
+
+tooikern:c_7c7b839f a skos:Concept ;
+  dcterms:created "2019-02-15T17:47:37.499+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:55:15.353+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_0b65df66 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "blog"@nl .
+
+tooikern:c_7e7d6677 a skos:Concept ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/uitwisselpakket_versieinformatie.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gecodeerde versieinformatie over de andere componenten in een uitwisselingspakket"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "versieinformatie"@nl ;
+  skos:scopeNote "Alleen voor gebruik in een STOP-XML Uitwisselingspakket"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_7eba29ad a skos:Concept ;
+  dcterms:created "2019-02-15T17:47:12.156+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:54:56.704+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "persbericht"@nl .
+
+tooikern:c_7f9a2e1c a skos:Concept ;
+  dcterms:created "2019-01-21T15:07:39.143+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T16:54:28.005+01:00"^^xsd:dateTime ;
+  skos:altLabel "KB"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "koninklijk besluit"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_7f9dffa7 a skos:Concept ;
+  dcterms:created "2019-05-17T16:33:05.737+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-10T16:03:25.386+01:00"^^xsd:dateTime ;
+  skos:altLabel "notulen"@nl ;
+  skos:definition "Ieder document dat een rol speelt op of ten behoeve van een vergadering."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "vergaderstuk"@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_8039ccaf a skos:Concept ;
+  dcterms:created "2019-01-17T15:00:22.441+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar ministerie"@nl .
+
+tooikern:c_810afbee a skos:Concept ;
+  dcterms:created "2019-02-05T15:07:30.042+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b9b318a5 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "landelijke eenheid"@nl .
+
+tooikern:c_816e508d a skos:Concept ;
+  dcterms:source "Artikel 3.1 Wet open overheid"@nl ;
+  shacl:order 1180 ;
+  skos:definition "Informatie die niet valt onder een van de verplichte informatiecategorieën van artikel 3.3 Woo, maar actief openbaar is gemaakt op grond van de algemene inspanningsverplichting van artikel 3.1 Woo "@nl ;
+  skos:example "beleidsdossier"@nl ;
+  skos:example "intern vergaderstuk"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "inspanningsverplichting art 3.1 Woo"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "inspanningsverplichting art 3.1 Woo"@nl .
+
+tooikern:c_8170d2d5 a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:betrokkenheid ;
+  skos:prefLabel "belanghebbende"@nl ;
+  skos:topConceptOf tooikern:betrokkenheid .
+
+tooikern:c_81c05ccd a skos:Concept ;
+  dcterms:created "2019-01-18T13:27:33.159+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-30T18:59:51.170+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_97fd6a12 ;
+  skos:definition "Intern verzelfstandigd in de uitvoering werkzaam dienstonderdeel van een ministerie dat een eigen sturingsmodel en financiële administratie heeft."@nl ;
+  skos:definition "jci1.3:c:BWBR0040286&paragraaf=1&artikel=1"^^xsd:anyURI ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "agentschap"@nl .
+
+tooikern:c_81cc2eb5 a skos:Concept ;
+  dcterms:created "2019-04-04T10:19:44.363+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:51:22"^^xsd:dateTime ;
+  skos:altLabel "Gmb"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Gemeenteblad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_8215ee66 a skos:Concept ;
+  dcterms:created "2019-10-11T15:13:29.115+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T15:14:41.114+02:00"^^xsd:dateTime ;
+  skos:definition "Een machtiging is de verklaring waarmee de bevoegdheid wordt verleend om in naam van de verlener van de machtiging een feitelijke handeling uit te voeren."@nl ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "machtiging"@nl ;
+  skos:topConceptOf tooikern:bevoegdheidsoverdracht .
+
+tooikern:c_8226285b a skos:Concept ;
+  skos:broader tooikern:c_5cbd74c8 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "voorbeschermingsregels omgevingsplan"@nl .
+
+tooikern:c_824c20ee a skos:Concept ;
+  dcterms:created "2019-03-18T15:18:54.050+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "buitenbehandelingstelling"@nl .
+
+tooikern:c_82c523bf a skos:Concept ;
+  dcterms:created "2019-01-17T13:52:12.601+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:25:51.024+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "adviescollege"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_840059b4 a skos:Concept ;
+  dcterms:created "2020-09-11T13:21:38"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/stop-regeling.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde tekst die bestaat uit juridische voorschriften van algemene strekking (regels) of beleidstekst"@nl ;
+  skos:editorialNote "STOP begrippenlijst biedt geen bruikbare definitie (https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_regeling.html)."@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "regeling"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_8428f5ae a skos:Concept ;
+  dcterms:created "2019-02-08T14:19:59.806+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T22:01:08"^^xsd:dateTime ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "processtap besluit"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_84a23404 a skos:Concept ;
+  dcterms:created "2020-01-20T17:34:31.617+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T16:58:31"^^xsd:dateTime ;
+  skos:broader tooikern:c_06ef9159 ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:editorialNote "De waterschapsverordening zal pas zijn intrede doen bij de inwerkingtreding van de Omgevingswet. https://www.uvw.nl/thema/wet-en-regelgeving/modelkeur/"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "waterschapsverordening"@nl .
+
+tooikern:c_852da199 a skos:Concept ;
+  dcterms:created "2020-09-14T15:48:12"^^xsd:dateTime ;
+  dcterms:modified "2021-02-08T08:37:45.685+01:00"^^xsd:dateTime ;
+  skos:altLabel "AB"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Afkondigingsblad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_86d0931f a skos:Concept ;
+  dcterms:created "2019-10-11T13:34:49.052+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:47:20.186+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a04c8796 ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar lichaam uit gemeenschappelijke regeling"@nl ;
+  skosxl:altLabel tooikern:xl_nl_8d4c5947 .
+
+tooikern:c_87ff6bdd a skos:Concept ;
+  dcterms:created "2019-02-08T11:13:15.519+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-08T14:41:25.239+01:00"^^xsd:dateTime ;
+  skos:altLabel "rechtsoordeel"@nl ;
+  skos:altLabel "wetsuitleg"@nl ;
+  skos:broader tooikern:c_25f6d91f ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:definition "Een bestuurlijk rechtsoordeel is alleen onder bepaalde omstandigheden als besluit te kenmerken. Namelijk als het oordeel over de toepasselijkheid van een wettelijk voorschrift zelfstandig en definitief is bedoeld, als op korte termijn geen appellabel besluit valt te verwachten waarin antwoord wordt gegeven op de vraag of er een besluit vereist is en of de betreffende activiteit is toegestaan, en als het het voor de belanghebbende onevenredig bezwarend is om een besluit af te wachten of uit te lokken. Zie onder meer ECLI:NL:RVS:2009:BJ1862."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "bestuurlijk rechtsoordeel"@nl .
+
+tooikern:c_88fb8563 a skos:Concept ;
+  dcterms:created "2019-01-17T13:57:05.808+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a568a309 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Eerste Kamer"@nl .
+
+tooikern:c_89625c86 a skos:Concept ;
+  dcterms:created "2020-09-11T13:21:06"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/stop_publicaties.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde bekendmaking, kennisgeving of mededeling van of over een besluit van een overheidsorganisatie in een officiëel publicatieblad"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "officiële publicatie"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_89ee6784 a skos:Concept ;
+  dcterms:source "Artikel 3.3, eerste lid, onder e, Wet open overheid"@nl ;
+  shacl:order 1050 ;
+  skos:definition "de bereikbaarheid van het bestuursorgaan en zijn organisatieonderdelen en de wijze waarop een verzoek om informatie kan worden ingediend"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "bereikbaarheidsgegevens"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "bereikbaarheidsgegevens"@nl .
+
+tooikern:c_8a13210a a skos:Concept ;
+  dcterms:created "2019-01-17T14:08:02.444+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_de78d2db ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Afdeling advisering"@nl .
+
+tooikern:c_8b92eab4 a skos:Concept ;
+  dcterms:created "2019-08-14T15:58:12.361+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:20:40.582+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:definition "Een rapport van de minister van Buitenlandse Zaken aan de minister voor Vreemdelingenzaken en Integratie, met informatie over de situatie in een land van herkomst van asielzoekers of over één individuele asielaanvraag, dat wordt gebruikt als informatiebron bij de beoordeling van asielverzoeken."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "ambtsbericht"@nl .
+
+tooikern:c_8bfd8014 a skos:Concept ;
+  dcterms:created "2019-05-03T15:36:33.067+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:40:42"^^xsd:dateTime ;
+  skos:inScheme tooikern:wegcategorie ;
+  skos:prefLabel "erftoegangsweg binnen de bebouwde kom"@nl ;
+  skos:topConceptOf tooikern:wegcategorie .
+
+tooikern:c_8c63a3eb a skos:Concept ;
+  skos:definition "kennisgeving van terinzagelegging ontwerp voorkeursbeslissing in de projectprocedure, in het voorbereidingsproces van een projectbesluit en een wijziging omgevingsplan voor project van publiek belang"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving terinzagelegging ontwerp voorkeursbeslissing"@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen terinzagelegging ontwerp voorkeursbeslissing" .
+
+tooikern:c_8c840238 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder a, Wet open overheid"@nl ;
+  shacl:order 1060 ;
+  skos:definition "bij de Kamers en de verenigde vergadering der Staten-Generaal, provinciale staten, gemeenteraden en algemene besturen van waterschappen ter behandeling ingekomen stukken, tenzij deze betrekking hebben op door de regering vertrouwelijk aan de Staten-Generaal verstrekte informatie of tenzij deze betrekking hebben op individuele gevallen"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "bij vertegenwoordigend orgaan ingekomen stuk"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "bij vertegenwoordigende organen ingekomen stukken"@nl .
+
+tooikern:c_8c913815 a skos:Concept ;
+  skos:definition "kennisgeving van het voornemen een besluit te nemen, o.a. bij een wijziging omgevingsplan en de projectprocedure"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving voorgenomen besluit"@nl ;
+  skos:scopeNote "Een kennisgeving voorgenomen besluit kan in de projectprocedure gecombineerd worden met de kennisgeving participatie."@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen voorgenomen besluit" .
+
+tooikern:c_8e1cbd0b a skos:Concept ;
+  dcterms:created "2019-05-03T15:56:36.663+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:05:12.623+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan regionaal samenwerkingsorgaan"@nl ;
+  skos:related tooikern:c_a04c8796 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_8ec8e5e7 a skos:Concept ;
+  dcterms:created "2019-11-21T17:16:27.491+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:24:12.886+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1cf18f83 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "aanvraag ex art. 4.1 Woo"@nl .
+
+tooikern:c_8ecf448e a skos:Concept ;
+  dcterms:created "2020-09-11T13:10:44"^^xsd:dateTime ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "besluitvormingsprocedure"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_8edd3cfb a skos:Concept ;
+  dcterms:created "2019-05-02T15:05:01.730+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:37:01"^^xsd:dateTime ;
+  skos:broader tooikern:c_8e1cbd0b ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "dagelijks bestuur"@nl .
+
+tooikern:c_8f5898e5 a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nota n.a.v. het nader verslag"@nl .
+
+tooikern:c_8f68c804 a skos:Concept ;
+  dcterms:created "2020-09-11T16:57:16"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "instructie"@nl .
+
+tooikern:c_8f6ef24c a skos:Concept ;
+  dcterms:created "2019-11-21T17:15:57.917+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:28:48.060+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_e9c95e6f ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "in wet benoemd type verzoek"@nl .
+
+tooikern:c_8fc2335c a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder f, Wet open overheid"@nl ;
+  shacl:order 1110 ;
+  skos:definition "convenanten"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "convenant"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "convenanten"@nl .
+
+tooikern:c_9023bfae a skos:Concept ;
+  dcterms:created "2019-05-03T16:20:39.565+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "functionaris"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_90b55269 a skos:Concept ;
+  dcterms:created "2019-02-01T11:41:38.808+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-02T17:11:31.437+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving zelfstandig bestuursorgaan"@nl .
+
+tooikern:c_9109f890 a skos:Concept ;
+  dcterms:created "2020-01-20T17:39:02.043+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1f1af729 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "provinciale verordening"@nl .
+
+tooikern:c_91fb5e42 a skos:Concept ;
+  dcterms:created "2019-01-18T11:32:13.383+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-12T12:59:36"^^xsd:dateTime ;
+  skos:broader tooikern:c_e5cd62ce ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "regering"@nl .
+
+tooikern:c_929d8850 a skos:Concept ;
+  dcterms:created "2019-02-08T14:20:28.642+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "verlening"@nl .
+
+tooikern:c_92e58f44 a skos:Concept ;
+  dcterms:created "2019-11-25T15:14:59.472+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:15:17.093+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "amendement"@nl .
+
+tooikern:c_93013a14 a skos:Concept ;
+  skos:definition "kennisgeving van voorontwerp (wijzigings-)besluit"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving voorontwerp"@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen voorontwerp" .
+
+tooikern:c_932b7730 a skos:Concept ;
+  dcterms:created "2020-09-08T22:02:21"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "publicatie"@nl .
+
+tooikern:c_9348cc20 a skos:Concept ;
+  dcterms:created "2019-05-03T15:20:07.128+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:42:25"^^xsd:dateTime ;
+  skos:inScheme tooikern:weggebruiker ;
+  skos:prefLabel "bestuurder van een motorrijwiel, scooter, personenauto of bestelauto"@nl ;
+  skos:topConceptOf tooikern:weggebruiker .
+
+tooikern:c_9376c730 a skos:Concept ;
+  dcterms:created "2019-02-08T11:10:36.594+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:27:29.949+01:00"^^xsd:dateTime ;
+  skos:altLabel "memo"@nl ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "beleidsnota"@nl .
+
+tooikern:c_93b0d113 a skos:Concept ;
+  dcterms:created "2019-01-31T16:37:27.804+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-15T17:04:21.921+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_465163c9 ;
+  skos:definition "Een besluit dat niet van algemene strekking is, met inbegrip van het afwijzen van een aanvraag daarvan."@nl ;
+  skos:definition "jci1.3:c:BWBR0005537&hoofdstuk=1&titeldeel=1.1&artikel=1:3"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beschikking"@nl .
+
+tooikern:c_95b65775 a skos:Concept ;
+  dcterms:created "2019-05-03T15:20:32.688+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:42:10"^^xsd:dateTime ;
+  skos:inScheme tooikern:weggebruiker ;
+  skos:prefLabel "bestuurder van een gelede vrachtwagen"@nl ;
+  skos:topConceptOf tooikern:weggebruiker .
+
+tooikern:c_964af97a a skos:Concept ;
+  dcterms:created "2019-01-21T15:08:08.083+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T12:39:11.770+01:00"^^xsd:dateTime ;
+  skos:altLabel "AMvB"@nl ;
+  skos:broader tooikern:c_545240d8 ;
+  skos:broader tooikern:c_7f9a2e1c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "algemene maatregel van bestuur"@nl .
+
+tooikern:c_9757fbcf a skos:Concept ;
+  dcterms:created "2020-09-11T16:59:43"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "reactieve interventie"@nl .
+
+tooikern:c_97acbec2 a skos:Concept ;
+  dcterms:created "2019-05-03T15:19:44.295+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:42:59"^^xsd:dateTime ;
+  skos:inScheme tooikern:weggebruiker ;
+  skos:prefLabel "fietser"@nl ;
+  skos:topConceptOf tooikern:weggebruiker .
+
+tooikern:c_97af63c4 a skos:Concept ;
+  dcterms:created "2019-10-11T15:14:51.736+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T15:30:23.215+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_46d35a42 ;
+  skos:definition "Het (bij wettelijk voorschrift) scheppen en toedelen van een publiekrechtelijke bevoegdheid. Geregeld, maar niet gedefinieerd in artikel 10:22 Awb."@nl ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "attributie"@nl .
+
+tooikern:c_97f44ea5 a skos:Concept ;
+  dcterms:created "2019-10-08T10:53:44.766+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "brochure"@nl .
+
+tooikern:c_97fd6a12 a skos:Concept ;
+  dcterms:created "2019-01-18T11:47:07.663+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:40:47.720+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_54d333b0 ;
+  skos:definition "Een ministerie is een onderdeel van Rijksoverheid waar, onder verantwoordelijkheid van een minister, beleid wordt voorbereid en uitgevoerd op een specifiek beleidsterrein"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "ministerie"@nl .
+
+tooikern:c_995d4fe9 a skos:Concept ;
+  skos:definition "ministeriële regeling"@nl ;
+  skos:editorialNote "Concept ten behoeve van de Kamerstukmodule (KSM). In de context van KSM wordt met regeling een ministeriële regeling bedoeld. Zie skos:exactMatch"@nl ;
+  skos:exactMatch tooikern:c_d2a6707c ;
+  skos:inScheme tooikern:plooiBijzondereDocumentsoorten ;
+  skos:prefLabel "regeling"@nl ;
+  skos:topConceptOf tooikern:plooiBijzondereDocumentsoorten .
+
+tooikern:c_99a836c7 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder e, Wet open overheid"@nl ;
+  shacl:order 1100 ;
+  skos:definition """adviezen:
+1. over de ontwerpen, bedoeld in het eerste lid, onderdeel c, van adviescolleges of -commissies alsmede van andere externe partijen indien die om advies zijn verzocht;
+2. over andere onderwerpen van adviescolleges of -commissies, alsmede de op dat advies betrekking hebbende adviesaanvraag, uitgezonderd adviezen die betrekking hebben op individuele gevallen;"""@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "advies"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "adviezen"@nl .
+
+tooikern:c_99d3e284 a skos:Concept ;
+  dcterms:created "2019-10-08T11:13:01.538+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "verantwoordingsrapport"@nl .
+
+tooikern:c_9b2d26fc a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "advies Raad van State"@nl .
+
+tooikern:c_9d315d95 a skos:Concept ;
+  dcterms:created "2019-02-08T14:20:37.298+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "intrekking"@nl .
+
+tooikern:c_9d4d78aa a skos:Concept ;
+  dcterms:created "2019-05-02T14:26:58.055+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:03:32.562+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan provincie"@nl ;
+  skos:related tooikern:c_358e6463 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_9d7f4a2e a skos:Concept ;
+  dcterms:created "2019-01-31T16:39:01.748+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_465163c9 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "besluit van algemene strekking"@nl .
+
+tooikern:c_9e676f10 a skos:Concept ;
+  dcterms:created "2019-01-21T15:11:57.983+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T12:38:39.061+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7f9a2e1c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "klein koninklijk besluit"@nl .
+
+tooikern:c_9ebc7716 a skos:Concept ;
+  dcterms:description "Deze procedurestap bevat naast de datum minimaal één link naar de van toepassing zijnde uitspraak voorlopige voorziening. Zijn er later een of meer andere uitspraken voorlopige voorzieningen, dan worden verwijzingen naar deze uitspraken toegevoegd aan deze stap. Vervalt of wordt een voorlopige voorziening opgeheven, dan wordt de link naar betreffende uitspraak weggehaald bij deze stap. "@nl ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005537&hoofdstuk=8&titeldeel=8.2&afdeling=8.2.6&artikel=8:72"^^xsd:anyURI ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:definition "De datum waarop de laatste voorlopige voorziening is opgeheven of vervallen"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "Uitspraak voorlopige voorziening"@nl .
+
+tooikern:c_9ebdee40 a skos:Concept ;
+  dcterms:created "2019-02-05T15:07:12.033+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b9b318a5 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "regionale eenheid"@nl .
+
+tooikern:c_9ecc0007 a skos:Concept ;
+  dcterms:created "2019-05-17T16:27:14.414+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-17T16:30:20.484+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:definition "Gegevens over hoe doelstellingen, werkwijze en interne structuur van een organisatie."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "organisatiegegevens"@nl .
+
+tooikern:c_a006e4d0 a skos:Concept ;
+  skos:definition "Een organisatie met publieke taak is een organisatie waaraan in wet- of regelgeving een publike taak is toebedeeld"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "organisatie met publieke taak"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_a04c8796 a skos:Concept ;
+  dcterms:created "2019-01-18T16:17:00.210+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-21T17:17:36.589+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_780eefbb ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "regionaal samenwerkingsorgaan"@nl ;
+  skos:related tooikern:c_780eefbb .
+
+tooikern:c_a06fcac7 a skos:Concept ;
+  dcterms:created "2020-09-08T22:10:18"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "einde beroepstermijn"@nl .
+
+tooikern:c_a0d2e0e2 a skos:Concept ;
+  dcterms:created "2019-12-05T17:35:00.671+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "delegatiebesluit"@nl .
+
+tooikern:c_a13976a4 a skos:Concept ;
+  dcterms:created "2019-05-02T15:02:39.617+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:07:14.976+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan waterschap"@nl ;
+  skos:related tooikern:c_b5326808 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_a17ef403 a skos:Concept ;
+  dcterms:created "2019-04-04T10:44:47.483+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:22:18.764+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1986dbe5 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Handelingen"@nl .
+
+tooikern:c_a1859fed a skos:Concept ;
+  skos:definition "uitsluitend tijdreisinformatie zoals op peildatum bekend was is aanwezig"@nl ;
+  skos:inScheme tooikern:tijdreis ;
+  skos:prefLabel "ex tunc"@nl ;
+  skos:scopeNote "Informatie die na peildatum bekend is geworden ontbreekt. "@nl ;
+  skos:topConceptOf tooikern:tijdreis .
+
+tooikern:c_a1dae55d a skos:Concept ;
+  dcterms:created "2019-11-25T15:32:11.941+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:34:30.013+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:definition "Overzicht van aanstaande en/of openstaande onderwerpen die moeten worden besproken en/of uitgevoerd binnen een bepaalde termijn."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "termijnagenda"@nl .
+
+tooikern:c_a32b4010 a skos:Concept ;
+  dcterms:created "2019-01-21T15:06:29.490+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_5b0f318a ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "verklaring"@nl .
+
+tooikern:c_a363934d a skos:Concept ;
+  dcterms:created "2019-01-18T16:21:52.369+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-18T16:22:23.847+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:broader tooikern:c_e2605d28 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "bijzonder college"@nl .
+
+tooikern:c_a40458df a skos:Concept ;
+  dcterms:created "2019-05-17T17:22:40.878+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7051a61f ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "adviesaanvraag"@nl .
+
+tooikern:c_a5295ba1 a skos:Concept ;
+  dcterms:created "2019-02-08T15:08:27.883+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "bekendmaking"@nl .
+
+tooikern:c_a55b7649 a skos:Concept ;
+  dcterms:created "2019-02-08T14:47:17.082+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:04:17.816+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1c7656ac ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beschikking tot opleggen last onder bestuursdwang"@nl .
+
+tooikern:c_a568a309 a skos:Concept ;
+  dcterms:created "2019-01-17T13:56:46.768+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-18T10:57:28.616+01:00"^^xsd:dateTime ;
+  skos:altLabel "parlement"@nl ;
+  skos:altLabel "volksvertegenwoordiging"@nl ;
+  skos:broader tooikern:c_29b489f7 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Staten-Generaal"@nl .
+
+tooikern:c_a6a3d8b a skos:Concept ;
+  rdfs:label "artikel inzake wijzigingen"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=6&paragraaf=6.1&aanwijzing=6.5"^^xsd:anyURI ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=6&paragraaf=6.2&aanwijzing=6.15"^^xsd:anyURI ;
+  skos:definition "Een artikel dat wijzigingen aan regelgeving vastlegt."@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake wijzigingen"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_a6f44748 a skos:Concept ;
+  dcterms:created "2019-02-08T11:18:39.853+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T15:17:01.763+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "jaarplan"@nl .
+
+tooikern:c_a70e5d5a a skos:Concept ;
+  dcterms:created "2019-02-08T14:20:33.579+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "verlenging"@nl .
+
+tooikern:c_a870c43d a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder l, en artikel 3.3a, derde lid, Wet open overheid"@nl ;
+  shacl:order 1170 ;
+  skos:definition "schriftelijke oordelen in klachtprocedures als bedoeld in titel 9.1 van de Algemene wet bestuursrecht"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "klachtoordeel"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "klachtoordelen"@nl .
+
+tooikern:c_a97ecc72 a skos:Concept ;
+  skos:altLabel "Decentrale Regelgeving en Officiële Publicaties"@nl ;
+  skos:inScheme tooikern:systeemarchitectuur ;
+  skos:prefLabel "DROP"@nl ;
+  skos:topConceptOf tooikern:systeemarchitectuur .
+
+tooikern:c_aaa42b72 a skos:Concept ;
+  dcterms:created "2019-02-08T14:41:01.269+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3c2f9b9c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "informatieverstrekking"@nl .
+
+tooikern:c_aab6bfc7 a skos:Concept ;
+  dcterms:source "Artikel 3.3, eerste lid, onder b, Wet open overheid"@nl ;
+  shacl:order 1020 ;
+  skos:definition "overige besluiten van algemene strekking"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "overig besluit van algemene strekking"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "overige besluiten van algemene strekking"@nl .
+
+tooikern:c_ab4cf250 a skos:Concept ;
+  dcterms:created "2019-06-14T18:15:29.077+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_0cd62ed2 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "openbaar lichaam voor beroep en bedrijf"@nl .
+
+tooikern:c_ab70202d a skos:Concept ;
+  dcterms:created "2020-09-08T14:17:35"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "burgemeester"@nl .
+
+tooikern:c_ab9964dd a skos:Concept ;
+  dcterms:created "2019-05-03T16:21:03.280+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9023bfae ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gedelegeerde functionaris"@nl .
+
+tooikern:c_ab9e91fe a skos:Concept ;
+  dcterms:created "2019-05-20T19:01:05.613+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-12-05T17:40:22.569+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "in specifieke wet genoemd besluit"@nl ;
+  skos:topConceptOf tooikern:publiekrechtelijkeHandeling .
+
+tooikern:c_ac2ec343 a skos:Concept ;
+  dcterms:created "2019-01-17T14:42:37.573+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:08:22.233+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_43418c0b ;
+  skos:definition "Organisatie die krachtens de Wet op de rechterlijke organisatie is belast met taken de rechtspraak betreffende, maar niet noodzakelijkerwijs (alleen) als rechtsprekende instantie."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechterlijke organisatie"@nl .
+
+tooikern:c_ac703d4b a skos:Concept ;
+  dcterms:created "2019-01-31T16:40:30.628+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-12-05T16:53:53.746+01:00"^^xsd:dateTime ;
+  skos:altLabel "CBAS"@nl ;
+  skos:altLabel "concrete norm"@nl ;
+  skos:altLabel "concretiserend besluit van algemene strekking"@nl ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:definition "Een besluit in de zin van artikel 1:3 Awb die het toepassingsgebruik van een algemeen verbindend voorschrift naar tijd, plaats en/of object concretiseert."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "concretiserend besluit"@nl .
+
+tooikern:c_ac823dd a skos:Concept ;
+  rdfs:label "artikel inzake overgangsrecht"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:modified "2025-06-19T12:51:51"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=5&paragraaf=5.1&aanwijzing=5.1"^^xsd:anyURI ;
+  skos:definition "Een artikel dat overgangsrecht beschrijft."@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake overgangsrecht"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_ac8e9ef a skos:Concept ;
+  rdfs:label "artikel inzake intrekking"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=3&paragraaf=3.5&aanwijzing=3.55"^^xsd:anyURI ;
+  skos:definition "Een artikel dat de intrekking van regelgeving vastlegt"@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake intrekking"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_acb44d77 a skos:Concept ;
+  dcterms:created "2019-02-08T11:26:46.650+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:34:06.558+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "benoemingsbeschikking"@nl .
+
+tooikern:c_ad6e3303 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:17.233+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "staatsraad"@nl .
+
+tooikern:c_ae03de2f a skos:Concept ;
+  dcterms:created "2019-02-05T15:07:44.219+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b9b318a5 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "ondersteunende dienst"@nl .
+
+tooikern:c_aebfec50 a skos:Concept ;
+  dcterms:created "2019-02-08T11:24:30.201+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:33:38.582+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "subsidiebeschikking"@nl .
+
+tooikern:c_af701731 a skos:Concept ;
+  dcterms:created "2019-02-12T11:39:15.688+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "weigering"@nl .
+
+tooikern:c_af782b32 a skos:Concept ;
+  skos:definition "officiële publicatie van correcties van de bekendgemaakte juridische inhoud van het besluit, zoals correcties van de tekst of van de informatieobjecten"@nl ;
+  skos:inScheme tooikern:soortJuridischeBronpublicatie ;
+  skos:prefLabel "rectificatie"@nl ;
+  skos:scopeNote "bron: https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_rectificatie.html"@nl ;
+  skos:topConceptOf tooikern:soortJuridischeBronpublicatie .
+
+tooikern:c_b0c5b422 a skos:Concept ;
+  dcterms:created "2019-01-21T15:06:17.441+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_5b0f318a ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "aanbeveling"@nl .
+
+tooikern:c_b190325d a skos:Concept ;
+  dcterms:created "2019-01-21T15:06:58.707+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-17T07:48:24"^^xsd:dateTime ;
+  skos:altLabel "formele wet"@nl ;
+  skos:altLabel "wet in formele zin"@nl ;
+  skos:broader tooikern:c_545240d8 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "wet"@nl .
+
+tooikern:c_b1b7d4bf a skos:Concept ;
+  dcterms:created "2019-01-21T15:58:28.564+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:35:11.495+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3cf43d73 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "regelgeving Koninkrijk"@nl .
+
+tooikern:c_b27107fd a skos:Concept ;
+  dcterms:created "2019-02-15T17:49:28.188+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:57:04.634+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "website"@nl .
+
+tooikern:c_b3179555 a skos:Concept ;
+  dcterms:created "2019-04-04T10:19:36.883+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:53:19"^^xsd:dateTime ;
+  skos:altLabel "Trb"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Tractatenblad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_b399a15e a skos:Concept ;
+  dcterms:created "2019-11-21T17:09:05.854+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T13:53:40.418+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_e9c95e6f ;
+  skos:definition "Een verzoek van een belanghebbende aan de overheid om een besluit te nemen. jci1.3:c:BWBR0005537&hoofdstuk=1&titeldeel=1.1&artikel=1:3&lid=3"@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "aanvraag"@nl .
+
+tooikern:c_b3a6a7fc a skos:Concept ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "kaart"@nl .
+
+tooikern:c_b4470cdd a skos:Concept ;
+  dcterms:created "2019-01-17T14:12:47.122+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:36:58.952+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:definition "Een Caribisch openbaar lichaam is een territoriaal openbaar lichaam in het Caribische deel van Nederland"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Caribisch openbaar lichaam"@nl .
+
+tooikern:c_b4625425 a skos:Concept ;
+  dcterms:created "2019-05-02T15:04:43.631+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:37:08"^^xsd:dateTime ;
+  skos:broader tooikern:c_8e1cbd0b ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "algemeen bestuur"@nl .
+
+tooikern:c_b5326808 a skos:Concept ;
+  dcterms:created "2019-01-17T14:12:34.061+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-03-01T13:50:29.093+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_d6bedd74 ;
+  skos:definition "Een waterschap is een territoriaal openbaar lichaam dat uitsluitend bevoegd is met betrekking tot de waterhuishouding"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "waterschap"@nl .
+
+tooikern:c_b6dcb53c a skos:Concept ;
+  dcterms:created "2019-05-03T10:45:44.637+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:09:32.457+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_86d0931f ;
+  skos:historyNote "Per 1 januari 2015 afgeschaft"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "plusregio"@nl .
+
+tooikern:c_b6dd5e95 a skos:Concept ;
+  dcterms:created "2019-05-03T15:36:59.848+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:41:15"^^xsd:dateTime ;
+  skos:inScheme tooikern:wegcategorie ;
+  skos:prefLabel "gebiedsontsluitingsweg binnen de bebouwde kom"@nl ;
+  skos:topConceptOf tooikern:wegcategorie .
+
+tooikern:c_b982534e a skos:Concept ;
+  dcterms:created "2019-05-20T18:57:39.757+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_534c040a ;
+  skos:inScheme tooikern:geschilbeslechting ;
+  skos:prefLabel "klacht"@nl .
+
+tooikern:c_b9b318a5 a skos:Concept ;
+  dcterms:created "2019-02-05T15:03:27.294+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-05T15:04:46.676+01:00"^^xsd:dateTime ;
+  skos:altLabel "politie"@nl ;
+  skos:definition "Met ingang van de Politiewet 2012 is er één landelijk politiekorps, waar alle andere onderdelen en eenheden onder vallen."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "landelijk politiekorps"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_ba9b96e8 a skos:Concept ;
+  skos:definition "mededeling in het kader van een beroepsprocedure waarbij de rechter het beroep definitief gegrond heeft verklaard en het besluit in zijn geheel heeft vernietigd"@nl ;
+  skos:inScheme tooikern:soortMededeling ;
+  skos:prefLabel "mededeling uitspraak rechter, gehele vernietiging besluit"@nl ;
+  skos:scopeNote "Het beroep is gegrond en het besluit wordt geheel vernietigd. Dit houdt in dat het beroepsorgaan het besluit ongeldig verklaart. Het besluit heeft juridisch dan nooit bestaan. Het bevoegd gezag dat bronhouder is, moet de geconsolideerde regelgeving dan naar aanleiding van de uitspraak aanpassen. Ook moet het BG een mededeling (volgens https://standaarden.overheid.nl/stop/doc/begrippenlijst_mededeling) publiceren over de uitspraak. Zie https://standaarden.overheid.nl/stop/doc/besluitproces_rechterlijkemacht_scenarios.html ."@nl ;
+  skos:topConceptOf tooikern:soortMededeling ;
+  tooiont:prefLabelVoorGroepen "mededeling uitspraak rechter, gehele vernietiging besluit"@nl .
+
+tooikern:c_bbb05295 a skos:Concept ;
+  dcterms:created "2019-01-17T14:49:22.245+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:05:53.261+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:broader tooikern:c_cf8179dc ;
+  skos:broader tooikern:c_e2605d28 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gerechtshof"@nl .
+
+tooikern:c_bbf20ffb a skos:Concept ;
+  dcterms:created "2019-01-17T14:09:52.872+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_29b489f7 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Nationale Ombudsman"@nl .
+
+tooikern:c_bcaddc61 a skos:Concept ;
+  dcterms:created "2019-05-20T19:04:40.109+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-21T17:12:29.712+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_4f50ca9c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beslissing op verzoek art. 4.1 Woo"@nl .
+
+tooikern:c_bcfb7b4e a skos:Concept ;
+  dcterms:created "2019-01-18T11:38:41.121+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-12T12:57:39"^^xsd:dateTime ;
+  skos:broader tooikern:c_e5cd62ce ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "minister"@nl .
+
+tooikern:c_bdc265d5 a skos:Concept ;
+  dcterms:created "2019-04-04T10:18:30.645+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:51:47"^^xsd:dateTime ;
+  skos:altLabel "Prb"@nl ;
+  skos:hiddenLabel "Provincieblad"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Provinciaal blad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_be169345 a skos:Concept ;
+  dcterms:created "2020-09-11T13:12:09"^^xsd:dateTime ;
+  skos:broader tooikern:c_8ecf448e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "definitiefbesluitprocedure"@nl .
+
+tooikern:c_bee85371 a skos:Concept ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nota n.a.v. het verslag"@nl .
+
+tooikern:c_bf0f9c95 a skos:Concept ;
+  dcterms:created "2019-04-04T10:45:13.043+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:23:26.716+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_056a75e1 ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "motie"@nl .
+
+tooikern:c_bf596767 a skos:Concept ;
+  dcterms:created "2019-05-03T10:38:41.509+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:44:36.004+02:00"^^xsd:dateTime ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_49ea8180 ;
+  skos:historyNote "Afgeschaft: De Wet van 7 februari 2013 tot wijziging van de Gemeentewet en enige andere wetten in verband met het afschaffen van de bevoegdheid van gemeentebesturen om deelgemeenten in te stellen is op 19 maart 2014 in werking getreden."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "deelgemeente"@nl .
+
+tooikern:c_bfd27dfb a skos:Concept ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/inspraak_en_vaststelling"^^xsd:anyURI ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beperking vindbaarheid"@nl ;
+  skos:scopeNote "Een bestuursorgaan moet de vindbaarheid van niet langer relevante (initiële) ontwerpbesluiten kunnen beïnvloeden zodat portalen op basis hiervan de juiste actuele ontwerpbesluiten kunnen tonen."@nl .
+
+tooikern:c_c1956ef0 a skos:Concept ;
+  dcterms:created "2019-02-12T11:31:04.726+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-15T13:31:49.440+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "aanwijzingsbeschikking"@nl .
+
+tooikern:c_c2052ba5 a skos:Concept ;
+  dcterms:created "2019-05-03T15:13:42.287+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_dc3fe3ef ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nota van wijziging"@nl .
+
+tooikern:c_c205bbe5 a skos:Concept ;
+  dcterms:created "2019-02-15T17:53:07.387+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "juridisch beroepsbeoefenaar"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_c2f56984 a skos:Concept ;
+  dcterms:created "2019-02-15T17:48:44.998+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:54:32.680+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_75007d14 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "nieuwsbericht"@nl .
+
+tooikern:c_c305f582 a skos:Concept ;
+  dcterms:created "2019-01-17T14:09:10.220+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T14:55:57.105+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_de78d2db ;
+  skos:broader tooikern:c_e2605d28 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Afdeling bestuursrechtspraak"@nl .
+
+tooikern:c_c30d04d4 a skos:Concept ;
+  dcterms:created "2020-09-11T16:56:34"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "omgevingsverordening"@nl .
+
+tooikern:c_c40f910b a skos:Concept ;
+  dcterms:created "2019-02-15T17:07:50.691+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-01-20T17:36:39.425+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_06ef9159 ;
+  skos:definition "Een verordening met regels die een waterschap hanteert bij de bescherming van waterkeringen, watergangen en bijbehorende kunstwerken."@nl ;
+  skos:editorialNote "Bij de inwerkingtreding van de Omgevingswet zal de keur worden vervangen door de waterschapsverordening. Zie https://www.uvw.nl/thema/wet-en-regelgeving/modelkeur/"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "keur"@nl .
+
+tooikern:c_c4ce01f3 a skos:Concept ;
+  skos:definition "uitsluitend toestanden die op zichtdatum bekend zijn als geldend zijn aanwezig"@nl ;
+  skos:inScheme tooikern:tijdreis ;
+  skos:prefLabel "actueel"@nl ;
+  skos:scopeNote "De toestanden hebben als enige tijd-as juridisch werkend vanaf. Er is geen historische informatie, over niet (meer) geldende toestanden."@nl ;
+  skos:topConceptOf tooikern:tijdreis .
+
+tooikern:c_c5137aec a skos:Concept ;
+  dcterms:created "2019-01-17T13:57:25.633+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a568a309 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Verenigde Vergadering"@nl .
+
+tooikern:c_c6cd1213 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder g, Wet open overheid"@nl ;
+  shacl:order 1120 ;
+  skos:definition "jaarplannen en jaarverslagen van bestuursorganen inzake de voorgenomen uitvoering van de taak of de verantwoording van die uitvoering"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "jaarplan of jaarverslag"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "jaarplannen en jaarverslagen"@nl .
+
+tooikern:c_c6d95aea a skos:Concept ;
+  dcterms:created "2019-01-17T14:49:15.617+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:05:36.602+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:broader tooikern:c_cf8179dc ;
+  skos:broader tooikern:c_e2605d28 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechtbank"@nl .
+
+tooikern:c_c74a0781 a skos:Concept ;
+  dcterms:created "2020-09-11T16:57:01"^^xsd:dateTime ;
+  skos:broader tooikern:c_507f38aa ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "projectbesluit"@nl .
+
+tooikern:c_c76862ab a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder b, Wet open overheid"@nl ;
+  shacl:order 1070 ;
+  skos:definition "vergaderstukken en verslagen van de Kamers en de verenigde vergadering der Staten-Generaal en hun commissies, tenzij deze betrekking hebben op door de regering vertrouwelijk aan de Staten-Generaal verstrekte informatie"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "vergaderstuk Staten-Generaal"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "vergaderstukken Staten-Generaal"@nl .
+
+tooikern:c_c77c86e0 a skos:Concept ;
+  skos:inScheme tooikern:redenIntrekkingOfVervanging ;
+  skos:prefLabel "correctie procedurele fout"@nl ;
+  skos:topConceptOf tooikern:redenIntrekkingOfVervanging .
+
+tooikern:c_c7eb524c a skos:Concept ;
+  dcterms:created "2019-05-23T11:27:07.460+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-23T13:01:54.486+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2e014c24 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "grensoverschrijdende regionale samenwerkingsorganisatie"@nl .
+
+tooikern:c_c97b118a a skos:Concept ;
+  dcterms:created "2019-04-04T10:19:51.745+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:53:50"^^xsd:dateTime ;
+  skos:altLabel "Wsb"@nl ;
+  skos:inScheme tooikern:publicatieblad ;
+  skos:prefLabel "Waterschapsblad"@nl ;
+  skos:topConceptOf tooikern:publicatieblad .
+
+tooikern:c_ca853f06 a skos:Concept ;
+  dcterms:created "2019-01-17T14:43:53.641+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:06:19.991+01:00"^^xsd:dateTime ;
+  skos:altLabel "Hoge Raad der Nederlanden"@nl ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:broader tooikern:c_cf8179dc ;
+  skos:broader tooikern:c_e2605d28 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Hoge Raad"@nl .
+
+tooikern:c_cb42e80a a skos:Concept ;
+  dcterms:created "2019-01-30T19:05:22.440+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-30T19:08:08.957+01:00"^^xsd:dateTime ;
+  skos:altLabel "inspectie"@nl ;
+  skos:broader tooikern:c_97fd6a12 ;
+  skos:example "Onderwijsinspectie"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "inspectiedienst"@nl .
+
+tooikern:c_cb739009 a skos:Concept ;
+  dcterms:created "2020-09-11T13:21:27"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/begrippenlijst_rectificatie.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde correcties van de gepubliceerde juridische inhoud van het besluit"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "rectificatie"@nl ;
+  skos:scopeNote "Een rectificatie wordt gebruikt als de bekendmaking afwijkt van het vastgestelde besluit."@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_cccba364 a skos:Concept ;
+  dcterms:created "2019-11-25T16:26:18.534+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_3300f29a ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "voortgangsrapport"@nl .
+
+tooikern:c_cce464b6 a skos:Concept ;
+  dcterms:created "2019-10-11T15:13:17.170+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T15:14:12.517+02:00"^^xsd:dateTime ;
+  skos:definition "Een volmacht is een meestal schriftelijke verklaring, waarbij iemand een ander de bevoegdheid geeft om namens hem of haar bepaalde (rechts)handelingen uit te voeren. Het verlenen van een volmacht kan uitdrukkelijk of stilzwijgend geschieden. "@nl ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "volmacht"@nl ;
+  skos:topConceptOf tooikern:bevoegdheidsoverdracht .
+
+tooikern:c_cd480cce a skos:Concept ;
+  skos:broader tooikern:c_c74a0781 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "omgevingsplanregels uit projectbesluit"@nl .
+
+tooikern:c_cdcbbc03 a skos:Concept ;
+  dcterms:created "2019-05-03T15:43:17.309+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:39:55"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "tijdelijke verkeersmaatregel van kortere duur dan 4 maanden"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_cdecd20a a skos:Concept ;
+  dcterms:created "2019-05-03T15:42:35.679+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:38:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "aanbrengen van voorzieningen ter regeling van het verkeer (fysieke maatregel)"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_ce9726ad a skos:Concept ;
+  dcterms:created "2019-05-03T10:48:29.484+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:38:15.296+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_34ee5ac0 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuurscollege"@nl .
+
+tooikern:c_cf268088 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder h, Wet open overheid"@nl ;
+  shacl:order 1130 ;
+  skos:definition "verplichtingen tot verstrekking van subsidies, anders dan met een beschikking (NB - alleen bij Min. BZ)"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "subsidieverplichting anders dan met beschikking"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "subsidieverplichtingen anders dan met beschikking"@nl .
+
+tooikern:c_cf8179dc a skos:Concept ;
+  dcterms:created "2019-01-17T14:42:29.251+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T14:48:55.913+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_43418c0b ;
+  skos:definition "De rechterlijke macht als gedefinieerd in art. 2 Wet RO"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechterlijke macht"@nl .
+
+tooikern:c_cfd928d3 a skos:Concept ;
+  dcterms:created "2019-01-21T15:06:51.790+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:41:16.134+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_545240d8 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "Grondwet"@nl .
+
+tooikern:c_d2a6707c a skos:Concept ;
+  dcterms:created "2019-01-21T15:13:31.389+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T11:41:33.065+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_545240d8 ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "ministeriële regeling"@nl .
+
+tooikern:c_d32c5718 a skos:Concept, dcat:Role ;
+  skos:inScheme tooikern:betrokkenheid ;
+  skos:prefLabel "geadresseerde"@nl ;
+  skos:topConceptOf tooikern:betrokkenheid .
+
+tooikern:c_d3f29f01 a skos:Concept ;
+  skos:inScheme tooikern:conceptScheme_74dec40e ;
+  skos:prefLabel "organisatiecontact"@nl ;
+  skos:topConceptOf tooikern:conceptScheme_74dec40e .
+
+tooikern:c_d4a4792f a skos:Concept ;
+  dcterms:created "2019-05-17T17:17:40.189+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-10T16:08:29.923+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7f9dffa7 ;
+  skos:definition "Een document dat de op een vergadering genomen besluit (kort) samenvat. Soms fysiek onderdeel van het vergaderverslag."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "besluitenlijst"@nl .
+
+tooikern:c_d506b718 a skos:Concept ;
+  dcterms:created "2019-05-17T17:22:31.652+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7051a61f ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "advies"@nl .
+
+tooikern:c_d66e60bd a skos:Concept ;
+  skos:inScheme tooikern:conceptScheme_74dec40e ;
+  skos:prefLabel "postadres"@nl ;
+  skos:topConceptOf tooikern:conceptScheme_74dec40e .
+
+tooikern:c_d67741 a skos:Concept ;
+  rdfs:label "artikel inzake evaluatie"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0005730&hoofdstuk=3&paragraaf=3.5&aanwijzing=3.55"^^xsd:anyURI ;
+  skos:definition "Een artikel dat vastlegt hoe de effecten van de regeling geëvalueerd gaat worden"@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "artikel inzake evaluatie"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_d6bedd74 a skos:Concept ;
+  dcterms:created "2019-01-17T14:10:44.546+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_0cd62ed2 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "regionaal openbaar lichaam"@nl .
+
+tooikern:c_d6ce86f5 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:26.303+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "raadsheer"@nl .
+
+tooikern:c_d84c5824 a skos:Concept ;
+  dcterms:created "2019-01-18T13:27:47.466+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_97fd6a12 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "secretaris-generaal"@nl .
+
+tooikern:c_d943ca24 a skos:Concept ;
+  dcterms:created "2019-11-21T17:10:35.241+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b399a15e ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "ontheffingsaanvraag"@nl .
+
+tooikern:c_d990e949 a skos:Concept ;
+  dcterms:created "2019-05-03T15:41:54.044+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:39:26"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "plaatsing of verwijdering van verkeerstekens"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_d9a4d49b a skos:Concept ;
+  dcterms:created "2019-01-17T13:57:12.747+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_a568a309 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Tweede Kamer"@nl .
+
+tooikern:c_dad20b4a a skos:Concept ;
+  dcterms:created "2020-09-08T22:21:17"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "begin inzagetermijn"@nl .
+
+tooikern:c_dad2a6ed a skos:Concept ;
+  dcterms:created "2019-11-21T17:10:23.941+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_b399a15e ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "vergunningaanvraag"@nl .
+
+tooikern:c_daf1c90b a skos:Concept ;
+  owl:deprecated true ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "opheffing schorsing"@nl .
+
+tooikern:c_db4862c3 a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder c, Wet open overheid"@nl ;
+  shacl:order 1080 ;
+  skos:definition "vergaderstukken en verslagen van provinciale staten, gemeenteraden en algemene besturen van waterschappen, algemene besturen van openbare lichamen, besturen van bedrijfsvoeringsorganisaties en gemeenschappelijke organen als bedoeld in de Wet gemeenschappelijke regelingen en hun commissies"@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "vergaderstuk decentrale overheid"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "vergaderstukken decentrale overheden"@nl .
+
+tooikern:c_dbe438f7 a skos:Concept ;
+  dcterms:created "2019-08-14T16:09:24.103+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-14T16:15:17.614+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8b92eab4 ;
+  skos:definition "Een rapport van de minister van Buitenlandse Zaken aan de minister voor Vreemdelingenzaken en Integratie, met informatie over één individuele asielaanvraag. "@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "individueel ambtsbericht"@nl .
+
+tooikern:c_dbf79787 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:02.207+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "statenlid"@nl .
+
+tooikern:c_dc3fe3ef a skos:Concept ;
+  dcterms:created "2019-05-03T15:12:56.602+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:14:42.614+01:00"^^xsd:dateTime ;
+  skos:definition "Document dat een rol speelt in de standkoming van wetgeving in materiële zin, dus inclusief decentrale en lagere regelgeving. "@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "wetgevingsketendocument "@nl ;
+  skos:topConceptOf tooikern:overheidsinformatie .
+
+tooikern:c_dc6ba2eb a skos:Concept ;
+  dcterms:created "2019-04-04T10:45:05.955+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:24:04.648+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1986dbe5 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "Kamervraag"@nl .
+
+tooikern:c_dd30e7ad a skos:Concept ;
+  dcterms:created "2019-02-12T13:05:56.742+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-02-12T13:07:17.212+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:example "Aanwijzingen voor de regelgeving"@nl ;
+  skos:example "Gedragscode Integriteit Rijk 2016"@nl ;
+  skos:example "Reglement van orde voor de ministerraad"@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "interne regel"@nl .
+
+tooikern:c_dd451365 a skos:Concept ;
+  dcterms:created "2019-11-21T17:16:36.614+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-02-27T16:30:40.018+01:00"^^xsd:dateTime ;
+  skos:altLabel "Wob-verzoek"@nl ;
+  skos:broader tooikern:c_1cf18f83 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel " aanvraag ex art. 3 Wob"@nl .
+
+tooikern:c_de27ae7a a skos:Concept ;
+  dcterms:created "2019-05-17T16:35:18.235+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-10T17:31:29.980+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7f9dffa7 ;
+  skos:definition "Een vergaderstuk afkomstig van een actor die niet tot het vergaderende gremium behoort, maar dat op diens verzoek, of op eigen initiatief van het vergaderende gremium op de vergaderagenda is geplaatst, over het algemeen alleen ter informatie."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "ingekomen stuk"@nl .
+
+tooikern:c_de78d2db a skos:Concept ;
+  dcterms:created "2019-01-17T14:05:20.804+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_29b489f7 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Raad van State"@nl .
+
+tooikern:c_df0cc565 a skos:Concept ;
+  dcterms:source "https://wetten.overheid.nl/jci1.3:c:BWBR0001947&paragraaf=1&artikel=2"^^xsd:anyURI ;
+  skos:definition "De organisatie is overheidswerkgever in het kader van de Ambtenarenwet 2017. "@nl ;
+  skos:inScheme tooikern:wettelijkeclassificatie ;
+  skos:prefLabel "overheidswerkgever"@nl ;
+  skos:topConceptOf tooikern:wettelijkeclassificatie .
+
+tooikern:c_df1efed4 a skos:Concept ;
+  dcterms:created "2019-02-15T17:47:41.495+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:55:37.767+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_0b65df66 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "tweet"@nl .
+
+tooikern:c_df2cb56e a skos:Concept ;
+  dcterms:created "2019-11-25T15:35:21.375+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T15:36:56.458+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7ab92a02 ;
+  skos:definition "Reactie die een belanghebbende aan het bevoegd gezag kan sturen als reactie op een ontwerp-besluit."@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "zienswijze"@nl .
+
+tooikern:c_dfa0ff1f a skos:Concept ;
+  dcterms:created "2019-08-14T16:21:23.616+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_10eb451d ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "begroting"@nl .
+
+tooikern:c_dfcee535 a skos:Concept ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "ontvangst"@nl .
+
+tooikern:c_e0865e4d a skos:Concept ;
+  dcterms:created "2019-11-25T18:00:06.753+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_4f50ca9c ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beslissing op verzoek art. 3 Wob"@nl .
+
+tooikern:c_e09e0233 a skos:Concept ;
+  dcterms:created "2019-01-17T13:53:10.752+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T15:26:49.982+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_f8c225c5 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "koninklijk huis"@nl .
+
+tooikern:c_e09fe246 a skos:Concept ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "start beroepsprocedure"@nl .
+
+tooikern:c_e0dfdff9 a skos:Concept ;
+  dcterms:created "2019-01-31T16:39:23.119+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9d7f4a2e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "algemeen verbindend voorschrift"@nl .
+
+tooikern:c_e1ec050e a skos:Concept ;
+  dcterms:created "2020-09-08T22:01:59"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "ondertekening"@nl .
+
+tooikern:c_e24d39f6 a skos:Concept ;
+  dcterms:created "2019-01-18T11:29:59.844+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:16:47"^^xsd:dateTime ;
+  skos:altLabel "commissaris van de Koningin"@nl ;
+  skos:broader tooikern:c_9d4d78aa ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "commissaris van de Koning"@nl .
+
+tooikern:c_e2605d28 a skos:Concept ;
+  dcterms:created "2019-01-17T14:42:46.966+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-17T14:54:02.781+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_43418c0b ;
+  skos:definition "rechterlijke instantie krachtens de wet belast met het beslissen van geschillen"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rechtsprekende instantie"@nl .
+
+tooikern:c_e28b9895 a skos:Concept ;
+  dcterms:created "2019-05-02T15:08:36.109+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-02T15:09:26.403+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_e5cd62ce ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "officier van justitie"@nl ;
+  skos:scopeNote "De officier van justitie is alleen een bestuursorgaan bij Mulderfeiten"@nl .
+
+tooikern:c_e41573cb a skos:Concept ;
+  skos:definition "kennisgeving i.h.k.v. een procedure voor een definitief besluit waartegen geen bezwaar of beroep openstaat, waar op de zaak betrekking hebbende stukken bij horen die ter inzage gelegd moeten worden"@nl ;
+  skos:inScheme tooikern:soortKennisgeving ;
+  skos:prefLabel "kennisgeving terinzagelegging op de zaak betrekking hebbende stukken"@nl ;
+  skos:scopeNote "Een kennisgeving terinzagelegging op de zaak betrekking hebbende stukken kan zich o.a. voordoen bij omgevingsverordening, waterschapsverordening, programma en voorkeursbeslissing."@nl ;
+  skos:topConceptOf tooikern:soortKennisgeving ;
+  tooiont:prefLabelVoorGroepen "kennisgevingen terinzagelegging op de zaak betrekking hebbende stukken" .
+
+tooikern:c_e4586ec4 a skos:Concept ;
+  dcterms:created "2019-11-21T17:17:09.224+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:24:41.532+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8f6ef24c ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "verzoek Wet hergebruik van overheidsinformatie"@nl .
+
+tooikern:c_e5cd62ce a skos:Concept ;
+  dcterms:created "2019-05-02T14:56:55.811+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T14:06:35.567+02:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "bestuursorgaan staat"@nl ;
+  skos:related tooikern:c_54d333b0 ;
+  skos:topConceptOf tooikern:bestuursorgaan .
+
+tooikern:c_e7711259 a skos:Concept ;
+  dcterms:created "2019-01-30T19:12:36.854+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-21T16:07:08.553+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2e014c24 ;
+  skos:definition "Permanente instelling waarin op regelmatige basis onderwerpen worden besproken door vertegenwoordigers van verschillende belangengroepen op een specifiek terrein."@nl ;
+  skos:example "Raad voor het Overheidspersoneelsbeleid"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "overlegorgaan"@nl .
+
+tooikern:c_e8c63f4d a skos:Concept ;
+  dcterms:created "2019-02-08T15:20:48.285+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_8428f5ae ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "terinzagelegging"@nl .
+
+tooikern:c_e9c8dc05 a skos:Concept ;
+  dcterms:created "2019-05-03T10:47:03.338+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T13:38:55.877+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_34ee5ac0 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "eilandsraad"@nl .
+
+tooikern:c_e9c95e6f a skos:Concept ;
+  dcterms:created "2019-11-25T13:51:52.374+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_7ab92a02 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "verzoek"@nl .
+
+tooikern:c_ea80bf73 a skos:Concept ;
+  dcterms:created "2020-09-11T13:20:35"^^xsd:dateTime ;
+  dcterms:source "https://koop.gitlab.io/STOP/standaard/2.0.0-rc/begrippenlijst_informatieobject.html"^^xsd:anyURI ;
+  skos:definition "in STOP-XML gespecificeerde informatie die onderdeel uitmaakt van de voorschriften en regels uit de regeling of het besluit, maar die zelf niet voorkomt in de leesbare tekst"@nl ;
+  skos:inScheme tooikern:stopWorktypes ;
+  skos:prefLabel "informatieobject"@nl ;
+  skos:topConceptOf tooikern:stopWorktypes .
+
+tooikern:c_ebc71fd1 a skos:Concept ;
+  dcterms:created "2019-01-17T13:46:06.421+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-21T16:21:40.384+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_2e014c24 ;
+  skos:definition "Een vereniging of stichting waarin een aantal gelijkaardige organisaties zijn vertegenwoordigd ter behartiging van gemeenschappelijke belangen."@nl ;
+  skos:example "Interprovinciaal Overleg"@nl ;
+  skos:example "Unie van Waterschappen"@nl ;
+  skos:example "Vereniging van Nederlandse Gemeenten"@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "koepelorganisatie"@nl .
+
+tooikern:c_eeafa639 a skos:Concept ;
+  skos:inScheme tooikern:conceptScheme_74dec40e ;
+  skos:prefLabel "Woo-contact"@nl ;
+  skos:topConceptOf tooikern:conceptScheme_74dec40e .
+
+tooikern:c_ef0e428b a skos:Concept ;
+  dcterms:created "2020-04-30T21:38:51.006+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-04-30T21:48:16.390+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_97fd6a12 ;
+  skos:definition "Onder de verantwoordelijkheid van een ministerie vallende uitvoerende, niet verzelfstandigde, dienst."@nl ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "rijksdienst"@nl .
+
+tooikern:c_ef935990 a skos:Concept ;
+  dcterms:created "2019-11-25T13:54:17.332+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T13:56:05.391+01:00"^^xsd:dateTime ;
+  skos:altLabel "klaagschrift"@nl ;
+  skos:broader tooikern:c_7ab92a02 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "klacht"@nl .
+
+tooikern:c_f06ce6e1 a skos:Concept ;
+  dcterms:created "2019-05-03T15:43:02.733+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:39:41"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "regelmatig terugkerende tijdelijke verkeersmaatregel"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_f07457d8 a skos:Concept ;
+  dcterms:created "2020-09-11T13:11:35"^^xsd:dateTime ;
+  skos:broader tooikern:c_8ecf448e ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "voorbereidingsprocedure"@nl .
+
+tooikern:c_f151674d a skos:Concept ;
+  dcterms:created "2019-10-11T15:15:07.947+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-11T15:26:11.860+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_46d35a42 ;
+  skos:definition "De bevoegdheid om in naam van een bestuursorgaan besluiten te nemen. Artikel 10:1 Awb,"@nl ;
+  skos:inScheme tooikern:bevoegdheidsoverdracht ;
+  skos:prefLabel "mandaat"@nl .
+
+tooikern:c_f1652921 a skos:Concept ;
+  dcterms:created "2019-04-04T10:45:22.632+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-05-03T14:24:54.342+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1986dbe5 ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "niet-dossierstuk"@nl .
+
+tooikern:c_f1b2084f a skos:Concept ;
+  dcterms:created "2019-01-31T15:27:14.810+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T15:32:07.969+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_01f138a7 ;
+  skos:definition "Verdrag gesloten tussen drie of meer landen, waarbij de mogelijkheid tot deelname beperkt is tot een bepaalde groep."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "plurilateraal verdrag"@nl .
+
+tooikern:c_f20a115d a skos:Concept ;
+  skos:definition "alle op zichtdatum bekende tijdreisinformatie is aanwezig, inclusief de effecten van inwerkingtreding met terugwerkende kracht"@nl ;
+  skos:inScheme tooikern:tijdreis ;
+  skos:prefLabel "ex nunc"@nl ;
+  skos:topConceptOf tooikern:tijdreis .
+
+tooikern:c_f281e4a a skos:Concept ;
+  rdfs:label "zelfstandige artikel"@nl ;
+  dcterms:created "2025-06-19T12:51:18"^^xsd:dateTime ;
+  dcterms:modified "2025-06-19T12:51:51"^^xsd:dateTime ;
+  dcterms:source "https://wetten.overheid.nl/BWBR0045086/2025-01-01#Bijlage3"^^xsd:anyURI ;
+  skos:definition "Een artikel dat (vrijwel) uitsluitend inhoudelijke bepalingen bevat."@nl ;
+  skos:inScheme tooikern:artikelsoort ;
+  skos:prefLabel "zelfstandig artikel"@nl ;
+  skos:topConceptOf tooikern:artikelsoort .
+
+tooikern:c_f41ac07f a skos:Concept ;
+  dcterms:created "2020-09-08T14:52:53"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:49:27"^^xsd:dateTime ;
+  skos:inScheme tooikern:publicatie ;
+  skos:prefLabel "kennisgeving"@nl ;
+  skos:topConceptOf tooikern:publicatie .
+
+tooikern:c_f470faee a skos:Concept ;
+  dcterms:created "2020-09-08T14:17:14"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "commissaris van de Koning"@nl .
+
+tooikern:c_f60a44db a skos:Concept ;
+  dcterms:created "2019-01-31T15:26:46.786+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-01-31T15:31:36.780+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_01f138a7 ;
+  skos:definition "Verdrag gesloten tussen twee landen."@nl ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "bilateraal verdrag"@nl .
+
+tooikern:c_f63e6a72 a skos:Concept ;
+  dcterms:created "2019-02-15T17:52:01.819+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "ambtenaar"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_f692d2ad a skos:Concept ;
+  dcterms:created "2019-05-03T15:42:08.834+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:38:47"^^xsd:dateTime ;
+  skos:inScheme tooikern:verkeersbesluit ;
+  skos:prefLabel "maatregel(en) tot wijziging van de inrichting van de weg"@nl ;
+  skos:topConceptOf tooikern:verkeersbesluit .
+
+tooikern:c_f6ae0e63 a skos:Concept ;
+  dcterms:created "2019-02-15T17:51:55.173+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:doelgroep ;
+  skos:prefLabel "burger"@nl ;
+  skos:topConceptOf tooikern:doelgroep .
+
+tooikern:c_f70a6113 a skos:Concept ;
+  dcterms:created "2019-02-08T12:13:25.469+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-12T13:02:12"^^xsd:dateTime ;
+  skos:altLabel "voorzitter"@nl ;
+  skos:broader tooikern:c_a13976a4 ;
+  skos:inScheme tooikern:bestuursorgaan ;
+  skos:prefLabel "dijkgraaf"@nl .
+
+tooikern:c_f7dc55d9 a skos:Concept ;
+  dcterms:created "2019-02-08T12:35:11.352+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-10-07T14:47:56.949+02:00"^^xsd:dateTime ;
+  skos:altLabel "ontheffingsbesluit"@nl ;
+  skos:broader tooikern:c_93b0d113 ;
+  skos:definition "Beschikking waarbij in een individueel geval een uitzondering op een wettelijk verbod of gebod wordt gemaakt."@nl ;
+  skos:definition "jci1.3:c:BWBR0005730&hoofdstuk=5&paragraaf=5.5&aanwijzing=5.17&lid=2"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "ontheffingsbeschikking"@nl .
+
+tooikern:c_f7f50928 a skos:Concept ;
+  dcterms:created "2019-05-03T16:21:13.336+02:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_9023bfae ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "gemandateerde functionaris"@nl .
+
+tooikern:c_f8c225c5 a skos:Concept ;
+  dcterms:created "2019-01-17T15:17:43.531+01:00"^^xsd:dateTime ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "Koninkrijk der Nederlanden"@nl ;
+  skos:topConceptOf tooikern:overheidsorganisatie .
+
+tooikern:c_f90465b3 a skos:Concept ;
+  dcterms:created "2019-04-04T10:44:38.972+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-10T16:06:07.492+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_1986dbe5 ;
+  skos:broader tooikern:c_7f9dffa7 ;
+  skos:definition "Een vergaderstuk dat een opsomming bevat van de op een vergadering te bespreken zaken, vaak met vermelding van stukken, tijdsplanning en deelnemers. "@nl ;
+  skos:inScheme tooikern:overheidsinformatie ;
+  skos:prefLabel "agenda"@nl .
+
+tooikern:c_fbaa7e4b a skos:Concept ;
+  dcterms:created "2019-01-21T15:18:33.380+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-13T11:13:12.843+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_26fb182e ;
+  skos:definition "Een bij besluit vastgestelde algemene regel, niet zijnde een algemeen verbindend voorschrift, omtrent de afweging van belangen, de vaststelling van feiten of de uitleg van wettelijke voorschriften bij het gebruik van een bevoegdheid van een bestuursorgaan (art 1:3 lid 4 Awb)."@nl ;
+  skos:definition "jci1.3:c:BWBR0005537&hoofdstuk=1&titeldeel=1.1&artikel=1:3&lid=4"^^xsd:anyURI ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "beleidsregel"@nl .
+
+tooikern:c_fc3563a1 a skos:Concept ;
+  dcterms:created "2019-02-08T12:15:47.478+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_232d2da9 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "raadslid"@nl .
+
+tooikern:c_fd4ae969 a skos:Concept ;
+  dcterms:created "2019-01-21T15:59:36.077+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-06-14T15:44:16.085+02:00"^^xsd:dateTime ;
+  skos:altLabel "AMvRB"@nl ;
+  skos:altLabel "RijksKB"@nl ;
+  skos:broader tooikern:c_b1b7d4bf ;
+  skos:inScheme tooikern:publiekrechtelijkeHandeling ;
+  skos:prefLabel "algemene maatregel van rijksbestuur"@nl .
+
+tooikern:c_fd54e93c a skos:Concept ;
+  dcterms:created "2019-01-17T15:00:02.491+01:00"^^xsd:dateTime ;
+  skos:broader tooikern:c_ac2ec343 ;
+  skos:inScheme tooikern:overheidsorganisatie ;
+  skos:prefLabel "parket bij de Hoge Raad"@nl .
+
+tooikern:c_fdaee95e a skos:Concept ;
+  dcterms:source "Artikel 3.3, tweede lid, onder j, Wet open overheid"@nl ;
+  shacl:order 1150 ;
+  skos:definition """op verzoek van een bestuursorgaan ambtelijk of extern opgestelde onderzoeksrapporten die geen onderdeel vormen van de uitvoering van de taak van dat bestuursorgaan, die voornamelijk uit feitelijk materiaal bestaan en die betrekking hebben op:
+1. de wijze van functioneren van de eigen organisatie;
+2. de voorbereiding of de evaluatie van beleid, inclusief de uitvoering, naleving en handhaving."""@nl ;
+  skos:inScheme tooikern:wooInformatiecategorieen ;
+  skos:prefLabel "onderzoeksrapport"@nl ;
+  skos:topConceptOf tooikern:wooInformatiecategorieen ;
+  tooiont:prefLabelVoorGroepen "onderzoeksrapporten"@nl .
+
+tooikern:conceptScheme_74dec40e a skos:ConceptScheme ;
+  skos:editorialNote "Dit schema dient ter ondersteuning van de contactgevens voor de ROO applicatie." ;
+  skos:prefLabel "Contactgegevens"@nl .
+
+tooikern:documentrelatie a skos:ConceptScheme ;
+  skos:prefLabel "documentrelatie"@nl .
+
+tooikern:doelgroep a skos:ConceptScheme ;
+  dcterms:created "2019-02-15T17:51:45.383+01:00"^^xsd:dateTime ;
+  skos:prefLabel "doelgroep"@nl .
+
+tooikern:geschilbeslechting a skos:ConceptScheme ;
+  dcterms:created "2019-02-08T12:47:15.191+01:00"^^xsd:dateTime ;
+  skos:prefLabel "geschilbeslechting"@nl .
+
+tooikern:overheidsinformatie a skos:ConceptScheme ;
+  dcterms:created "2019-05-03T14:10:25.949+02:00"^^xsd:dateTime ;
+  skos:prefLabel "overheidsinformatie"@nl .
+
+tooikern:overheidsorganisatie a skos:ConceptScheme ;
+  dcterms:created "2019-01-11T16:01:52.199+01:00"^^xsd:dateTime ;
+  skos:prefLabel "overheidsorganisatie"@nl .
+
+tooikern:plooiBijzondereDocumentsoorten a skos:ConceptScheme ;
+  skos:editorialNote "Schema voor concepten die niet zuiver in de andere TOOI-schema's kunnen worden ingepast. In eerste instantie afkomstig uit de Kamerstukmodule. "@nl ;
+  skos:prefLabel "PLOOI bijzondere documentsoorten"@nl .
+
+tooikern:publicatie a skos:ConceptScheme ;
+  dcterms:created "2020-09-15T21:47:58"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:54:36"^^xsd:dateTime ;
+  skos:prefLabel "publicatie"@nl .
+
+tooikern:publicatieblad a skos:ConceptScheme ;
+  skos:prefLabel "publicatieblad"@nl .
+
+tooikern:publiekrechtelijkeHandeling a skos:ConceptScheme ;
+  dcterms:created "2019-01-17T13:39:02.564+01:00"^^xsd:dateTime ;
+  skos:prefLabel "publiekrechtelijke handeling"@nl .
+
+tooikern:redenIntrekkingOfVervanging a skos:ConceptScheme ;
+  skos:editorialNote "Schema met begrippen die de reden aanduiden waarom een eerdere versie van een informatieobject niet langer publiekelijk beschikbaar wordt gesteld. Let op: dit betreft een eerdere versie van dezelfde resource, niet om twee verschillende resources (toestanden of informatieobjecten) die beide nog beschikbaar zijn."@nl ;
+  skos:prefLabel "reden intrekking of vervanging"@nl .
+
+tooikern:skosCollection_0488ebea a skos:Collection ;
+  skos:member tooikern:c_38ba44de ;
+  skos:member tooikern:c_4efe1293 ;
+  skos:member tooikern:c_6f49bf34 ;
+  skos:member tooikern:c_8b92eab4 ;
+  skos:member tooikern:c_99d3e284 ;
+  skos:member tooikern:c_cccba364 ;
+  skos:prefLabel "rapport"@nl ;
+  tooiont:expandeert tooikern:c_3300f29a .
+
+tooikern:skosCollection_05456b84 a skos:Collection ;
+  dcterms:created "2019-11-25T18:15:12.067+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:17:15.469+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_5b1055aa ;
+  skos:member tooikern:c_fbaa7e4b ;
+  skos:prefLabel "regelgeving"@nl .
+
+tooikern:skosCollection_0736a934 a skos:Collection ;
+  skos:member tooikern:c_0670bae1 ;
+  skos:member tooikern:c_12cd7b9b ;
+  skos:member tooikern:c_61e3099a ;
+  skos:member tooikern:c_81cc2eb5 ;
+  skos:member tooikern:c_b3179555 ;
+  skos:member tooikern:c_bdc265d5 ;
+  skos:member tooikern:c_c97b118a ;
+  skos:prefLabel "Publicatieblad"@nl .
+
+tooikern:skosCollection_0748250c a skos:Collection ;
+  dcterms:created "2019-11-25T16:37:48.345+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-09T16:54:33"^^xsd:dateTime ;
+  skos:definition "Waardelijst met documentsoorten t.b.v. aanlevering Plooi."@nl ;
+  skos:member tooikern:c_386e74cb ;
+  skos:member tooikern:skosCollection_05456b84 ;
+  skos:member tooikern:skosCollection_07d7bba3 ;
+  skos:member tooikern:skosCollection_506d5d0a ;
+  skos:member tooikern:skosCollection_676504b0 ;
+  skos:member tooikern:skosCollection_7a84c572 ;
+  skos:member tooikern:skosCollection_a46bfe51 ;
+  skos:member tooikern:skosCollection_b266eb6a ;
+  skos:member tooikern:skosCollection_b32febba ;
+  skos:member tooikern:skosCollection_e5dd8c45 ;
+  skos:prefLabel "documentsoorten Plooi-aanlevering"@nl .
+
+tooikern:skosCollection_07d7bba3 a skos:Collection ;
+  dcterms:created "2019-11-25T17:46:06.650+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T17:47:57.206+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_0e425c23 ;
+  skos:member tooikern:c_a40458df ;
+  skos:member tooikern:c_d506b718 ;
+  skos:prefLabel "<adviesdocument>"@nl ;
+  tooiont:expandeert tooikern:c_7051a61f .
+
+tooikern:skosCollection_09651315 a skos:Collection ;
+  dcterms:created "2020-09-11T17:00:35"^^xsd:dateTime ;
+  dcterms:modified "2021-02-24T22:05:13.744+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_0776061d ;
+  skos:member tooikern:c_0887da8f ;
+  skos:member tooikern:c_3f4ec90d ;
+  skos:member tooikern:c_526e0a9f ;
+  skos:member tooikern:c_5bea6262 ;
+  skos:member tooikern:c_5cbd74c8 ;
+  skos:member tooikern:c_6b572c33 ;
+  skos:member tooikern:c_8226285b ;
+  skos:member tooikern:c_84a23404 ;
+  skos:member tooikern:c_8f68c804 ;
+  skos:member tooikern:c_964af97a ;
+  skos:member tooikern:c_9757fbcf ;
+  skos:member tooikern:c_c30d04d4 ;
+  skos:member tooikern:c_c74a0781 ;
+  skos:member tooikern:c_cd480cce ;
+  skos:member tooikern:c_d2a6707c ;
+  skos:prefLabel "STOP soort regeling TPOD"@nl .
+
+tooikern:skosCollection_0c722aae a skos:Collection ;
+  skos:member tooikern:c_2aedadff ;
+  skos:member tooikern:c_3a121159 ;
+  skos:member tooikern:c_3eb5572a ;
+  skos:member tooikern:c_6604fe5b ;
+  skos:member tooikern:c_7652d853 ;
+  skos:member tooikern:c_7eba29ad ;
+  skos:member tooikern:c_97f44ea5 ;
+  skos:member tooikern:c_9ecc0007 ;
+  skos:member tooikern:c_c2f56984 ;
+  skos:prefLabel "communicatie-uiting"@nl ;
+  tooiont:expandeert tooikern:c_75007d14 .
+
+tooikern:skosCollection_1448ec0f a skos:Collection ;
+  skos:member tooikern:c_42e406dd ;
+  skos:member tooikern:c_d4a4792f ;
+  skos:member tooikern:c_de27ae7a ;
+  skos:member tooikern:c_f90465b3 ;
+  skos:prefLabel "vergaderstuk"@nl ;
+  tooiont:expandeert tooikern:c_7f9dffa7 .
+
+tooikern:skosCollection_149a3964 a skos:Collection ;
+  skos:member tooikern:c_1cf18f83 ;
+  skos:member tooikern:c_4f50ca9c ;
+  skos:prefLabel "Woo-procedure"@nl .
+
+tooikern:skosCollection_1672ca89 a skos:Collection ;
+  skos:member tooikern:c_0e425c23 ;
+  skos:member tooikern:c_a40458df ;
+  skos:member tooikern:c_d506b718 ;
+  skos:prefLabel "adviesdocument"@nl ;
+  tooiont:expandeert tooikern:c_7051a61f .
+
+tooikern:skosCollection_191f0158 a skos:Collection ;
+  skos:member tooikern:skosCollection_0736a934 ;
+  skos:member tooikern:skosCollection_21370e79 ;
+  skos:member tooikern:skosCollection_cc6b643b ;
+  skos:prefLabel "OP Publicatiesoort"@nl .
+
+tooikern:skosCollection_1e96f394 a skos:Collection ;
+  skos:member tooikern:c_41ac5574 ;
+  skos:member tooikern:c_465163c9 ;
+  skos:member tooikern:c_4bd6c154 ;
+  skos:member tooikern:c_5b1055aa ;
+  skos:member tooikern:c_995d4fe9 ;
+  skos:member tooikern:c_d2a6707c ;
+  skos:member tooikern:c_fbaa7e4b ;
+  skos:prefLabel "regelgeving en formele besluitvorming"@nl .
+
+tooikern:skosCollection_1f3a8750 a skos:Collection ;
+  dcterms:created "2020-09-08T22:19:34"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T13:02:49"^^xsd:dateTime ;
+  skos:member tooikern:c_1c457490 ;
+  skos:member tooikern:c_641ecd76 ;
+  skos:member tooikern:c_932b7730 ;
+  skos:member tooikern:c_bfd27dfb ;
+  skos:member tooikern:c_dad20b4a ;
+  skos:member tooikern:c_e1ec050e ;
+  skos:prefLabel "STOP stappen besluitvorming ontwerpbesluit"@nl .
+
+tooikern:skosCollection_1f944a94 a skos:Collection ;
+  dcterms:created "2020-08-05T18:26:23.326+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T13:02:22"^^xsd:dateTime ;
+  skos:member tooikern:skosCollection_2a1d64e7 ;
+  skos:member tooikern:skosCollection_3469893d ;
+  skos:member tooikern:skosCollection_be4c3d94 ;
+  skos:member tooikern:skosCollection_e3cf586b ;
+  skos:prefLabel "STOP bestuursorgaan"@nl .
+
+tooikern:skosCollection_21370e79 a skos:Collection ;
+  skos:member tooikern:c_03c52ba0 ;
+  skos:member tooikern:c_056a75e1 ;
+  skos:member tooikern:c_6d494ab6 ;
+  skos:member tooikern:c_a17ef403 ;
+  skos:member tooikern:c_f1652921 ;
+  skos:member tooikern:c_f90465b3 ;
+  skos:prefLabel "<parlementair document]"@nl .
+
+tooikern:skosCollection_22255da3 a skos:Collection ;
+  skos:editorialNote "Dit is een naam en daarom met een hoofdletter geschreven."@nl ;
+  skos:member tooikern:c_0d0e9b52 ;
+  skos:member tooikern:c_11305262 ;
+  skos:member tooikern:c_1422b182 ;
+  skos:member tooikern:c_2977c34f ;
+  skos:member tooikern:c_33d7570c ;
+  skos:member tooikern:c_49599e6c ;
+  skos:member tooikern:c_622408c6 ;
+  skos:member tooikern:c_8f5898e5 ;
+  skos:member tooikern:c_9b2d26fc ;
+  skos:member tooikern:c_bee85371 ;
+  skos:member tooikern:c_c2052ba5 ;
+  skos:prefLabel "Kamerstuk"@nl ;
+  tooiont:expandeert tooikern:c_056a75e1 .
+
+tooikern:skosCollection_24d47bd0 a skos:Collection ;
+  skos:member tooikern:c_a1859fed ;
+  skos:member tooikern:c_c4ce01f3 ;
+  skos:member tooikern:c_f20a115d ;
+  skos:prefLabel "STOP tijdreissoorten"@nl .
+
+tooikern:skosCollection_2a1d64e7 a skos:Collection ;
+  dcterms:created "2020-08-09T11:44:52"^^xsd:dateTime ;
+  dcterms:modified "2020-08-09T11:46:51"^^xsd:dateTime ;
+  skos:member tooikern:c_28ecfd6d ;
+  skos:member tooikern:c_2a7d8663 ;
+  skos:member tooikern:c_2c4e7407 ;
+  skos:prefLabel "bestuursorgaan gemeente"@nl .
+
+tooikern:skosCollection_3447778e a skos:Collection ;
+  skos:member tooikern:c_4d1ea9ba ;
+  skos:prefLabel "PLOOI documentrelatie WooPub"@nl .
+
+tooikern:skosCollection_3469893d a skos:Collection ;
+  dcterms:created "2020-08-09T11:45:03"^^xsd:dateTime ;
+  dcterms:modified "2020-08-09T11:47:17"^^xsd:dateTime ;
+  skos:member tooikern:c_411b4e4a ;
+  skos:member tooikern:c_61676cbc ;
+  skos:member tooikern:c_e24d39f6 ;
+  skos:prefLabel "bestuursorgaan provincie"@nl .
+
+tooikern:skosCollection_38f68a0f a skos:Collection ;
+  skos:member tooikern:c_0670bae1 ;
+  skos:member tooikern:c_61e3099a ;
+  skos:prefLabel "<publicatieblad|"@nl .
+
+tooikern:skosCollection_3b881f06 a skos:Collection ;
+  dcterms:created "2020-03-10T16:41:46.525+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-03-11T09:04:13.199+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_42e406dd ;
+  skos:member tooikern:c_68c541a4 ;
+  skos:member tooikern:c_de27ae7a ;
+  skos:member tooikern:c_f90465b3 ;
+  skos:prefLabel "<vergaderstuk|"@nl ;
+  tooiont:expandeert tooikern:c_7f9dffa7 .
+
+tooikern:skosCollection_475dff96 a skos:Collection ;
+  dcterms:created "2019-10-29T15:27:18.107+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-02-28T13:49:43.132+01:00"^^xsd:dateTime ;
+  skos:definition " Waardelijst met documentsoorten t.b.v. het Plooi-portaal. "@nl ;
+  skos:editorialNote "Deze collectie is een voorlopige lijst van de documentsoorten die in Plooi-portaal zijn opgenomen. Vooralsnog alleen gebaseerd op de content van RONL."@nl ;
+  skos:member tooikern:skosCollection_38f68a0f ;
+  skos:member tooikern:skosCollection_3b881f06 ;
+  skos:member tooikern:skosCollection_b55bc3bc ;
+  skos:member tooikern:skosCollection_c8beadf5 ;
+  skos:member tooikern:skosCollection_c9747bf6 ;
+  skos:member tooikern:skosCollection_d6fb6e4a ;
+  skos:prefLabel "documentsoorten Plooi-portaal"@nl .
+
+tooikern:skosCollection_500d99e1 a skos:Collection ;
+  dcterms:created "2019-11-25T17:51:48.359+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T17:53:45.666+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_38ba44de ;
+  skos:member tooikern:c_4efe1293 ;
+  skos:member tooikern:c_6f49bf34 ;
+  skos:member tooikern:c_8b92eab4 ;
+  skos:member tooikern:c_99d3e284 ;
+  skos:member tooikern:c_cccba364 ;
+  skos:prefLabel "<rapport>"@nl ;
+  tooiont:expandeert tooikern:c_3300f29a .
+
+tooikern:skosCollection_506d5d0a a skos:Collection ;
+  dcterms:created "2021-06-09T16:51:03"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T17:16:33"^^xsd:dateTime ;
+  skos:member tooikern:c_056a75e1 ;
+  skos:member tooikern:c_a17ef403 ;
+  skos:member tooikern:c_f1652921 ;
+  skos:member tooikern:skosCollection_973dfe4b ;
+  skos:prefLabel "<parlementair document>"@nl ;
+  tooiont:expandeert tooikern:c_1986dbe5 .
+
+tooikern:skosCollection_5087d9c0 a skos:Collection ;
+  skos:member tooikern:c_cd480cce ;
+  skos:prefLabel "<projectbesluit>"@nl ;
+  tooiont:expandeert tooikern:c_c74a0781 .
+
+tooikern:skosCollection_570b2619 a skos:Collection ;
+  skos:member tooikern:c_386e74cb ;
+  skos:member tooikern:c_6bbc9177 ;
+  skos:member tooikern:skosCollection_0c722aae ;
+  skos:member tooikern:skosCollection_1448ec0f ;
+  skos:member tooikern:skosCollection_149a3964 ;
+  skos:member tooikern:skosCollection_1672ca89 ;
+  skos:member tooikern:skosCollection_1e96f394 ;
+  skos:member tooikern:skosCollection_722842d2 ;
+  skos:member tooikern:skosCollection_83cb2845 ;
+  skos:member tooikern:skosCollection_a4ec93a9 ;
+  skos:member tooikern:skosCollection_c27612fd ;
+  skos:member tooikern:skosCollection_f49814b2 ;
+  skos:prefLabel "PLOOI documentsoort"@nl .
+
+tooikern:skosCollection_5b52c7c5 a skos:Collection ;
+  dcterms:created "2019-11-25T18:05:42.199+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:06:39.908+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_45be34e9 ;
+  skos:member tooikern:c_566a4430 ;
+  skos:member tooikern:c_a55b7649 ;
+  skos:prefLabel "<beschikking tot handhaving>"@nl ;
+  tooiont:expandeert tooikern:c_1c7656ac .
+
+tooikern:skosCollection_676504b0 a skos:Collection ;
+  dcterms:created "2019-11-25T18:18:23.398+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:20:42.737+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_42e406dd ;
+  skos:member tooikern:c_d4a4792f ;
+  skos:member tooikern:c_de27ae7a ;
+  skos:member tooikern:c_f90465b3 ;
+  skos:prefLabel "<vergaderstuk>"@nl ;
+  tooiont:expandeert tooikern:c_7f9dffa7 .
+
+tooikern:skosCollection_722842d2 a skos:Collection ;
+  skos:member tooikern:c_3d782f30 ;
+  skos:member tooikern:c_9376c730 ;
+  skos:member tooikern:c_a1dae55d ;
+  skos:member tooikern:c_a6f44748 ;
+  skos:member tooikern:c_b3a6a7fc ;
+  skos:member tooikern:c_dfa0ff1f ;
+  skos:member tooikern:skosCollection_0488ebea ;
+  skos:prefLabel "beleidsdocument"@nl ;
+  tooiont:expandeert tooikern:c_10eb451d .
+
+tooikern:skosCollection_7a84c572 a skos:Collection ;
+  dcterms:created "2019-11-25T17:54:25.050+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:00:43.101+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_002fc258 ;
+  skos:member tooikern:c_2ab17960 ;
+  skos:member tooikern:c_2c0438f4 ;
+  skos:member tooikern:c_30e8b503 ;
+  skos:member tooikern:c_acb44d77 ;
+  skos:member tooikern:c_aebfec50 ;
+  skos:member tooikern:c_bcaddc61 ;
+  skos:member tooikern:c_c1956ef0 ;
+  skos:member tooikern:c_e0865e4d ;
+  skos:member tooikern:c_f7dc55d9 ;
+  skos:member tooikern:skosCollection_5b52c7c5 ;
+  skos:prefLabel "<beschikking>"@nl ;
+  tooiont:expandeert tooikern:c_93b0d113 .
+
+tooikern:skosCollection_83cb2845 a skos:Collection ;
+  skos:member tooikern:c_06a67c95 ;
+  skos:member tooikern:c_5824891d ;
+  skos:member tooikern:c_d943ca24 ;
+  skos:member tooikern:c_dad2a6ed ;
+  skos:member tooikern:c_df2cb56e ;
+  skos:member tooikern:c_ef935990 ;
+  skos:prefLabel "document van burger"@nl ;
+  tooiont:expandeert tooikern:c_7ab92a02 .
+
+tooikern:skosCollection_86b9401c a skos:Collection ;
+  skos:member tooikern:c_047db726 ;
+  skos:member tooikern:c_23de8263 ;
+  skos:member tooikern:c_50109c8c ;
+  skos:member tooikern:c_640b009e ;
+  skos:member tooikern:c_8c63a3eb ;
+  skos:member tooikern:c_8c913815 ;
+  skos:member tooikern:c_93013a14 ;
+  skos:member tooikern:c_e41573cb ;
+  skos:prefLabel "STOP kennisgevingsoort"@nl .
+
+tooikern:skosCollection_89e43e13 a skos:Collection ;
+  dcterms:created "2020-09-11T13:12:33"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T13:12:51"^^xsd:dateTime ;
+  skos:member tooikern:c_be169345 ;
+  skos:member tooikern:c_f07457d8 ;
+  skos:prefLabel "STOP proceduresoort"@nl .
+
+tooikern:skosCollection_8dc1ec98 a skos:Collection ;
+  skos:member tooikern:c_098c1346 ;
+  skos:member tooikern:c_c77c86e0 ;
+  skos:prefLabel "PLOOI reden intrekking of vervanging"@nl .
+
+tooikern:skosCollection_973dfe4b a skos:Collection ;
+  skos:member tooikern:c_03c52ba0 ;
+  skos:member tooikern:c_6d494ab6 ;
+  skos:prefLabel "<Kamervraag>"@nl ;
+  tooiont:expandeert tooikern:c_dc6ba2eb .
+
+tooikern:skosCollection_a3307697 a skos:Collection ;
+  skos:editorialNote "Dit is een naam en daarom met een hoofdletter geschreven."@nl ;
+  skos:member tooikern:c_03c52ba0 ;
+  skos:member tooikern:c_6d494ab6 ;
+  skos:prefLabel "Kamervraag"@nl ;
+  tooiont:expandeert tooikern:c_dc6ba2eb .
+
+tooikern:skosCollection_a46bfe51 a skos:Collection ;
+  dcterms:created "2019-11-25T17:49:29.795+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-18T14:36:14"^^xsd:dateTime ;
+  skos:member tooikern:c_2977c34f ;
+  skos:member tooikern:c_3d782f30 ;
+  skos:member tooikern:c_9376c730 ;
+  skos:member tooikern:c_a1dae55d ;
+  skos:member tooikern:c_a6f44748 ;
+  skos:member tooikern:c_dfa0ff1f ;
+  skos:member tooikern:skosCollection_500d99e1 ;
+  skos:prefLabel "<beleidsdocument>"@nl ;
+  tooiont:expandeert tooikern:c_10eb451d .
+
+tooikern:skosCollection_a4ec93a9 a skos:Collection ;
+  skos:member tooikern:c_002fc258 ;
+  skos:member tooikern:c_2ab17960 ;
+  skos:member tooikern:c_2c0438f4 ;
+  skos:member tooikern:c_30e8b503 ;
+  skos:member tooikern:c_acb44d77 ;
+  skos:member tooikern:c_aebfec50 ;
+  skos:member tooikern:c_c1956ef0 ;
+  skos:member tooikern:c_f7dc55d9 ;
+  skos:member tooikern:skosCollection_ac6749c5 ;
+  skos:prefLabel "beschikking"@nl ;
+  tooiont:expandeert tooikern:c_93b0d113 .
+
+tooikern:skosCollection_ac6749c5 a skos:Collection ;
+  skos:member tooikern:c_45be34e9 ;
+  skos:member tooikern:c_566a4430 ;
+  skos:member tooikern:c_a55b7649 ;
+  skos:prefLabel "beschikking tot handhaving"@nl ;
+  tooiont:expandeert tooikern:c_1c7656ac .
+
+tooikern:skosCollection_b266eb6a a skos:Collection ;
+  skos:member tooikern:c_0670bae1 ;
+  skos:member tooikern:c_61e3099a ;
+  skos:prefLabel "<publicatieblad>"@nl .
+
+tooikern:skosCollection_b32febba a skos:Collection ;
+  dcterms:created "2019-11-25T18:07:27.673+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:09:19.916+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_2aedadff ;
+  skos:member tooikern:c_3eb5572a ;
+  skos:member tooikern:c_7652d853 ;
+  skos:member tooikern:c_7eba29ad ;
+  skos:member tooikern:c_97f44ea5 ;
+  skos:member tooikern:c_9ecc0007 ;
+  skos:member tooikern:c_c2f56984 ;
+  skos:prefLabel "<communicatie-uiting>"@nl ;
+  tooiont:expandeert tooikern:c_75007d14 .
+
+tooikern:skosCollection_b41918c8 a skos:Collection ;
+  skos:member tooikern:c_03c52ba0 ;
+  skos:member tooikern:c_6d494ab6 ;
+  skos:prefLabel "<Kamervraag|"@nl ;
+  tooiont:expandeert tooikern:c_dc6ba2eb .
+
+tooikern:skosCollection_b55bc3bc a skos:Collection ;
+  dcterms:created "2020-02-27T16:10:20.915+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-09T16:47:55"^^xsd:dateTime ;
+  skos:member tooikern:c_2aedadff ;
+  skos:member tooikern:c_3eb5572a ;
+  skos:member tooikern:c_7652d853 ;
+  skos:member tooikern:c_7eba29ad ;
+  skos:member tooikern:c_97f44ea5 ;
+  skos:member tooikern:c_9ecc0007 ;
+  skos:prefLabel "communicatie"@nl .
+
+tooikern:skosCollection_ba945c09 a skos:Collection ;
+  skos:member tooikern:c_526e0a9f ;
+  skos:member tooikern:c_8226285b ;
+  skos:prefLabel "<voorbeschermingsregels>"@nl ;
+  tooiont:expandeert tooikern:c_5cbd74c8 .
+
+tooikern:skosCollection_bd82c6db a skos:Collection ;
+  skos:member tooikern:c_04262aa6 ;
+  skos:member tooikern:c_245e0743 ;
+  skos:member tooikern:c_ba9b96e8 ;
+  skos:prefLabel "STOP mededelingsoort"@nl .
+
+tooikern:skosCollection_be4c3d94 a skos:Collection ;
+  dcterms:created "2020-08-09T11:45:37"^^xsd:dateTime ;
+  dcterms:modified "2020-09-08T14:40:01"^^xsd:dateTime ;
+  skos:member tooikern:c_5cc92c89 ;
+  skos:member tooikern:c_70c87e3d ;
+  skos:member tooikern:c_f70a6113 ;
+  skos:prefLabel "bestuursorgaan waterschap"@nl .
+
+tooikern:skosCollection_c27612fd a skos:Collection ;
+  skos:member tooikern:c_a17ef403 ;
+  skos:member tooikern:c_bf0f9c95 ;
+  skos:member tooikern:c_f1652921 ;
+  skos:member tooikern:skosCollection_22255da3 ;
+  skos:member tooikern:skosCollection_a3307697 ;
+  skos:prefLabel "parlementair document"@nl ;
+  tooiont:expandeert tooikern:c_1986dbe5 .
+
+tooikern:skosCollection_c8beadf5 a skos:Collection ;
+  dcterms:created "2020-02-27T16:10:03.454+01:00"^^xsd:dateTime ;
+  dcterms:modified "2020-06-15T17:31:26.110+02:00"^^xsd:dateTime ;
+  skos:member tooikern:c_002fc258 ;
+  skos:member tooikern:c_386e74cb ;
+  skos:member tooikern:c_465163c9 ;
+  skos:member tooikern:c_d2a6707c ;
+  skos:member tooikern:c_e0865e4d ;
+  skos:member tooikern:c_fbaa7e4b ;
+  skos:prefLabel "formele besluitvorming"@nl .
+
+tooikern:skosCollection_c9747bf6 a skos:Collection ;
+  dcterms:created "2021-06-09T16:57:33"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T10:57:26"^^xsd:dateTime ;
+  skos:member tooikern:c_056a75e1 ;
+  skos:member tooikern:c_a17ef403 ;
+  skos:member tooikern:c_f1652921 ;
+  skos:member tooikern:skosCollection_b41918c8 ;
+  skos:prefLabel "<parlementair document|"@nl ;
+  tooiont:expandeert tooikern:c_1986dbe5 .
+
+tooikern:skosCollection_cc6b643b a skos:Collection ;
+  skos:member tooikern:c_77548398 ;
+  skos:prefLabel "KOOP-systeem"@nl .
+
+tooikern:skosCollection_d381b512 a skos:Collection ;
+  skos:definition "Waardelijst voor PLOOI met handelingen die een bestaand document van toestand doen veranderen (bijvoorbeeld: het document is ter inzage gelegd), dan wel een nieuw document doen ontstaan  (bijvoorbeeld: het document is gewijzigd en er ontstaat een nieuwe (geconsolideerde) versie van het document). "@nl ;
+  skos:member tooikern:c_641ecd76 ;
+  skos:member tooikern:c_dfcee535 ;
+  skos:member tooikern:c_e1ec050e ;
+  skos:prefLabel "PLOOI documenthandeling"@nl .
+
+tooikern:skosCollection_d6075a8f a skos:Collection ;
+  skos:definition "Interne informatiesystemen bij KOOP"@nl ;
+  skos:member tooikern:c_a97ecc72 ;
+  skos:prefLabel "KOOP-systemen"@nl .
+
+tooikern:skosCollection_d6fb6e4a a skos:Collection ;
+  dcterms:created "2020-02-27T16:09:38.444+01:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-18T14:35:38"^^xsd:dateTime ;
+  skos:member tooikern:c_0e425c23 ;
+  skos:member tooikern:c_2977c34f ;
+  skos:member tooikern:c_3300f29a ;
+  skos:member tooikern:c_3d782f30 ;
+  skos:member tooikern:c_8b92eab4 ;
+  skos:member tooikern:c_9376c730 ;
+  skos:member tooikern:c_a40458df ;
+  skos:member tooikern:c_a6f44748 ;
+  skos:member tooikern:c_d506b718 ;
+  skos:member tooikern:c_dfa0ff1f ;
+  skos:prefLabel "beleidsinformatie"@nl .
+
+tooikern:skosCollection_dc76b862 a skos:Collection ;
+  dcterms:description "De artikelcategoriën zijn belangrijk in de consolidatie van regelingversies die zijn opgebouwd volgens het klassieke model van STOP. Ten behoeve van geautomatiseerd vaststellen of een RegelingKlassiek geconsolideerd moet worden, kan de redacteur van de regeling met het attribuut categorieKlassiek de inhoud van een artikel categoriseren."@nl ;
+  skos:member tooikern:c_0b6ecea ;
+  skos:member tooikern:c_177f538 ;
+  skos:member tooikern:c_ac823dd ;
+  skos:member tooikern:c_f281e4a ;
+  skos:prefLabel "STOP artikelsoort"@nl .
+
+tooikern:skosCollection_e3cf586b a skos:Collection ;
+  dcterms:created "2020-08-09T11:45:22"^^xsd:dateTime ;
+  dcterms:modified "2020-08-09T11:47:48"^^xsd:dateTime ;
+  skos:member tooikern:c_3aaa4d12 ;
+  skos:member tooikern:c_91fb5e42 ;
+  skos:member tooikern:c_bcfb7b4e ;
+  skos:prefLabel "bestuursorgaan staat"@nl .
+
+tooikern:skosCollection_e570a636 a skos:Collection ;
+  dcterms:created "2020-09-08T22:19:06"^^xsd:dateTime ;
+  dcterms:modified "2020-09-11T13:02:36"^^xsd:dateTime ;
+  skos:member tooikern:c_2efdfa71 ;
+  skos:member tooikern:c_35b3b577 ;
+  skos:member tooikern:c_49f9f3ab ;
+  skos:member tooikern:c_641ecd76 ;
+  skos:member tooikern:c_932b7730 ;
+  skos:member tooikern:c_9ebc7716 ;
+  skos:member tooikern:c_a06fcac7 ;
+  skos:member tooikern:c_e09fe246 ;
+  skos:member tooikern:c_e1ec050e ;
+  skos:prefLabel "STOP stappen besluitvorming definitief besluit"@nl .
+
+tooikern:skosCollection_e5dd8c45 a skos:Collection ;
+  dcterms:created "2019-11-25T18:22:48.283+01:00"^^xsd:dateTime ;
+  dcterms:modified "2019-11-25T18:27:52.322+01:00"^^xsd:dateTime ;
+  skos:member tooikern:c_06a67c95 ;
+  skos:member tooikern:c_5824891d ;
+  skos:member tooikern:c_8ec8e5e7 ;
+  skos:member tooikern:c_d943ca24 ;
+  skos:member tooikern:c_dad2a6ed ;
+  skos:member tooikern:c_dd451365 ;
+  skos:member tooikern:c_df2cb56e ;
+  skos:member tooikern:c_ef935990 ;
+  skos:prefLabel "<document van burger>"@nl ;
+  tooiont:expandeert tooikern:c_7ab92a02 .
+
+tooikern:skosCollection_e8cdc2b7 a skos:Collection ;
+  skos:member tooikern:c_0d209822 ;
+  skos:member tooikern:c_2b051ee2 ;
+  skos:member tooikern:c_34cb528c ;
+  skos:member tooikern:c_af782b32 ;
+  skos:prefLabel "STOP soort juridische bronpublicatie"@nl .
+
+tooikern:skosCollection_edba233f a skos:Collection ;
+  skos:definition "Een lijst van classificatie van organisaties naar wettelijke regime."@nl ;
+  skos:member tooikern:c_055aa18b ;
+  skos:member tooikern:c_21bfb04e ;
+  skos:member tooikern:c_df0cc565 ;
+  skos:prefLabel "wettelijke classificaties"@nl .
+
+tooikern:skosCollection_f49814b2 a skos:Collection ;
+  skos:member tooikern:c_0670bae1 ;
+  skos:member tooikern:c_12cd7b9b ;
+  skos:member tooikern:c_61e3099a ;
+  skos:member tooikern:c_81cc2eb5 ;
+  skos:member tooikern:c_852da199 ;
+  skos:member tooikern:c_b3179555 ;
+  skos:member tooikern:c_bdc265d5 ;
+  skos:member tooikern:c_c97b118a ;
+  skos:prefLabel "publicatieblad"@nl .
+
+tooikern:soortJuridischeBronpublicatie a skos:ConceptScheme ;
+  skos:definition "aanduiding van het type publicatie dat geleid heeft tot een wijziging"@nl ;
+  skos:prefLabel "soort juridische bronpublicatie"@nl ;
+  skos:scopeNote "Een soort juridische bronpublicatie wordt in STOP in de wetstechnische informatie van een geconsolideerde regeling of geconsolideerd informatieobject gebruikt om aan te geven wat voor soort publicatie geleid heeft tot deze wijziging. Een STOP worktype wordt gebruikt in de identificatiemodule van een STOP XML-document om aan te geven wat voor document het is. Ondanks dat deze concepten gerelateerd zijn en sommige concepten hetzelfde label hebben, is het echt wat anders."@nl .
+
+tooikern:soortKennisgeving a skos:ConceptScheme ;
+  skos:definition "aanduiding van het type informatie dat gepubliceerd wordt en gelegenheid geeft tot participatie"@nl ;
+  skos:prefLabel "soort kennisgeving"@nl ;
+  skos:scopeNote """Wanneer er naar aanleiding van een (mogelijke toekomstige) publicatie gelegenheid is tot participatie, moet het BG een kennisgeving publiceren. Deze kennisgeving bevat enkel de zogeheten zakelijke informatie over een publicatie, zoals waar en wanneer de publicatie ter inzage ligt, tot wanneer beroep mogelijk is en waar overige relevante informatie elders te vinden is. We noemen dit ook wel een zakelijke mededeling.
+De soorten kennisgeving zijn gebaseerd op Artikel 12 Bekendmakingswet (https://wetten.overheid.nl/BWBR0004287#Artikel12), zoals toegelicht in de Memorie van Toelichting op de Wep, § 4.4 t/m 4.6 (https://zoek.officielebekendmakingen.nl/dossier/kst-35218-3.html)."""@nl .
+
+tooikern:soortMededeling a skos:ConceptScheme ;
+  skos:definition "duiding van de categorie van juridische inhoud waarover een mededeling handelt"@nl ;
+  skos:prefLabel "soort mededeling"@nl ;
+  skos:scopeNote """Mededeling is een algemene aanduiding van een publicatie met juridische inhoud. Dit in tegenstelling tot de kennisgeving, die een zakelijke mededeling is zonder juridische inhoud.
+
+Het begrip mededeling wordt alleen gebruikt voor publicaties met juridische inhoud waarvoor geen specifiekere aanduiding bestaat, in tegenstelling tot bijvoorbeeld een besluit,
+
+Wanneer bijvoorbeeld een uitspraak van een rechter consequenties kan hebben voor geconsolideerde regelgeving moet het bevoegd gezag dat eindverantwoordelijk is voor die regelgeving de inhoud van deze uitspraken als mededeling publiceren in zijn officiële publicatieblad, zodat belanghebbenden ervan kennis kunnen nemen en eventuele consequenties voor de geconsolideerde regelgeving zichtbaar worden."""@nl .
+
+tooikern:stopFormaatInformatieobject a skos:ConceptScheme ;
+  dcterms:created "2020-09-11T12:50:55"^^xsd:dateTime ;
+  skos:prefLabel "STOP formaat informatieobject"@nl .
+
+tooikern:stopWorktypes a skos:ConceptScheme ;
+  dcterms:created "2020-09-11T13:19:12"^^xsd:dateTime ;
+  skos:prefLabel "STOP worktypes"@nl .
+
+tooikern:swc_artikelsoorten a skos:ConceptScheme ;
+  rdfs:label "artikelcategorieën"@nl ;
+  dcterms:created "2025-06-19T16:00:00"^^xsd:dateTime ;
+  skos:prefLabel "Soort artikel"@nl .
+
+tooikern:systeemarchitectuur a skos:ConceptScheme ;
+  skos:editorialNote "Taxonomie voor begrippen om de informatiesystemen te beschrijven waarmee informatieobjecten worden gemanipuleerd, bijvoorbeeld ten behoeve van provenance-metadata"@nl ;
+  skos:prefLabel "systeemarchitectuur"@nl .
+
+tooikern:tijdreis a skos:ConceptScheme ;
+  skos:definition "de soort tijdreis-informatie die aanwezig is in een verzameling toestanden van een geconsolideerde regeling"@nl ;
+  skos:prefLabel "tijdreis"@nl .
+
+tooikern:verkeersbesluit a skos:ConceptScheme ;
+  dcterms:created "2020-09-15T21:35:57"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:44:57"^^xsd:dateTime ;
+  skos:prefLabel "verkeersbesluit"@nl .
+
+tooikern:wegcategorie a skos:ConceptScheme ;
+  dcterms:created "2020-09-15T21:36:53"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:44:29"^^xsd:dateTime ;
+  skos:prefLabel "wegcategorie"@nl .
+
+tooikern:weggebruiker a skos:ConceptScheme ;
+  dcterms:created "2020-09-15T21:36:29"^^xsd:dateTime ;
+  dcterms:modified "2020-09-15T21:44:43"^^xsd:dateTime ;
+  skos:prefLabel "weggebruiker"@nl .
+
+tooikern:wettelijkeclassificatie a skos:ConceptScheme ;
+  skos:definition "Classificatie van een overheidsorganisatie op grond van toepasselijk wettelijk regime."@nl ;
+  skos:prefLabel "wettelijke classificatie"@nl .
+
+tooikern:wooInformatiecategorieen a skos:ConceptScheme ;
+  skos:definition " informatiecategorieën die expliciet worden genoemd in artikel 3.3 van de Wet open overheid (Woo)"@nl ;
+  skos:editorialNote "Voorlopig een eigen conceptschema voor PLOOI met de informatiecategorieën uit de Woo. Dit schema kan vervallen als we ervoor kiezen om de concepten in een aparte tak van tooikern:overheidsinformatie onder te brengen. De definities baseren we zo veel mogelijk op de letterlijke omschrijving van de categorie in de Woo. Hooguit passen we hier en daar de tekst iets aan als de definitie buiten de context van de wet verduidelijkt moet worden."@nl ;
+  skos:prefLabel "Woo informatiecategorieën"@nl .
+
+tooikern:xl_nl_8d4c5947 a skosxl:Label ;
+  skosxl:literalForm "openbaar lichaam"@nl .
+
+

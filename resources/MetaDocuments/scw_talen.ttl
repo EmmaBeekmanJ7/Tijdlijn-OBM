@@ -1,0 +1,238 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix file-type: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix ministerie: <https://identifier.overheid.nl/tooi/id/ministerie/> .
+@prefix ont: <https://identifier.overheid.nl/tooi/def/ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooi: <https://identifier.overheid.nl/tooi/def/> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooiwep: <https://identifier.overheid.nl/tooi/def/thes/wep/> .
+@prefix tooiwl: <https://identifier.overheid.nl/tooi/def/wl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://identifier.overheid.nl/tooi/set/scw_talen/1> a owl:Ontology, tooiwl:SchemagebaseerdeConceptwaardelijst;
+  dcterms:description "Waardelijst met een selectie van officiÃ«le talen van de Europese Unie uit de EU Vocabulary Authority table voor talen (languages-skos-ap-act.rdf), aangevuld met Fries, Papiamentu en Papiamento.";
+  pav:derivedFrom <https://identifier.overheid.nl/tooi/def/thes/xtrn>;
+  owl:imports <http://purl.org/pav>, <http://www.w3.org/2004/02/skos/core>, tooi:ont,
+    tooi:wl;
+  owl:versionInfo "Eerste versie waardelijst Talen op zichtdatum 15-11-2021.";
+  prov:generatedAtTime "2021-11-15T17:48:28.165+01:00"^^xsd:dateTime;
+  tooiont:publicatiedatum "2021-11-15";
+  tooiont:titel "Talen";
+  tooiont:verantwoordelijke ministerie:mnre1034;
+  tooiont:zichtdatum "2021-11-15"^^xsd:date;
+  tooiwl:afgeleidVanVersie "";
+  tooiwl:bronversie "";
+  tooiwl:schema <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  tooiwl:volgnummer 1 .
+
+<http://publications.europa.eu/resource/authority/language/BUL> a skos:Concept;
+  skos:notation "bg"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "bul"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "bul"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Bulgaars"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/CES> a skos:Concept;
+  skos:notation "ces"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>, "cs"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>,
+    "cze"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Tsjechisch"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/DAN> a skos:Concept;
+  skos:notation "da"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "dan"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "dan"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Deens"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/DEU> a skos:Concept;
+  skos:notation "de"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "deu"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "ger"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Duits"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/ELL> a skos:Concept;
+  skos:notation "el"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "ell"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "gre"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Grieks"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/ENG> a skos:Concept;
+  skos:notation "en"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "eng"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "eng"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Engels"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/EST> a skos:Concept;
+  skos:notation "est"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "est"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "et"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Estisch"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FIN> a skos:Concept;
+  skos:notation "fi"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "fin"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "fin"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Fins"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FRA> a skos:Concept;
+  skos:notation "fr"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "fra"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "fre"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Frans"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FRY> a skos:Concept;
+  skos:notation "fry"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "fry"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "fy"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Fries"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/GLE> a skos:Concept;
+  skos:notation "ga"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "gle"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "gle"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Iers"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/HRV> a skos:Concept;
+  skos:notation "hr"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "hrv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "hrv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Kroatisch"@nl;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/HUN> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "hu"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "hun"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "hun"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Hongaars"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/ITA> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "it"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "ita"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "ita"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Italiaans"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/LAV> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "lav"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "lav"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "lv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Lets"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/LIT> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "lit"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "lit"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "lt"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Litouws"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/MLT> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "mlt"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "mlt"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "mt"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Maltees"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/NLD> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "dut"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "nl"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>,
+    "nld"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Nederlands"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> a skos:ConceptScheme;
+  skos:prefLabel "taal"@nl .
+
+<http://publications.europa.eu/resource/authority/language/POL> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "pl"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "pol"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "pol"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Pools"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/POR> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "por"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>, "por"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "pt"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>;
+  skos:prefLabel "Portugees"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/RON> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "ro"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "ron"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "rum"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Roemeens"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/SLK> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "sk"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "slk"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>,
+    "slo"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>;
+  skos:prefLabel "Slowaaks"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/SLV> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "sl"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "slv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "slv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Sloveens"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/SPA> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "es"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "spa"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "spa"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Spaans"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/SWE> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "sv"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_1>, "swe"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_2B>,
+    "swe"^^<http://publications.europa.eu/ontology/euvoc#ISO_639_3>;
+  skos:prefLabel "Zweeds"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<https://identifier.overheid.nl/tooi/def/thes/xtrn/PAP-AW> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "pap-AW";
+  skos:prefLabel "Papiamento"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<https://identifier.overheid.nl/tooi/def/thes/xtrn/PAP-CW> a skos:Concept;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal>;
+  skos:notation "pap-CW";
+  skos:prefLabel "Papiamentu"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/BUL> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/CES> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/DAN> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/DEU> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/ELL> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/ENG> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/EST> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FIN> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FRA> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/FRY> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+
+<http://publications.europa.eu/resource/authority/language/GLE> skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/xtrn/taal> .
+ 

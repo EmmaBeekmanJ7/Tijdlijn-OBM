@@ -1,0 +1,611 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooitop: <https://identifier.overheid.nl/tooi/def/thes/top/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://identifier.overheid.nl/tooi/def/thes/top> a owl:Ontology ;
+  rdfs:label "tooitop"@nl ;
+  rdfs:comment "Geversioneerde variant"@nl ;
+  dcterms:description "De TOOI-thesaurus voor de TOP-lijst (tooitop) bevat een taxonomie van beleidsthema’s voor officiële publicaties."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-thes-kern/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-07-02"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "TOOI-thesaurus voor de TOP-lijst" ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/THESAURUS> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - Initiële versie."@nl ;
+  owl:versionInfo "v1.1 - 30 januari 2020 - Suggesties SDU verwerkt; vastgesteld door Redactieraad BWB."@nl ;
+  owl:versionInfo "v1.1.1 - 19 juni 2023 - Metadata en formattering verbeterd."@nl ;
+  owl:versionInfo "v1.1.2 - 29 januari 2024 - Feedback via GitLab."@nl ;
+  owl:versionInfo "v1.1.3 - 11 maart 2024 - Beheerplan toegevoegd aan documentatie."@nl ;
+  owl:versionInfo "v1.1.4 - 20 juni 2024 - Alleen documentatie gewijzigd, fix versielinkjes."@nl ;
+  owl:versionInfo "v1.1.5 - 2 juli 2025 - Alleen documentatie gewijzigd, tooigeo toegevoegd."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.5> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top-1.1.5> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top_v1.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/top_v1.1> ;
+  pav:version "1.1.5" ;
+  tooiont:publicatiedatum "2025-07-02"^^xsd:date ;
+  vann:preferredNamespacePrefix "tooitop" ;
+  vann:preferredNamespaceUri tooitop: .
+
+tooitop:c_0361ffb3 a skos:Concept ;
+  dcterms:created "2019-06-25T17:29:29.219+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "cultuur en recreatie"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_068da9fb a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:25.839+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "inkoop en beheer"@nl .
+
+tooitop:c_08d12aef a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:09.393+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "onderzoek en wetenschap"@nl .
+
+tooitop:c_0fe7c5e7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:43.690+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "jeugdzorg"@nl .
+
+tooitop:c_124eaf3a a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:00.503+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "wonen"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_1781ce20 a skos:Concept ;
+  dcterms:created "2019-06-25T17:32:59.713+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d4890526 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ouderen"@nl .
+
+tooitop:c_17a86a17 a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:13.380+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_124eaf3a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "woningmarkt"@nl .
+
+tooitop:c_195b5b5e a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:26.141+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "transport"@nl .
+
+tooitop:c_1f37c612 a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:42.643+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_9d1917e9 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "arbeidsverhoudingen"@nl .
+
+tooitop:c_1f781691 a skos:Concept ;
+  dcterms:created "2020-02-26T09:01:17.305+01:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "speciaal onderwijs"@nl .
+
+tooitop:c_1fe409d0 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:42.191+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "staatsrecht"@nl .
+
+tooitop:c_218c52ee a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:05.664+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ethiek"@nl .
+
+tooitop:c_2408fb5a a skos:Concept ;
+  dcterms:created "2019-06-25T17:50:03.775+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "cultureel erfgoed"@nl .
+
+tooitop:c_25e30d03 a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:42.078+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_391585db ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "belasting"@nl .
+
+tooitop:c_2835e395 a skos:Concept ;
+  dcterms:created "2019-06-25T17:32:13.199+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_849842ac ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "luchtvaart"@nl .
+
+tooitop:c_28ddcea5 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:52.293+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "lucht"@nl .
+
+tooitop:c_2e9944e7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:37:30.436+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_399f194b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "migratie"@nl .
+
+tooitop:c_319461d7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:32:07.239+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_849842ac ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "openbaar vervoer"@nl .
+
+tooitop:c_341c5bef a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:25.149+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "zorgverzekeringen"@nl .
+
+tooitop:c_389a72e6 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:36.756+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "water"@nl .
+
+tooitop:c_391585db a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:34.562+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "overheidsfinanciën"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_399f194b a skos:Concept ;
+  dcterms:created "2019-06-25T17:29:08.728+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "migratie en integratie"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_3afc269f a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:30.447+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ondernemen"@nl .
+
+tooitop:c_3eb6243b a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:41.046+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "organisatie en bedrijfsvoering"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_4348dad1 a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:47.512+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_391585db ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "begroting"@nl .
+
+tooitop:c_4872b086 a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:52.290+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d58b78ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "terrorisme"@nl .
+
+tooitop:c_4d1c84a7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:20.583+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "dienstensector"@nl .
+
+tooitop:c_4e83eca7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:48.183+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_9d1917e9 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "arbeidsomstandigheden"@nl .
+
+tooitop:c_4eb912c1 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:14.386+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "onderwijsvoorzieningen"@nl .
+
+tooitop:c_516ec027 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:19.423+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "hoger onderwijs"@nl .
+
+tooitop:c_576c2bd7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:07.822+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f47ad6ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "internationale betrekkingen"@nl .
+
+tooitop:c_61d3e636 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:41.357+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "stoffen"@nl .
+
+tooitop:c_68609e19 a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:13.200+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f47ad6ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "Europese zaken"@nl .
+
+tooitop:c_6b728132 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:41.295+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "media"@nl .
+
+tooitop:c_6b9627b5 a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:59.928+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "geneesmiddelen en medische hulpmiddelen"@nl .
+
+tooitop:c_70e03904 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:51.624+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "evenementen"@nl .
+
+tooitop:c_72138db9 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:48.278+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-26T17:59:06.536+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "rechtspraak"@nl .
+
+tooitop:c_75809540 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:45.827+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "horeca"@nl .
+
+tooitop:c_76136c82 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:05.716+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d4890526 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "gezin en kinderen"@nl .
+
+tooitop:c_79010191 a skos:Concept ;
+  dcterms:created "2019-11-06T15:41:54.186+01:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "klimaatverandering"@nl .
+
+tooitop:c_7a0f87d5 a skos:Concept ;
+  dcterms:created "2020-02-26T09:03:10.052+01:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "zorginstellingen"@nl .
+
+tooitop:c_7b01f260 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:30.620+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "basisonderwijs"@nl .
+
+tooitop:c_7ce8a10c a skos:Concept ;
+  dcterms:created "2019-06-25T17:37:16.538+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "bodem"@nl .
+
+tooitop:c_824ce7ff a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:04.953+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "privaatrecht"@nl .
+
+tooitop:c_83db27fc a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:15.768+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "handel"@nl .
+
+tooitop:c_849842ac a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:12.412+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-26T18:06:14.767+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "verkeer"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_85a72eb3 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:30.432+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_cfc7d5ab ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "netwerken"@nl .
+
+tooitop:c_87d3d66c a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:09.809+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "kenniseconomie"@nl .
+
+tooitop:c_8940ed07 a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:01.825+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f47ad6ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ontwikkelingssamenwerking"@nl .
+
+tooitop:c_8b081a63 a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:50.258+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "gezondheidsrisico's"@nl .
+
+tooitop:c_980b8db2 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:03.819+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "voortgezet onderwijs"@nl .
+
+tooitop:c_989e37d9 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:04.417+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "landbouw, visserij, voedselkwaliteit"@nl .
+
+tooitop:c_98e03e32 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:36.986+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "strafrecht"@nl .
+
+tooitop:c_9a574af9 a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:33.648+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ziekten en behandelingen"@nl .
+
+tooitop:c_9af4b880 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:22.599+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_cfc7d5ab ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ruimtelijke ordening"@nl .
+
+tooitop:c_9d1917e9 a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:06.842+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "werk"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_9f410ab6 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:57.157+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "geluid"@nl .
+
+tooitop:c_a6a9eddd a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:18.682+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_124eaf3a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "bouwen en verbouwen"@nl .
+
+tooitop:c_a6c5e5b8 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:36.057+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "recreatie"@nl .
+
+tooitop:c_a71dc533 a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:15.461+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_cfc7d5ab ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "waterbeheer"@nl .
+
+tooitop:c_a94e1fa4 a skos:Concept ;
+  dcterms:created "2019-06-25T17:37:37.512+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_399f194b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "integratie"@nl .
+
+tooitop:c_afa30a11 a skos:Concept ;
+  dcterms:created "2019-06-25T17:29:02.773+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "natuur en milieu"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_b46b92e7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:26.115+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_c232ae4a ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "beroepsonderwijs"@nl .
+
+tooitop:c_beb01b1c a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:17.549+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "bestuursrecht"@nl .
+
+tooitop:c_c232ae4a a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:59.047+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "onderwijs en wetenschap"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_cfc7d5ab a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:24.390+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ruimte en infrastructuur"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_d0463fb7 a skos:Concept ;
+  dcterms:created "2019-06-25T17:27:53.147+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "zorg en gezondheid"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_d2b1338a a skos:Concept ;
+  dcterms:created "2019-06-25T17:33:58.741+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "rechten en vrijheden"@nl .
+
+tooitop:c_d363776f a skos:Concept ;
+  dcterms:created "2019-06-25T17:29:22.004+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "economie"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_d3b599f8 a skos:Concept ;
+  dcterms:created "2019-06-25T17:31:56.962+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_849842ac ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "scheepvaart"@nl .
+
+tooitop:c_d4890526 a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:17.961+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "sociale zekerheid"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_d58b78ca a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:48.258+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "openbare orde en veiligheid"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_d772bf06 a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:46.483+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d58b78ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "veiligheid"@nl .
+
+tooitop:c_d96f9cd3 a skos:Concept ;
+  dcterms:created "2019-06-25T17:37:21.733+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "afval"@nl .
+
+tooitop:c_daaa67b3 a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:19.307+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-08-26T17:53:55.808+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f47ad6ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "defensie"@nl .
+
+tooitop:c_db2fbedb a skos:Concept ;
+  dcterms:created "2019-06-25T17:36:47.077+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_afa30a11 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "natuur- en landschapsbeheer"@nl .
+
+tooitop:c_dc437d00 a skos:Concept ;
+  dcterms:created "2019-06-25T17:38:36.275+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "markttoezicht"@nl .
+
+tooitop:c_e277e756 a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:30.591+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "religie"@nl .
+
+tooitop:c_e3d35361 a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:12.561+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_f4679acc ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "bezwaar en klachten"@nl .
+
+tooitop:c_ee06665e a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:32.959+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "informatievoorziening en ICT"@nl .
+
+tooitop:c_f02ce1b3 a skos:Concept ;
+  dcterms:created "2019-06-25T17:30:38.464+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d0463fb7 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "ouderenzorg"@nl .
+
+tooitop:c_f28344a5 a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:01.272+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "koninkrijksrelaties"@nl .
+
+tooitop:c_f2c9a613 a skos:Concept ;
+  dcterms:created "2019-06-25T17:34:55.210+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "overheidspersoneel"@nl .
+
+tooitop:c_f37fd49d a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:18.353+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "inrichting van de overheid"@nl .
+
+tooitop:c_f411e390 a skos:Concept ;
+  dcterms:created "2019-06-25T17:32:02.318+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_849842ac ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "rail- en wegverkeer"@nl .
+
+tooitop:c_f4679acc a skos:Concept ;
+  dcterms:created "2019-06-25T17:28:28.808+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "recht"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_f47ad6ca a skos:Concept ;
+  dcterms:created "2019-06-25T17:29:16.532+02:00"^^xsd:dateTime ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "internationaal"@nl ;
+  skos:topConceptOf tooitop:toplijst .
+
+tooitop:c_f4f1867a a skos:Concept ;
+  dcterms:created "2019-06-25T17:37:10.526+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-10-19T14:14:07.840+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d363776f ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "energie"@nl .
+
+tooitop:c_f6d7f591 a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:10.561+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_3eb6243b ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "interne organisatie"@nl .
+
+tooitop:c_f72b706a a skos:Concept ;
+  dcterms:created "2019-06-25T17:49:57.302+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_0361ffb3 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "cultuur"@nl .
+
+tooitop:c_fc530104 a skos:Concept ;
+  dcterms:created "2020-02-26T09:02:18.698+01:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d4890526 ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "arbeidsongeschiktheid en werkloosheid"@nl .
+
+tooitop:c_fcac43e4 a skos:Concept ;
+  dcterms:created "2019-06-25T17:35:57.771+02:00"^^xsd:dateTime ;
+  skos:broader tooitop:c_d58b78ca ;
+  skos:inScheme tooitop:toplijst ;
+  skos:prefLabel "criminaliteit"@nl .
+
+tooitop:toplijst a skos:ConceptScheme ;
+  dcterms:created "2019-06-25T17:27:16.306+02:00"^^xsd:dateTime ;
+  dcterms:modified "2019-12-09T17:24:13.714+01:00"^^xsd:dateTime ;
+  skos:definition "Thema-indeling voor Officiële Publicaties"@nl ;
+  skos:prefLabel "TOP-lijst"@nl .
+
+

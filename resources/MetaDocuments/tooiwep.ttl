@@ -1,0 +1,994 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooiwep: <https://identifier.overheid.nl/tooi/def/thes/wep/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://identifier.overheid.nl/tooi/def/thes/wep> a owl:Ontology ;
+  rdfs:label "tooiwep"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "De TOOI-thesaurus voor de Wep (tooiwep) bevat concepten die van belang zijn voor het metadateren van de officiële publicaties volgens de Wet elektronisch publicaties (Wep)."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-thes-wep/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-06-30"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "TOOI-thesaurus voor de Wep"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/THESAURUS> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports sh: ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - 1 april 2021 - Initiële versie."@nl ;
+  owl:versionInfo "v1.1 - 1 april 2021 - Volgorde rubrieken mbv sh:order; plansoort afwijkvergunning verwijderd."@nl ;
+  owl:versionInfo "v1.1.1 - 20 juni 2023 - Betere metadata en formattering."@nl ;
+  owl:versionInfo "v1.2 - Rubriek avv (ministeriële regeling) toegevoegd."@nl ;
+  owl:versionInfo "v1.2.1 - 29 januari 2024 - Feedback via GitLab."@nl ;
+  owl:versionInfo "v1.2.2 - 11 maart 2024 - Beheerplan toegevoegd aan documentatie."@nl ;
+  owl:versionInfo "v1.2.3 - 26 juni 2024 - Alleen documentatie gewijzigd, fix versielinkjes."@nl ;
+  owl:versionInfo "v1.2.4 - 30 juni 2025 - Alleen documentatie gewijzigd, tooigeo toegevoegd."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.2.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.2.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.2.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.2.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep-1.2.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep_v1.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep_v1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/wep_v1.2> ;
+  pav:version "1.2.4" ;
+  tooiont:publicatiedatum "2025-06-30"^^xsd:date ;
+  vann:preferredNamespacePrefix "tooiwep" ;
+  vann:preferredNamespaceUri tooiwep: .
+
+tooiwep:activiteit a skos:ConceptScheme ;
+  skos:prefLabel "activiteit"@nl .
+
+tooiwep:c_11b611a01 a skos:Concept ;
+  sh:order 1010 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "evenementenvergunning"@nl ;
+  tooiont:prefLabelVoorGroepen "evenementenvergunningen"@nl .
+
+tooiwep:c_11b611a02 a skos:Concept ;
+  sh:order 1020 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "exploitatievergunning"@nl ;
+  tooiont:prefLabelVoorGroepen "exploitatievergunningen"@nl .
+
+tooiwep:c_11b611a03 a skos:Concept ;
+  sh:order 1030 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "omgevingsvergunning"@nl ;
+  tooiont:prefLabelVoorGroepen "omgevingsvergunningen"@nl .
+
+tooiwep:c_11b611a04 a skos:Concept ;
+  sh:order 1040 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "vergunning voor activiteiten op of in oppervlaktewater"@nl ;
+  tooiont:prefLabelVoorGroepen "vergunningen voor activiteiten op of in oppervlaktewater"@nl .
+
+tooiwep:c_11b611a05 a skos:Concept ;
+  sh:order 1050 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "andere vergunning"@nl ;
+  tooiont:prefLabelVoorGroepen "andere vergunningen"@nl .
+
+tooiwep:c_11b611a06 a skos:Concept ;
+  sh:order 1060 ;
+  skos:broader tooiwep:c_a2c634b01 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "andere beschikking"@nl ;
+  tooiont:prefLabelVoorGroepen "andere beschikkingen"@nl .
+
+tooiwep:c_11b611a07 a skos:Concept ;
+  sh:order 2010 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "algemeen verbindend voorschrift (verordening)"@nl ;
+  tooiont:prefLabelVoorGroepen "algemeen verbindende voorschriften (verordeningen)"@nl .
+
+tooiwep:c_11b611a08 a skos:Concept ;
+  sh:order 2020 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "algemeenverbindendverklaring van cao-bepalingen"@nl ;
+  tooiont:prefLabelVoorGroepen "algemeenverbindendverklaringen van cao-bepalingen"@nl .
+
+tooiwep:c_11b611a09 a skos:Concept ;
+  sh:order 2030 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "bekendmaking aan de scheepvaart"@nl ;
+  tooiont:prefLabelVoorGroepen "bekendmakingen aan de scheepvaart"@nl .
+
+tooiwep:c_11b611a10 a skos:Concept ;
+  sh:order 2040 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "beleidsregel"@nl ;
+  tooiont:prefLabelVoorGroepen "beleidsregels"@nl .
+
+tooiwep:c_11b611a11 a skos:Concept ;
+  sh:order 2050 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "delegatie- of mandaatbesluit"@nl ;
+  tooiont:prefLabelVoorGroepen "delegatie- en mandaatbesluiten"@nl .
+
+tooiwep:c_11b611a12 a skos:Concept ;
+  sh:order 2060 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "gemeenschappelijke regeling"@nl ;
+  tooiont:prefLabelVoorGroepen "gemeenschappelijke regelingen"@nl .
+
+tooiwep:c_11b611a13 a skos:Concept ;
+  sh:order 2070 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "ruimtelijk plan of omgevingsdocument"@nl ;
+  tooiont:prefLabelVoorGroepen "ruimtelijke plannen en omgevingsdocumenten"@nl .
+
+tooiwep:c_11b611a14 a skos:Concept ;
+  sh:order 2080 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "verkeersbesluit of -mededeling"@nl ;
+  tooiont:prefLabelVoorGroepen "verkeersbesluiten en -mededelingen"@nl .
+
+tooiwep:c_11b611a15 a skos:Concept ;
+  sh:order 2090 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "ander besluit van algemene strekking"@nl ;
+  tooiont:prefLabelVoorGroepen "andere besluiten van algemene strekking"@nl .
+
+tooiwep:c_11b611a16 a skos:Concept ;
+  sh:order 3010 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "accountantsregister"@nl ;
+  tooiont:prefLabelVoorGroepen "accountantsregister"@nl .
+
+tooiwep:c_11b611a17 a skos:Concept ;
+  sh:order 3020 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "handelsregister"@nl ;
+  tooiont:prefLabelVoorGroepen "handelsregister"@nl .
+
+tooiwep:c_11b611a18 a skos:Concept ;
+  sh:order 3030 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "register beroepsbeoefenaren individuele gezondheidszorg"@nl ;
+  tooiont:prefLabelVoorGroepen "registers beroepsbeoefenaren individuele gezondheidszorg"@nl .
+
+tooiwep:c_11b611a19 a skos:Concept ;
+  sh:order 3050 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "register geneesmiddelen"@nl ;
+  tooiont:prefLabelVoorGroepen "register geneesmiddelen"@nl .
+
+tooiwep:c_11b611a20 a skos:Concept ;
+  sh:order 3060 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "register gewasbeschermingsmiddelen of biociden"@nl ;
+  tooiont:prefLabelVoorGroepen "registers gewasbeschermingsmiddelen en biociden"@nl .
+
+tooiwep:c_11b611a21 a skos:Concept ;
+  sh:order 3040 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "register diergeneesmiddelen"@nl ;
+  tooiont:prefLabelVoorGroepen "register diergeneesmiddelen"@nl .
+
+tooiwep:c_11b611a22 a skos:Concept ;
+  sh:order 3070 ;
+  skos:broader tooiwep:c_a2c634b03 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "register streekproducten"@nl ;
+  tooiont:prefLabelVoorGroepen "registers streekproducten"@nl .
+
+tooiwep:c_11b611a23 a skos:Concept ;
+  sh:order 4010 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "deurwaardersexploot of betekening Belastingdienst"@nl ;
+  tooiont:prefLabelVoorGroepen "deurwaardersexploten en betekeningen Belastingdienst"@nl .
+
+tooiwep:c_11b611a24 a skos:Concept ;
+  sh:order 4020 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "echtscheiding of ontbinding"@nl ;
+  tooiont:prefLabelVoorGroepen "echtscheidingen en ontbindingen"@nl .
+
+tooiwep:c_11b611a25 a skos:Concept ;
+  sh:order 4030 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "faillissement, surseance van betaling of schuldsanering"@nl ;
+  tooiont:prefLabelVoorGroepen "faillissementen, surseances van betaling en schuldsaneringen"@nl .
+
+tooiwep:c_11b611a26 a skos:Concept ;
+  sh:order 4040 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "gerechtelijke oproeping belanghebbenden"@nl ;
+  tooiont:prefLabelVoorGroepen "gerechtelijke oproepingen belanghebbenden"@nl .
+
+tooiwep:c_11b611a27 a skos:Concept ;
+  sh:order 4050 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "ondercuratelestelling of handlichting"@nl ;
+  tooiont:prefLabelVoorGroepen "ondercuratelestellingen en handlichtingen"@nl .
+
+tooiwep:c_11b611a28 a skos:Concept ;
+  sh:order 4060 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "oproeping onbetaalde boetes"@nl ;
+  tooiont:prefLabelVoorGroepen "oproepingen onbetaalde boetes"@nl .
+
+tooiwep:c_11b611a29 a skos:Concept ;
+  sh:order 4070 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "schuldeisers of vereffening nalatenschap"@nl ;
+  tooiont:prefLabelVoorGroepen "schuldeisers en vereffeningen nalatenschappen"@nl .
+
+tooiwep:c_11b611a30 a skos:Concept ;
+  sh:order 4080 ;
+  skos:broader tooiwep:c_a2c634b04 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "uitschrijving basisregistratie personen"@nl ;
+  tooiont:prefLabelVoorGroepen "uitschrijvingen basisregistratie personen"@nl .
+
+tooiwep:c_11b611a31 a skos:Concept ;
+  sh:order 5010 ;
+  skos:broader tooiwep:c_a2c634b05 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "evenementmelding"@nl ;
+  tooiont:prefLabelVoorGroepen "evenementmeldingen"@nl .
+
+tooiwep:c_11b611a32 a skos:Concept ;
+  sh:order 5020 ;
+  skos:broader tooiwep:c_a2c634b05 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "exploitatiemelding"@nl ;
+  tooiont:prefLabelVoorGroepen "exploitatiemeldingen"@nl .
+
+tooiwep:c_11b611a33 a skos:Concept ;
+  sh:order 5030 ;
+  skos:broader tooiwep:c_a2c634b05 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "melding van activiteiten op of in oppervlaktewater"@nl ;
+  tooiont:prefLabelVoorGroepen "meldingen van activiteiten op of in oppervlaktewater"@nl .
+
+tooiwep:c_11b611a34 a skos:Concept ;
+  sh:order 5040 ;
+  skos:broader tooiwep:c_a2c634b05 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "omgevingsmelding"@nl ;
+  tooiont:prefLabelVoorGroepen "omgevingsmeldingen"@nl .
+
+tooiwep:c_11b611a35 a skos:Concept ;
+  sh:order 5050 ;
+  skos:broader tooiwep:c_a2c634b05 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "andere melding"@nl ;
+  tooiont:prefLabelVoorGroepen "andere meldingen"@nl .
+
+tooiwep:c_11b611a36 a skos:Concept ;
+  sh:order 6010 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "afvalinzameling"@nl ;
+  tooiont:prefLabelVoorGroepen "afvalinzameling"@nl .
+
+tooiwep:c_11b611a37 a skos:Concept ;
+  sh:order 6020 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "inspraak"@nl ;
+  tooiont:prefLabelVoorGroepen "inspraak"@nl .
+
+tooiwep:c_11b611a38 a skos:Concept ;
+  sh:order 6030 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "openingstijden"@nl ;
+  tooiont:prefLabelVoorGroepen "openingstijden"@nl .
+
+tooiwep:c_11b611a39 a skos:Concept ;
+  sh:order 6040 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "vergadering of stuk van het bestuur"@nl ;
+  tooiont:prefLabelVoorGroepen "vergaderingen en stukken van het bestuur"@nl .
+
+tooiwep:c_11b611a40 a skos:Concept ;
+  sh:order 6050 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "verkiezingen"@nl ;
+  tooiont:prefLabelVoorGroepen "verkiezingen"@nl .
+
+tooiwep:c_11b611a41 a skos:Concept ;
+  sh:order 6060 ;
+  skos:broader tooiwep:c_a2c634b06 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "andere voorlichtingsinformatie"@nl ;
+  tooiont:prefLabelVoorGroepen "andere voorlichtingsinformatie"@nl .
+
+tooiwep:c_11b611a42 a skos:Concept ;
+  sh:order 7010 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "advies Raad van State"@nl ;
+  tooiont:prefLabelVoorGroepen "adviezen Raad van State"@nl .
+
+tooiwep:c_11b611a43 a skos:Concept ;
+  sh:order 7020 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "autorisatiebesluit basisregistratie personen"@nl ;
+  tooiont:prefLabelVoorGroepen "autorisatiebesluiten basisregistratie personen"@nl .
+
+tooiwep:c_11b611a44 a skos:Concept ;
+  sh:order 7030 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "benoeming of ontslag"@nl ;
+  tooiont:prefLabelVoorGroepen "benoemingen en ontslagen"@nl .
+
+tooiwep:c_11b611a45 a skos:Concept ;
+  sh:order 7040 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "circulaire"@nl ;
+  tooiont:prefLabelVoorGroepen "circulaires"@nl .
+
+tooiwep:c_11b611a46 a skos:Concept ;
+  sh:order 7050 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "convenant"@nl ;
+  tooiont:prefLabelVoorGroepen "convenanten"@nl .
+
+tooiwep:c_11b611a47 a skos:Concept ;
+  sh:order 7060 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "Gazette Raad voor plantenrassen"@nl ;
+  tooiont:prefLabelVoorGroepen "Gazette Raad voor plantenrassen"@nl .
+
+tooiwep:c_11b611a48 a skos:Concept ;
+  sh:order 7070 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "interne regeling"@nl ;
+  tooiont:prefLabelVoorGroepen "interne regelingen"@nl .
+
+tooiwep:c_11b611a49 a skos:Concept ;
+  sh:order 7080 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "kieswetpublicatie"@nl ;
+  tooiont:prefLabelVoorGroepen "kieswetpublicaties"@nl .
+
+tooiwep:c_11b611a50 a skos:Concept ;
+  sh:order 7090 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "koninklijke onderscheiding"@nl ;
+  tooiont:prefLabelVoorGroepen "koninklijke onderscheidingen"@nl .
+
+tooiwep:c_11b611a51 a skos:Concept ;
+  sh:order 7100 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "liquidatie"@nl ;
+  tooiont:prefLabelVoorGroepen "liquidaties"@nl .
+
+tooiwep:c_11b611a52 a skos:Concept ;
+  sh:order 7110 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "mededeling verzekeringswezen"@nl ;
+  tooiont:prefLabelVoorGroepen "mededelingen verzekeringswezen"@nl .
+
+tooiwep:c_11b611a53 a skos:Concept ;
+  sh:order 7120 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "ongewenstverklaring vreemdeling"@nl ;
+  tooiont:prefLabelVoorGroepen "ongewenstverklaringen vreemdelingen"@nl .
+
+tooiwep:c_11b611a54 a skos:Concept ;
+  sh:order 7130 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "onteigening"@nl ;
+  tooiont:prefLabelVoorGroepen "onteigeningen"@nl .
+
+tooiwep:c_11b611a55 a skos:Concept ;
+  sh:order 7140 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "pensioenen"@nl ;
+  tooiont:prefLabelVoorGroepen "pensioenen"@nl .
+
+tooiwep:c_11b611a56 a skos:Concept ;
+  sh:order 7150 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "tuchtrechtelijke uitspraak"@nl ;
+  tooiont:prefLabelVoorGroepen "tuchtrechtelijke uitspraken"@nl .
+
+tooiwep:c_11b611a57 a skos:Concept ;
+  sh:order 7160 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "vervreemding erfgoed"@nl ;
+  tooiont:prefLabelVoorGroepen "vervreemdingen erfgoed"@nl .
+
+tooiwep:c_11b611a58 a skos:Concept ;
+  sh:order 7170 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "overige overheidsinformatie"@nl ;
+  tooiont:prefLabelVoorGroepen "overige overheidsinformatie"@nl .
+
+tooiwep:c_38871eed a skos:Concept ;
+  sh:order 2005 ;
+  skos:broader tooiwep:c_a2c634b02 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "algemeen verbindend voorschrift (ministeriële regeling)"@nl ;
+  tooiont:prefLabelVoorGroepen "algemeen verbindende voorschriften (ministeriële regelingen)" .
+
+tooiwep:c_52a2fb6d a skos:Concept ;
+  sh:order 7135 ;
+  skos:broader tooiwep:c_a2c634b07 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "participatie"@nl ;
+  tooiont:prefLabelVoorGroepen "participaties"@nl .
+
+tooiwep:c_a2c634b01 a skos:Concept ;
+  sh:order 1000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "vergunning of andere beschikking"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "vergunningen en andere beschikkingen"@nl .
+
+tooiwep:c_a2c634b02 a skos:Concept ;
+  sh:order 2000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "besluit van algemene strekking"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "besluiten van algemene strekking"@nl .
+
+tooiwep:c_a2c634b03 a skos:Concept ;
+  sh:order 3000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "registermutatie"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "registermutaties"@nl .
+
+tooiwep:c_a2c634b04 a skos:Concept ;
+  sh:order 4000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "oproeping of juridische kennisgeving"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "oproepingen en juridische kennisgevingen"@nl .
+
+tooiwep:c_a2c634b05 a skos:Concept ;
+  sh:order 5000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "melding"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "meldingen"@nl .
+
+tooiwep:c_a2c634b06 a skos:Concept ;
+  sh:order 6000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "voorlichting"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "voorlichting"@nl .
+
+tooiwep:c_a2c634b07 a skos:Concept ;
+  sh:order 7000 ;
+  skos:inScheme tooiwep:rubriek ;
+  skos:prefLabel "overig"@nl ;
+  skos:topConceptOf tooiwep:rubriek ;
+  tooiont:prefLabelVoorGroepen "overig"@nl .
+
+tooiwep:c_d3c8b4b04 a skos:Concept ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "provinciale omgevingsverordening"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "provinciale omgevingsverordeningen"@nl .
+
+tooiwep:c_d3c8b4b05 a skos:Concept ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "structuur- of omgevingsvisie"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "structuur- en omgevingsvisies"@nl .
+
+tooiwep:c_d3c8b4b06 a skos:Concept ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "voorbereidingsbesluit"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "voorbereidingsbesluiten"@nl .
+
+tooiwep:c_d3c8b4b08 a skos:Concept ;
+  dcterms:modified "2020-08-13T11:38:20"^^xsd:dateTime ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "waterschapsverordening"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "waterschapsverordeningen"@nl .
+
+tooiwep:c_d3c8b4b09 a skos:Concept ;
+  dcterms:modified "2020-08-13T11:43:00"^^xsd:dateTime ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "reactieve interventie"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "reactieve interventies"@nl .
+
+tooiwep:c_d3c8b4b11 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "bouwen"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "bouwen"@nl .
+
+tooiwep:c_d3c8b4b12 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "brandveilig gebruik"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "brandveilig gebruik"@nl .
+
+tooiwep:c_d3c8b4b13 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "kappen"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "kappen"@nl .
+
+tooiwep:c_d3c8b4b14 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "milieu"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "milieu"@nl .
+
+tooiwep:c_d3c8b4b15 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "ruimtelijke ordening"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "ruimtelijke ordening"@nl .
+
+tooiwep:c_d3c8b4b16 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "slopen"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "slopen"@nl .
+
+tooiwep:c_d3c8b4b17 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "uitweg en inrit"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "uitweg en inrit"@nl .
+
+tooiwep:c_d3c8b4b18 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "natuur"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "natuur"@nl .
+
+tooiwep:c_d3c8b4b19 a skos:Concept ;
+  skos:inScheme tooiwep:activiteit ;
+  skos:prefLabel "reclame"@nl ;
+  skos:topConceptOf tooiwep:activiteit ;
+  tooiont:prefLabelVoorGroepen "reclame"@nl .
+
+tooiwep:c_d3c8e4b01 a skos:Concept ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "aanwijzingsbesluit of instructie"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "aanwijzingsbesluiten en instructies"@nl .
+
+tooiwep:c_d3c8e4b02 a skos:Concept ;
+  dcterms:modified "2020-08-13T11:43:34"^^xsd:dateTime ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "projectbesluit"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "projectbesluiten"@nl .
+
+tooiwep:c_d3c8e4b03 a skos:Concept ;
+  skos:inScheme tooiwep:plansoort ;
+  skos:prefLabel "bestemmings- of omgevingsplan"@nl ;
+  skos:topConceptOf tooiwep:plansoort ;
+  tooiont:prefLabelVoorGroepen "bestemmings- en omgevingsplannen"@nl .
+
+tooiwep:plansoort a skos:ConceptScheme ;
+  skos:prefLabel "plansoort"@nl .
+
+tooiwep:rubriek a skos:ConceptScheme ;
+  skos:prefLabel "rubriek"@nl .
+
+tooiwep:skosCollection_082172d0 a skos:Collection ;
+  dcterms:created "2020-08-05T16:19:20.056+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-02-11T10:30:23.353+01:00"^^xsd:dateTime ;
+  sh:order 7000 ;
+  skos:member tooiwep:c_11b611a42 ;
+  skos:member tooiwep:c_11b611a43 ;
+  skos:member tooiwep:c_11b611a44 ;
+  skos:member tooiwep:c_11b611a45 ;
+  skos:member tooiwep:c_11b611a46 ;
+  skos:member tooiwep:c_11b611a47 ;
+  skos:member tooiwep:c_11b611a48 ;
+  skos:member tooiwep:c_11b611a49 ;
+  skos:member tooiwep:c_11b611a50 ;
+  skos:member tooiwep:c_11b611a51 ;
+  skos:member tooiwep:c_11b611a52 ;
+  skos:member tooiwep:c_11b611a53 ;
+  skos:member tooiwep:c_11b611a54 ;
+  skos:member tooiwep:c_11b611a55 ;
+  skos:member tooiwep:c_11b611a56 ;
+  skos:member tooiwep:c_11b611a57 ;
+  skos:member tooiwep:c_11b611a58 ;
+  skos:prefLabel "<overig|"@nl .
+
+tooiwep:skosCollection_15fff04a a skos:Collection ;
+  dcterms:created "2020-08-05T16:18:13.109+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-02-11T10:30:52.779+01:00"^^xsd:dateTime ;
+  sh:order 1000 ;
+  skos:member tooiwep:c_11b611a03 ;
+  skos:member tooiwep:c_11b611a05 ;
+  skos:prefLabel "<vergunning of andere beschikking|"@nl .
+
+tooiwep:skosCollection_279c30f9 a skos:Collection ;
+  dcterms:created "2021-06-02T10:18:13"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T14:50:34"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a01 ;
+  skos:member tooiwep:c_11b611a02 ;
+  skos:member tooiwep:c_11b611a04 ;
+  skos:member tooiwep:c_11b611a05 ;
+  skos:member tooiwep:c_11b611a06 ;
+  skos:prefLabel "beschikking zonder omgevingsvergunning"@nl .
+
+tooiwep:skosCollection_2c9df109 a skos:Collection ;
+  dcterms:created "2021-06-10T14:50:22"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T14:51:20"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a31 ;
+  skos:member tooiwep:c_11b611a32 ;
+  skos:member tooiwep:c_11b611a33 ;
+  skos:member tooiwep:c_11b611a35 ;
+  skos:prefLabel "melding zonder omgevingsmelding"@nl .
+
+tooiwep:skosCollection_41231c98 a skos:Collection ;
+  dcterms:created "2021-06-10T17:43:55"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T18:00:15"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a36 ;
+  skos:member tooiwep:c_11b611a37 ;
+  skos:member tooiwep:c_11b611a38 ;
+  skos:member tooiwep:c_11b611a39 ;
+  skos:member tooiwep:c_11b611a40 ;
+  skos:member tooiwep:c_11b611a41 ;
+  skos:prefLabel "<voorlichting>"@nl .
+
+tooiwep:skosCollection_496893cf a skos:Collection ;
+  dcterms:created "2020-08-05T16:23:49.331+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-02-11T10:30:36.458+01:00"^^xsd:dateTime ;
+  sh:order 3000 ;
+  skos:member tooiwep:c_11b611a16 ;
+  skos:member tooiwep:c_11b611a17 ;
+  skos:member tooiwep:c_11b611a18 ;
+  skos:member tooiwep:c_11b611a19 ;
+  skos:member tooiwep:c_11b611a20 ;
+  skos:member tooiwep:c_11b611a21 ;
+  skos:member tooiwep:c_11b611a22 ;
+  skos:prefLabel "<registermutatie|"@nl .
+
+tooiwep:skosCollection_4aaaed32 a skos:Collection ;
+  dcterms:created "2021-06-10T17:42:19"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T18:18:19"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a01 ;
+  skos:member tooiwep:c_11b611a02 ;
+  skos:member tooiwep:c_11b611a04 ;
+  skos:member tooiwep:c_11b611a05 ;
+  skos:member tooiwep:c_11b611a06 ;
+  skos:prefLabel "beschikking niet zijnde omgevingsvergunning"@nl .
+
+tooiwep:skosCollection_4ab9b0a5 a skos:Collection ;
+  dcterms:created "2020-08-05T15:06:20.676+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-17T10:13:05"^^xsd:dateTime ;
+  sh:order 6000 ;
+  skos:member tooiwep:c_11b611a36 ;
+  skos:member tooiwep:c_11b611a37 ;
+  skos:member tooiwep:c_11b611a38 ;
+  skos:member tooiwep:c_11b611a39 ;
+  skos:member tooiwep:c_11b611a40 ;
+  skos:member tooiwep:c_11b611a41 ;
+  skos:prefLabel "<voorlichting|"@nl .
+
+tooiwep:skosCollection_4af9ff61 a skos:Collection ;
+  dcterms:created "2020-08-05T17:26:47.492+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-05T17:27:52.987+02:00"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b11 ;
+  skos:member tooiwep:c_d3c8b4b12 ;
+  skos:member tooiwep:c_d3c8b4b13 ;
+  skos:member tooiwep:c_d3c8b4b14 ;
+  skos:member tooiwep:c_d3c8b4b15 ;
+  skos:member tooiwep:c_d3c8b4b16 ;
+  skos:member tooiwep:c_d3c8b4b17 ;
+  skos:member tooiwep:c_d3c8b4b18 ;
+  skos:member tooiwep:c_d3c8b4b19 ;
+  skos:prefLabel "activiteit invoer decentraal"@nl .
+
+tooiwep:skosCollection_4c6b43ad a skos:Collection ;
+  dcterms:created "2021-06-10T14:49:03"^^xsd:dateTime ;
+  dcterms:modified "2021-06-30T14:05:49"^^xsd:dateTime ;
+  skos:member tooiwep:skosCollection_41231c98 ;
+  skos:member tooiwep:skosCollection_4aaaed32 ;
+  skos:member tooiwep:skosCollection_4e380121 ;
+  skos:member tooiwep:skosCollection_58d9ddee ;
+  skos:member tooiwep:skosCollection_72fc4199 ;
+  skos:member tooiwep:skosCollection_7bef5125 ;
+  skos:member tooiwep:skosCollection_9ca86d8b ;
+  skos:member tooiwep:skosCollection_e7989681 ;
+  skos:prefLabel "rubriek invoer"@nl .
+
+tooiwep:skosCollection_4e380121 a skos:Collection ;
+  dcterms:created "2021-06-10T17:43:24"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T17:49:45"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a23 ;
+  skos:member tooiwep:c_11b611a24 ;
+  skos:member tooiwep:c_11b611a25 ;
+  skos:member tooiwep:c_11b611a26 ;
+  skos:member tooiwep:c_11b611a27 ;
+  skos:member tooiwep:c_11b611a28 ;
+  skos:member tooiwep:c_11b611a29 ;
+  skos:member tooiwep:c_11b611a30 ;
+  skos:prefLabel "<oproeping of juridische kennisgeving>"@nl .
+
+tooiwep:skosCollection_4fed568b a skos:Collection ;
+  dcterms:created "2020-08-05T16:03:10.509+02:00"^^xsd:dateTime ;
+  skos:member tooiwep:skosCollection_082172d0 ;
+  skos:member tooiwep:skosCollection_15fff04a ;
+  skos:member tooiwep:skosCollection_496893cf ;
+  skos:member tooiwep:skosCollection_bb4036a8 ;
+  skos:member tooiwep:skosCollection_fc27c174 ;
+  skos:prefLabel "rubriek invoer centraal"@nl .
+
+tooiwep:skosCollection_58d9ddee a skos:Collection ;
+  dcterms:created "2021-06-10T17:42:44"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T17:47:39"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a07 ;
+  skos:member tooiwep:c_11b611a08 ;
+  skos:member tooiwep:c_11b611a09 ;
+  skos:member tooiwep:c_11b611a10 ;
+  skos:member tooiwep:c_11b611a11 ;
+  skos:member tooiwep:c_11b611a12 ;
+  skos:member tooiwep:c_11b611a13 ;
+  skos:member tooiwep:c_11b611a14 ;
+  skos:member tooiwep:c_11b611a15 ;
+  skos:member tooiwep:c_38871eed ;
+  skos:prefLabel "<besluit van algemene strekking>"@nl .
+
+tooiwep:skosCollection_5c5faf65 a skos:Collection ;
+  dcterms:created "2020-08-05T15:05:55.676+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-17T10:12:26"^^xsd:dateTime ;
+  sh:order 5000 ;
+  skos:member tooiwep:c_11b611a31 ;
+  skos:member tooiwep:c_11b611a32 ;
+  skos:member tooiwep:c_11b611a33 ;
+  skos:member tooiwep:c_11b611a34 ;
+  skos:member tooiwep:c_11b611a35 ;
+  skos:prefLabel "<melding|"@nl .
+
+tooiwep:skosCollection_65a846b7 a skos:Collection ;
+  dcterms:created "2020-08-06T10:06:35"^^xsd:dateTime ;
+  dcterms:modified "2020-08-06T10:07:36"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b11 ;
+  skos:member tooiwep:c_d3c8b4b12 ;
+  skos:member tooiwep:c_d3c8b4b13 ;
+  skos:member tooiwep:c_d3c8b4b14 ;
+  skos:member tooiwep:c_d3c8b4b15 ;
+  skos:member tooiwep:c_d3c8b4b16 ;
+  skos:member tooiwep:c_d3c8b4b17 ;
+  skos:member tooiwep:c_d3c8b4b18 ;
+  skos:member tooiwep:c_d3c8b4b19 ;
+  skos:prefLabel "activiteit invoer centraal"@nl .
+
+tooiwep:skosCollection_681a4769 a skos:Collection ;
+  dcterms:created "2021-04-14T18:07:06"^^xsd:dateTime ;
+  dcterms:modified "2021-06-01T11:27:25"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b08 ;
+  skos:member tooiwep:c_d3c8e4b02 ;
+  skos:prefLabel "plansoort waterschap"@nl .
+
+tooiwep:skosCollection_7261d483 a skos:Collection ;
+  dcterms:created "2021-04-14T17:39:52"^^xsd:dateTime ;
+  dcterms:modified "2021-06-01T11:27:37"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b05 ;
+  skos:member tooiwep:c_d3c8b4b06 ;
+  skos:member tooiwep:c_d3c8e4b03 ;
+  skos:prefLabel "plansoort gemeente"@nl .
+
+tooiwep:skosCollection_72fc4199 a skos:Collection ;
+  dcterms:created "2021-06-10T17:44:09"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T17:57:00"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a42 ;
+  skos:member tooiwep:c_11b611a43 ;
+  skos:member tooiwep:c_11b611a44 ;
+  skos:member tooiwep:c_11b611a45 ;
+  skos:member tooiwep:c_11b611a46 ;
+  skos:member tooiwep:c_11b611a47 ;
+  skos:member tooiwep:c_11b611a48 ;
+  skos:member tooiwep:c_11b611a49 ;
+  skos:member tooiwep:c_11b611a50 ;
+  skos:member tooiwep:c_11b611a51 ;
+  skos:member tooiwep:c_11b611a52 ;
+  skos:member tooiwep:c_11b611a53 ;
+  skos:member tooiwep:c_11b611a54 ;
+  skos:member tooiwep:c_11b611a55 ;
+  skos:member tooiwep:c_11b611a56 ;
+  skos:member tooiwep:c_11b611a57 ;
+  skos:member tooiwep:c_11b611a58 ;
+  skos:member tooiwep:c_52a2fb6d ;
+  skos:prefLabel "<overig>"@nl .
+
+tooiwep:skosCollection_7bef5125 a skos:Collection ;
+  dcterms:created "2021-06-30T14:05:36"^^xsd:dateTime ;
+  dcterms:modified "2021-06-30T14:06:23"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a03 ;
+  skos:member tooiwep:c_11b611a34 ;
+  skos:prefLabel "omgevingsvergunning of -melding"@nl .
+
+tooiwep:skosCollection_8c7bd751 a skos:Collection ;
+  dcterms:created "2020-08-05T17:19:31.434+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-01T17:55:25"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b05 ;
+  skos:member tooiwep:c_d3c8b4b06 ;
+  skos:member tooiwep:c_d3c8e4b01 ;
+  skos:member tooiwep:c_d3c8e4b02 ;
+  skos:prefLabel "plansoort rijk"@nl .
+
+tooiwep:skosCollection_9ca86d8b a skos:Collection ;
+  dcterms:created "2021-06-10T17:43:03"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T17:59:21"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a16 ;
+  skos:member tooiwep:c_11b611a17 ;
+  skos:member tooiwep:c_11b611a18 ;
+  skos:member tooiwep:c_11b611a19 ;
+  skos:member tooiwep:c_11b611a20 ;
+  skos:member tooiwep:c_11b611a21 ;
+  skos:member tooiwep:c_11b611a22 ;
+  skos:prefLabel "<registermutatie>"@nl .
+
+tooiwep:skosCollection_a898527f a skos:Collection ;
+  dcterms:created "2021-04-14T18:00:21"^^xsd:dateTime ;
+  dcterms:modified "2021-04-14T18:01:28"^^xsd:dateTime ;
+  skos:member tooiwep:c_d3c8b4b04 ;
+  skos:member tooiwep:c_d3c8b4b05 ;
+  skos:member tooiwep:c_d3c8b4b06 ;
+  skos:member tooiwep:c_d3c8b4b09 ;
+  skos:member tooiwep:c_d3c8e4b01 ;
+  skos:member tooiwep:c_d3c8e4b02 ;
+  skos:prefLabel "plansoort provincie"@nl .
+
+tooiwep:skosCollection_bb4036a8 a skos:Collection ;
+  dcterms:created "2020-08-05T16:12:37.222+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-02-11T10:29:48.075+01:00"^^xsd:dateTime ;
+  sh:order 2000 ;
+  skos:member tooiwep:c_11b611a08 ;
+  skos:member tooiwep:c_11b611a09 ;
+  skos:member tooiwep:c_11b611a10 ;
+  skos:member tooiwep:c_11b611a12 ;
+  skos:member tooiwep:c_11b611a13 ;
+  skos:member tooiwep:c_11b611a14 ;
+  skos:member tooiwep:c_11b611a15 ;
+  skos:member tooiwep:c_38871eed ;
+  skos:prefLabel "<besluit van algemene strekking|"@nl .
+
+tooiwep:skosCollection_cb69ffbc a skos:Collection ;
+  dcterms:created "2020-08-05T15:04:45.526+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-17T10:12:11"^^xsd:dateTime ;
+  sh:order 2000 ;
+  skos:member tooiwep:c_11b611a07 ;
+  skos:member tooiwep:c_11b611a09 ;
+  skos:member tooiwep:c_11b611a10 ;
+  skos:member tooiwep:c_11b611a11 ;
+  skos:member tooiwep:c_11b611a12 ;
+  skos:member tooiwep:c_11b611a13 ;
+  skos:member tooiwep:c_11b611a14 ;
+  skos:member tooiwep:c_11b611a15 ;
+  skos:prefLabel "<besluit van algemene strekking|"@nl .
+
+tooiwep:skosCollection_deeb619d a skos:Collection ;
+  dcterms:created "2020-08-05T15:01:59.705+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T15:42:50"^^xsd:dateTime ;
+  sh:order 1000 ;
+  skos:member tooiwep:c_11b611a03 ;
+  skos:prefLabel "<vergunning of andere beschikking|"@nl .
+
+tooiwep:skosCollection_e7989681 a skos:Collection ;
+  dcterms:created "2021-06-10T17:43:44"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T18:18:39"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a31 ;
+  skos:member tooiwep:c_11b611a32 ;
+  skos:member tooiwep:c_11b611a33 ;
+  skos:member tooiwep:c_11b611a35 ;
+  skos:prefLabel "melding niet zijnde omgevingsmelding"@nl .
+
+tooiwep:skosCollection_ef549194 a skos:Collection ;
+  dcterms:created "2020-08-05T15:06:47.076+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-17T10:12:47"^^xsd:dateTime ;
+  sh:order 7000 ;
+  skos:member tooiwep:c_11b611a44 ;
+  skos:member tooiwep:c_11b611a46 ;
+  skos:member tooiwep:c_11b611a49 ;
+  skos:member tooiwep:c_11b611a57 ;
+  skos:member tooiwep:c_11b611a58 ;
+  skos:member tooiwep:c_52a2fb6d ;
+  skos:prefLabel "<overig|"@nl .
+
+tooiwep:skosCollection_f2208533 a skos:Collection ;
+  dcterms:created "2020-08-05T17:19:46.798+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-01T17:56:01"^^xsd:dateTime ;
+  skos:member tooiwep:skosCollection_681a4769 ;
+  skos:member tooiwep:skosCollection_7261d483 ;
+  skos:member tooiwep:skosCollection_8c7bd751 ;
+  skos:member tooiwep:skosCollection_a898527f ;
+  skos:prefLabel "plansoort invoer"@nl .
+
+tooiwep:skosCollection_faf5d9d2 a skos:Collection ;
+  dcterms:created "2020-08-05T15:05:24.970+02:00"^^xsd:dateTime ;
+  dcterms:modified "2020-08-17T10:12:36"^^xsd:dateTime ;
+  sh:order 4000 ;
+  skos:member tooiwep:c_11b611a30 ;
+  skos:prefLabel "<oproeping of juridische kennisgeving|"@nl .
+
+tooiwep:skosCollection_fc27c174 a skos:Collection ;
+  dcterms:created "2020-08-05T16:18:49.770+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-02-11T10:30:08.458+01:00"^^xsd:dateTime ;
+  sh:order 4000 ;
+  skos:member tooiwep:c_11b611a23 ;
+  skos:member tooiwep:c_11b611a24 ;
+  skos:member tooiwep:c_11b611a25 ;
+  skos:member tooiwep:c_11b611a26 ;
+  skos:member tooiwep:c_11b611a27 ;
+  skos:member tooiwep:c_11b611a28 ;
+  skos:member tooiwep:c_11b611a29 ;
+  skos:prefLabel "<oproeping of juridische kennisgeving|"@nl .
+
+tooiwep:skosCollection_ffa1fbd8 a skos:Collection ;
+  dcterms:created "2020-08-05T14:15:28.687+02:00"^^xsd:dateTime ;
+  dcterms:modified "2021-06-10T15:52:35"^^xsd:dateTime ;
+  skos:member tooiwep:c_11b611a03 ;
+  skos:member tooiwep:skosCollection_279c30f9 ;
+  skos:member tooiwep:skosCollection_4ab9b0a5 ;
+  skos:member tooiwep:skosCollection_5c5faf65 ;
+  skos:member tooiwep:skosCollection_cb69ffbc ;
+  skos:member tooiwep:skosCollection_ef549194 ;
+  skos:member tooiwep:skosCollection_faf5d9d2 ;
+  skos:prefLabel "rubriek invoer decentraal"@nl .
+
+

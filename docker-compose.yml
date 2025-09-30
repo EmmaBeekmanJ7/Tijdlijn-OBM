@@ -1,0 +1,16 @@
+services:
+  scraper:
+    build: .
+    command: python resources/scraper.py
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  summarizer:
+    build: .
+    command: python resources/summarizer.py
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1

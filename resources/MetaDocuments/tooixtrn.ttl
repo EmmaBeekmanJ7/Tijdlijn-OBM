@@ -1,0 +1,1208 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix file-type: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooixtrn: <https://identifier.overheid.nl/tooi/def/thes/xtrn/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://identifier.overheid.nl/tooi/def/thes/xtrn> a owl:Ontology ;
+  rdfs:label "tooixtrn"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "TOOI-thesaurus voor TOOI-externe begrippen (tooixtrn) is een thesaurus van begrippen die buiten TOOI gedefinieerd zijn, maar binnen TOOI worden toegepast. Het betreft hoofdzakelijk concepten die gemunt zijn in de Authority Tables (AT) van het Publication Office of the EU."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-thes-xtrn/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language language:NLD ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-07-02"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "TOOI-thesaurus voor TOOI-externe begrippen"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/THESAURUS> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - 1 april 2021 - Initiële versie"@nl ;
+  owl:versionInfo "v1.0.1 - 20 juni 2023 - Betere metadata en formattering"@nl ;
+  owl:versionInfo "v1.1.0 - 29 januari 2024 - language:PAP verwijderd, updates in Aansluitvoorwaarden PLOOI, file-type:7z toegevoegd aan tooixtrn:file-type, skosCollections opaak gemaakt, feedback via GitLab."@nl ;
+  owl:versionInfo "v1.1.1 - 11 maart 2024 - Beheerplan toegevoegd aan documentatie."@nl ;
+  owl:versionInfo "v1.1.2 - 26 juni 2024 - Alleen documentatie gewijzigd, fix versielinkjes."@nl ;
+  owl:versionInfo "v1.1.3 - 2 juli 2025 - Alleen documentatie gewijzigd, tooigeo toegevoegd."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.1.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.0.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.1.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.1.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn-1.1.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/thes/xtrn_v1.0> ;
+  pav:version "1.1.3" ;
+  tooiont:publicatiedatum "2025-07-02"^^xsd:date ;
+  vann:preferredNamespacePrefix "tooixtrn" ;
+  vann:preferredNamespaceUri <https://identifier.overheid.nl/tooi/def/thes/tooixtrn/> .
+
+file-type:7z a skos:Concept ;
+  skos:definition "7z is a compressed archive file format that supports several different data compression, encryption and pre-processing algorithms."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "7-Zip compressed file" ;
+  skos:notation "7z" ;
+  skos:prefLabel "7z"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ATOM a skos:Concept ;
+  skos:definition "The Atom Feed or Atom Syndication Format is an XML language used for web feeds. Web feeds allow software programs to check for updates published on a website."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ATOM" ;
+  skos:notation "application/atom+xml" ;
+  skos:notation "atom" ;
+  skos:notation "xml" ;
+  skos:prefLabel "Atom Feed"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:AZW a skos:Concept ;
+  skos:definition "AZW Kindle File Format is a proprietary e-book file format created by Amazon.com that can be downloaded and read on devices like smartphones, tablets, computers or e-readers that have Amazon's Kindle application."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "AZW" ;
+  skos:notation "application/vnd.amazon.ebook" ;
+  skos:notation "azw" ;
+  skos:prefLabel "Amazon Kindle eBook"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:BMP a skos:Concept ;
+  skos:definition "The bitmap image (BMP) or device independent bitmap (DIB) is a raster graphics image file format used to store bitmap digital images, independently of the display device."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "BMP" ;
+  skos:notation "bm" ;
+  skos:notation "bmp" ;
+  skos:notation "dib" ;
+  skos:notation "image/x-ms-bmp" ;
+  skos:prefLabel "Bitmap Image File"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:BWF a skos:Concept ;
+  skos:definition "BWF – Broadcast Wave Format – is an extension of the Microsoft WAV audio format and is the recording format of most file-based non-linear digital recorders used for motion picture, radio and television production. The purpose of this file format is the addition of metadata to facilitate the seamless exchange of sound data between different computer platforms and applications."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "BWF" ;
+  skos:notation "audio/vnd.wave" ;
+  skos:notation "bwf" ;
+  skos:notation "wav" ;
+  skos:prefLabel "BWF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:CSS a skos:Concept ;
+  skos:definition "CSS – Cascading Style Sheets – is a style sheet language used for describing the presentation of a document written in a markup language."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "CSS" ;
+  skos:notation "css" ;
+  skos:notation "text/css" ;
+  skos:prefLabel "CSS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:CSV a skos:Concept ;
+  skos:definition "CSV – comma-separated values – files store tabular data (numbers and text) in plain text. Each line of the file is a data record. Each record consists of one or more fields, separated by commas."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "CSV" ;
+  skos:notation "csv" ;
+  skos:notation "text/csv" ;
+  skos:prefLabel "CSV"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:DBF a skos:Concept ;
+  skos:definition "DBF – dBase database file – is supported by a number of database products. dBase was one of the first database management systems for microcomputers."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "DBF" ;
+  skos:notation "application/x-dbase" ;
+  skos:notation "dbf" ;
+  skos:prefLabel "DBF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:DOC a skos:Concept ;
+  skos:definition "DOC is a proprietary binary Word document format used by Microsoft Word word processor."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "DOC" ;
+  skos:notation "application/msword" ;
+  skos:notation "doc" ;
+  skos:prefLabel "Word DOC"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:DOCX a skos:Concept ;
+  skos:definition "DOCX is an Office Open XML international standard for Office documents. It is used by Microsoft Word and by a growing number of applications from other vendors in word processing programs."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "DOCX" ;
+  skos:notation "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ;
+  skos:notation "docx" ;
+  skos:prefLabel "Word DOCX"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:DTD_SGML a skos:Concept ;
+  skos:definition "SGML – Standard Generalized Markup Language – is a standard for defining generalized markup languages for documents. DTD – document type definition – is a set of markup declarations that define a document type for an SGML-family markup language (SGML, XML, HTML). It defines the legal building blocks of an XML document, the document structure with a list of legal elements and attributes."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "DTD_SGML" ;
+  skos:notation "application/sgml" ;
+  skos:notation "dtd" ;
+  skos:prefLabel "SGML DTD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:DTD_XML a skos:Concept ;
+  skos:definition "XML – Extensible Markup Language – is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. DTD – document type definition – is a set of markup declarations that define a document type for an SGML-family markup language (SGML, XML, HTML). It defines the legal building blocks of an XML document, the document structure with a list of legal elements and attributes. XML uses a subset of SGML DTD."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "DTD_XML" ;
+  skos:notation "application/xml-dtd" ;
+  skos:notation "dtd" ;
+  skos:prefLabel "XML DTD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:E00 a skos:Concept ;
+  skos:definition "E00 is an ArcInfo interchange file format. ArcInfo is a full-featured geographic information system produced by Esri."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "E00" ;
+  skos:notation "application/x-e00" ;
+  skos:notation "e00" ;
+  skos:prefLabel "E00"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ECW a skos:Concept ;
+  skos:definition "ECW – Enhanced Compressed Wavelet – is the media type which shall be used for a proprietary wavelet compression image format optimized for aerial and satellite imagery."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ECW" ;
+  skos:notation "application/x-ecw" ;
+  skos:notation "ecw" ;
+  skos:prefLabel "ECW"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:EPS a skos:Concept ;
+  skos:definition "EPS – Encapsulated PostScript – files are more-or-less self-contained, reasonably predictable PostScript documents that describe an image or drawing and can be placed within another PostScript document."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "EPS" ;
+  skos:notation "application/postscript" ;
+  skos:notation "eps" ;
+  skos:prefLabel "Encapsulated Postscript"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:EPUB a skos:Concept ;
+  skos:definition "EPUB – electronic publication – is an e-book file format that can be downloaded and read on devices like smartphones, tablets, computers or e-readers. It is a technical standard published by the International Digital Publishing Forum (IDPF)."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "EPUB" ;
+  skos:notation "application/epub+zip" ;
+  skos:notation "epub" ;
+  skos:prefLabel "EPUB"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:FMX2 a skos:Concept ;
+  skos:definition "Formex describes the format for the exchange of data between the Publication Office and its contractors. In particular, it defines the logical markup for documents which are published in the different series of the Offical Journal of the European Union. Formex 2 was a previous version of Formex actually used."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "FMX2" ;
+  skos:notation "text/sgml" ;
+  skos:notation "xml" ;
+  skos:prefLabel "Formex 2"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:FMX3 a skos:Concept ;
+  skos:definition "Formex describes the format for the exchange of data between the Publication Office and its contractors. In particular, it defines the logical markup for documents which are published in the different series of the Offical Journal of the European Union. Formex 3 was a previous version of Formex actually used."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "FMX3" ;
+  skos:notation "text/sgml" ;
+  skos:notation "xml" ;
+  skos:prefLabel "Formex 3"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:FMX4 a skos:Concept ;
+  skos:definition "Formex describes the format for the exchange of data between the Publication Office and its contractors. In particular, it defines the logical markup for documents which are published in the different series of the Offical Journal of the European Union. Formex V4 is based on the international standard XML."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "FMX4" ;
+  skos:notation "application/xml" ;
+  skos:notation "xml" ;
+  skos:prefLabel "Formex 4"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:GDB a skos:Concept ;
+  skos:definition "GDB is an Esri's file-based geodatabase format, stored as folders in a file system. It shall be used for Esri file geodatabases. The file is a zip archive that contains the gdb directory."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "GDB" ;
+  skos:notation "application/x-filegdb" ;
+  skos:notation "gdb" ;
+  skos:prefLabel "Esri File Geodatabase"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:GIF a skos:Concept ;
+  skos:definition "GIF – Graphics Interchange Format – is a bitmap image format that was developed by a team at the bulletin board service (BBS) provider CompuServe."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "GIF" ;
+  skos:notation "gif" ;
+  skos:notation "image/gif" ;
+  skos:prefLabel "GIF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:GML a skos:Concept ;
+  skos:definition "GML – Geography Markup Language – is the XML grammar defined by the Open Geospatial Consortium (OGC) to express geographical features. GML serves as a modeling language for geographic systems as well as an open interchange format for geographic transactions on the Internet."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "GML" ;
+  skos:notation "application/gml+xml" ;
+  skos:notation "gml .xml" ;
+  skos:prefLabel "GML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:GZIP a skos:Concept ;
+  skos:definition "GZIP – GNU zip – is a file format and a software application used for file compression and decompression."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "GZIP" ;
+  skos:notation "application/gzip" ;
+  skos:notation "application/x-gzip" ;
+  skos:notation "gz" ;
+  skos:prefLabel "GNU zip"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:HDF a skos:Concept ;
+  skos:definition "HDF is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of numerical data."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "HDF" ;
+  skos:notation "application/x-hdf" ;
+  skos:notation "h4" ;
+  skos:notation "h5" ;
+  skos:notation "hdf" ;
+  skos:notation "hdf4" ;
+  skos:notation "hdf5" ;
+  skos:notation "he2" ;
+  skos:notation "he5" ;
+  skos:prefLabel "HDF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:HTML a skos:Concept ;
+  skos:definition "HTML is the standard markup language used to create web pages and its elements form the building blocks of all websites."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "HTML" ;
+  skos:notation "htm" ;
+  skos:notation "html" ;
+  skos:notation "text/html" ;
+  skos:prefLabel "HTML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:INDD a skos:Concept ;
+  skos:definition "INDD is a file format for a page layout file used by Adobe InDesign. InDesign is a desktop publishing software application."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "INDD" ;
+  skos:notation "application/x-indesign" ;
+  skos:notation "indd" ;
+  skos:prefLabel "INDD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:JPEG a skos:Concept ;
+  skos:definition "JPEG – Joint Photographic Experts Group – is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography. The degree of compression can be adjusted, allowing a selectable tradeoff between storage size and image quality."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "JPEG" ;
+  skos:notation "image/jpeg" ;
+  skos:notation "jpeg" ;
+  skos:notation "jpg" ;
+  skos:prefLabel "JPEG"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:JSON a skos:Concept ;
+  skos:definition "JSON is an open-standard file format that uses human-readable text to transmit data objects consisting of attribute–value pairs and array data types (or any other serializable value). It is a very common data format used for asynchronous browser/server communication."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "JSON" ;
+  skos:notation "application/json" ;
+  skos:notation "json" ;
+  skos:prefLabel "JSON"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:JSON_LD a skos:Concept ;
+  skos:definition "JSON-LD is a JSON-based format to serialize Linked Data. It is primarily intended to be a way to use Linked Data in Web-based programming environments, to build interoperable Web services, and to store Linked Data in JSON-based storage engines."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "JSON_LD" ;
+  skos:notation "application/ld+json" ;
+  skos:notation "jsonld" ;
+  skos:prefLabel "JSON-LD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:KML a skos:Concept ;
+  skos:definition "KML – Keyhole Markup Language – is an XML notation for expressing geographic annotation and visualization within Internet-based, two-dimensional maps and three-dimensional Earth browsers. KML was developed for use with Google Earth and became an international standard."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "KML" ;
+  skos:notation "application/vnd.google-earth.kml+xml" ;
+  skos:notation "kml" ;
+  skos:prefLabel "KML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:KMZ a skos:Concept ;
+  skos:definition "A KMZ file consists of a main KML file and zero or more supporting files that are packaged using a Zip utility into one unit, called an archive. The KMZ file can then be stored and emailed as a single entity. A NetworkLink can fetch a KMZ file from a web server. When the KMZ file is unzipped, the main .kml file and its supporting files are separated into their original formats and directory structure, with their original filenames and extensions. In addition to being an archive format, the Zip format is also compressed, so an archive can include only a single large KML file. Depending on the content of the KML file, this process typically results in 10:1 compression. Your 10 Kbyte KML file can be served with a 1 Kbyte KMZ file."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "KMZ" ;
+  skos:notation "application/vnd.google-earth.kmz" ;
+  skos:notation "kmz" ;
+  skos:prefLabel "KMZ"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MAP_PRVW a skos:Concept ;
+  skos:definition "Esri's ArcGIS is a geographic information system (GIS) for working with maps and geographic information. Map previews are normal raster background maps."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MAP_PRVW" ;
+  skos:notation "arcgis_map_preview" ;
+  skos:prefLabel "ArcGIS Map Preview"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MAP_SRVC a skos:Concept ;
+  skos:definition "Esri's ArcGIS is a geographic information system (GIS) for working with maps and geographic information. Map services offer access to map and layer content."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MAP_SRVC" ;
+  skos:notation "arcgis_map_service" ;
+  skos:prefLabel "ArcGIS Map Service"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MDB a skos:Concept ;
+  skos:definition "MDB – Microsoft Database – is a proprietary file format used by 2003 and earlier versions of Microsoft Access. Microsoft Access is a database management system."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MDB" ;
+  skos:notation "application/vnd.ms-access" ;
+  skos:notation "application/x-msaccess" ;
+  skos:notation "mdb" ;
+  skos:prefLabel "MDB"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:METS a skos:Concept ;
+  skos:definition "METS – Metadata Encoding and Transmission Standard – is a metadata standard for encoding descriptive, administrative and structural metadata regarding objects within a digital library, expressed using the XML schema language."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "METS" ;
+  skos:notation "application/xml" ;
+  skos:notation "xml" ;
+  skos:prefLabel "METS XML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:METS_ZIP a skos:Concept ;
+  skos:definition "METS package is a zip file containing METS XML files."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "METS_ZIP" ;
+  skos:notation "application/zip" ;
+  skos:notation "zip" ;
+  skos:prefLabel "METS package"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MOBI a skos:Concept ;
+  skos:definition "Mobipocket eBook is a proprietary e-book file format of Mobipocket SA company that can be used by mobile phones, personal digital assistants (PDA) and desktop operating systems."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MOBI" ;
+  skos:notation "application/x-mobipocket-ebook" ;
+  skos:notation "mobi" ;
+  skos:notation "prc" ;
+  skos:prefLabel "Mobipocket eBook"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MOP a skos:Concept ;
+  skos:definition "MOP is a chemical file format used by MOPAC. MOPAC is a popular computer program used in computational chemistry. It is designed to implement semi-empirical quantum chemistry algorithms."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MOP" ;
+  skos:notation "chemical/x-mopac-input" ;
+  skos:notation "mop" ;
+  skos:prefLabel "MOP"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MPEG2 a skos:Concept ;
+  skos:definition "MPEG-2 – Moving Picture Experts Group – is a standard for the generic coding of moving pictures and associated audio information. It describes a combination of lossy video compression and lossy audio data compression methods, which permit storage and transmission of movies using currently available storage media and transmission bandwidth."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MPEG2" ;
+  skos:notation "audio/mpeg" ;
+  skos:notation "m2v" ;
+  skos:notation "mp2" ;
+  skos:notation "mp3" ;
+  skos:notation "mpeg" ;
+  skos:notation "mpg" ;
+  skos:notation "video/mpeg" ;
+  skos:prefLabel "MPEG-2"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MPEG4 a skos:Concept ;
+  skos:definition "MPEG-4 – Moving Picture Experts Group – is a method of defining compression of audio and visual (AV) digital data. It was designated a standard for a group of audio and video coding formats and related technology."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MPEG4" ;
+  skos:notation "application/mp4" ;
+  skos:notation "audio/mp4" ;
+  skos:notation "mp4" ;
+  skos:notation "mpeg" ;
+  skos:notation "mpg" ;
+  skos:notation "video/mp4" ;
+  skos:prefLabel "MPEG-4"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:MXD a skos:Concept ;
+  skos:definition "MXD – Map Exchange Document – is a file format in which the maps created from ArcGIS software can be stored."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "MXD" ;
+  skos:notation "application/x-mxd" ;
+  skos:notation "mxd" ;
+  skos:prefLabel "MXD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ODF a skos:Concept ;
+  skos:definition "ODF – Open Document Format for Office Applications, also known as OpenDocument – is an XML-based file format for spreadsheets, charts, presentations and word processing documents. It was developed with the aim of providing an open, XML-based file format specification for office applications."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ODF" ;
+  skos:notation "application/octet-stream" ;
+  skos:notation "application/vnd.oasis.opendocument.formula" ;
+  skos:notation "odf" ;
+  skos:prefLabel "ODF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ODP a skos:Concept ;
+  skos:definition "ODP is an OpenDocument file format for presentations. OpenDocument was developed with the aim of providing an open, XML-based file format specification for office applications."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ODP" ;
+  skos:notation "application/vnd.oasis.opendocument.presentation" ;
+  skos:notation "fodp" ;
+  skos:notation "odp" ;
+  skos:prefLabel "ODP"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ODS a skos:Concept ;
+  skos:definition "ODS is an OpenDocument file format for spreadsheets. OpenDocument was developed with the aim of providing an open, XML-based file format specification for office applications."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ODS" ;
+  skos:notation "application/vnd.oasis.opendocument.spreadsheet" ;
+  skos:notation "ods" ;
+  skos:prefLabel "ODS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ODT a skos:Concept ;
+  skos:definition "ODT is the word processing file format of OpenDocument, an open standard for electronic documents."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ODT" ;
+  skos:notation "application/vnd.oasis.opendocument.text" ;
+  skos:notation "odt" ;
+  skos:prefLabel "ODT"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:OWL a skos:Concept ;
+  skos:definition "OWL – Web Ontology Language – is a family of knowledge representation languages for authoring ontologies."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "OWL" ;
+  skos:notation "application/owl+xml" ;
+  skos:notation "owl" ;
+  skos:notation "owx" ;
+  skos:notation "rdf" ;
+  skos:prefLabel "OWL"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PDF a skos:Concept ;
+  skos:definition "PDF – Portable Document Format – is a file format developed to present documents, including text formatting and images, in a manner independent of application software, hardware and operating systems. Based on the PostScript language, each PDF file encapsulates a complete description of a fixed-layout flat document, including the text, fonts, vector graphics, raster images and other information needed to display it. PDF was standardized as an open format and does not require any royalties for its implementation."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PDF" ;
+  skos:notation "application/pdf" ;
+  skos:notation "pdf" ;
+  skos:prefLabel "PDF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PDFA1A a skos:Concept ;
+  skos:definition "PDF/A-1 is the Part 1 of the PDF standard and specifies two levels of conformance for PDF files. PDF/A-1a – Level A (accessible) conformance was intended to increase the accessibility of conforming files for physically impaired users by allowing assistive software, such as screen readers, to more precisely extract and interpret a file's contents."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PDFA1A" ;
+  skos:notation "application/pdf" ;
+  skos:notation "pdf" ;
+  skos:prefLabel "PDF/A-1a"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PDFA1B a skos:Concept ;
+  skos:definition "PDF/A-1 is the Part 1 of the PDF standard and specifies two levels of conformance for PDF files. Level B (basic) conformance requires only that standards necessary for the reliable reproduction of a document's visual appearance be followed."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PDFA1B" ;
+  skos:notation "application/pdf" ;
+  skos:notation "pdf" ;
+  skos:prefLabel "PDF/A-1b"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PDFX a skos:Concept ;
+  skos:definition "PDF/X is a subset of the PDF standard. The purpose of PDF/X is to facilitate graphics exchange, and it therefore has a series of printing related requirements which do not apply to standard PDF files."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PDFX" ;
+  skos:notation "application/pdf" ;
+  skos:notation "pdf" ;
+  skos:prefLabel "PDF/X"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PNG a skos:Concept ;
+  skos:definition "PNG – Portable Network Graphics – is a raster graphics file format that supports lossless data compression. PNG was created as an improved, non-patented replacement for Graphics Interchange Format (GIF), and is the most widely used lossless image compression format on the Internet."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PNG" ;
+  skos:notation "image/png" ;
+  skos:notation "png" ;
+  skos:prefLabel "PNG"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PPS a skos:Concept ;
+  skos:definition "PPS – PowerPoint 97–2003 binary slide show – is a binary filaname extension of Microsoft PowerPoint presentation program. PowerPoint was originally designed to provide visuals for group presentations within business organizations, but has come to be very widely used in many other communication situations, both in business and beyond."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PPS" ;
+  skos:notation "application/vnd.ms-powerpoint" ;
+  skos:notation "pps" ;
+  skos:prefLabel "PowerPoint Slide Show"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PPSX a skos:Concept ;
+  skos:definition "PPSX – PowerPoint 2007 XML slide show – is an XML filename extension of Microsoft PowerPoint presentation program. PowerPoint was originally designed to provide visuals for group presentations within business organizations, but has come to be very widely used in many other communication situations, both in business and beyond."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PPSX" ;
+  skos:notation "application/vnd.openxmlformats-officedocument.presentationml.slideshow" ;
+  skos:notation "ppsx" ;
+  skos:prefLabel "PowerPoint PPSX"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PPT a skos:Concept ;
+  skos:definition "PPT is a binary media type of Microsoft PowerPoint presentation program. PowerPoint was originally designed to provide visuals for group presentations within business organizations, but has come to be very widely used in many other communication situations, both in business and beyond."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PPT" ;
+  skos:notation "application/vnd.ms-powerpoint" ;
+  skos:notation "ppt" ;
+  skos:prefLabel "PowerPoint PPT"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PPTX a skos:Concept ;
+  skos:definition "PPTX – PowerPoint 2007 XML presentation – is an XML filename extension of Office Open XML version of Microsoft PowerPoint presentation program. PowerPoint was originally designed to provide visuals for group presentations within business organizations, but has come to be very widely used in many other communication situations, both in business and beyond."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PPTX" ;
+  skos:notation "application/vnd.openxmlformats-officedocument.presentationml.presentation" ;
+  skos:notation "pptx" ;
+  skos:prefLabel "PowerPoint PPTX"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PS a skos:Concept ;
+  skos:definition "PS – PostScript – is a page description language in the electronic publishing and desktop publishing business. It is a dynamically typed, concatenative programming language."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PS" ;
+  skos:notation "application/postscript" ;
+  skos:notation "ps" ;
+  skos:prefLabel "PS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:PSD a skos:Concept ;
+  skos:definition "PSD – Photoshop Document – stores an image with support for most imaging options available in Adobe Photoshop. Photoshop is a raster graphics editor."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "PSD" ;
+  skos:notation "application/x-photoshop" ;
+  skos:notation "psd" ;
+  skos:prefLabel "PSD"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RAR a skos:Concept ;
+  skos:definition "RAR is a proprietary archive file format that supports data compression, error recovery and file spanning."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RAR" ;
+  skos:notation "application/vnd.rar" ;
+  skos:notation "r00" ;
+  skos:notation "r01" ;
+  skos:notation "rar" ;
+  skos:notation "rev" ;
+  skos:prefLabel "RAR"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDFA a skos:Concept ;
+  skos:definition "RDFa is a technique that provides a set of markup attributes to augment the visual information on the Web with machine-readable hints."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDFA" ;
+  skos:notation "application/rdfa" ;
+  skos:notation "rdfa" ;
+  skos:prefLabel "RDFa"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_N_QUADS a skos:Concept ;
+  skos:definition "N-Quads is a line-based, plain text format for encoding an RDF dataset. N-quads statements are a sequence of RDF terms representing the subject, predicate, object and graph label of an RDF Triple and the graph it is part of in a dataset."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_N_QUADS" ;
+  skos:notation "application/n-quads" ;
+  skos:notation "nq" ;
+  skos:prefLabel "RDF N-Quads"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_N_TRIPLES a skos:Concept ;
+  skos:definition "RDF N-Tirples is a line-based, plain text format for encoding an RDF graph; a concrete syntax for RDF, an easy to parse line-based subset of Turtle."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_N_TRIPLES" ;
+  skos:notation "application/n-triples" ;
+  skos:notation "nt" ;
+  skos:prefLabel "RDF N-Triples"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_TRIG a skos:Concept ;
+  skos:definition "TriG allows an RDF dataset to be completely written in a compact and natural text form, with abbreviations for common usage patterns and datatypes. TriG is an extension of the Turtle format."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_TRIG" ;
+  skos:notation "application/trig" ;
+  skos:notation "trig" ;
+  skos:prefLabel "RDF TriG"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_TRIX a skos:Concept ;
+  skos:definition "TriX (Triples in XML) is a serialization format for RDF (Resource Description Framework) graphs. It is an XML format for serializing Named Graphs and RDF Datasets which offers a compact and readable alternative to the XML-based RDF/XML syntax."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_TRIX" ;
+  skos:notation "application/xml" ;
+  skos:notation "trix" ;
+  skos:notation "xml" ;
+  skos:prefLabel "RDF TriX"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_TURTLE a skos:Concept ;
+  skos:definition "Turtle – Terse RDF Triple Language – is a format for expressing data in the Resource Description Framework (RDF) data model with a syntax similar to SPARQL. RDF, in turn, represents information using ‘triples’, each of which consists of a subject, a predicate and an object. Each of those items is expressed as a Web URI."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_TURTLE" ;
+  skos:notation "text/turtle" ;
+  skos:notation "ttl" ;
+  skos:prefLabel "RDF Turtle"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RDF_XML a skos:Concept ;
+  skos:definition "RDF XML is a syntax, defined by the W3C, to express (i.e. serialize) an RDF graph as an XML document."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RDF_XML" ;
+  skos:notation "application/rdf+xml" ;
+  skos:notation "rdf" ;
+  skos:prefLabel "RDF XML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RSS a skos:Concept ;
+  skos:definition "RSS – Rich Site Summary; originally RDF Site Summary; often called Really Simple Syndication – is a type of web feed which allows users to access updates to online content in a standardized, computer-readable format. These feeds can, for example, allow a user to keep track of many different websites in a single news aggregator. Websites usually use RSS feeds to publish frequently updated information, such as blog entries, news headlines, audio, video. An RSS document (called ‘feed’, ‘web feed’ or ‘channel’) includes full or summarized text and metadata."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RSS" ;
+  skos:notation "application/rss+xml" ;
+  skos:notation "rss" ;
+  skos:notation "xml" ;
+  skos:prefLabel "RSS feed"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:RTF a skos:Concept ;
+  skos:definition "RTF – Rich Text Format – is a proprietary document file format developed for cross-platform document interchange with Microsoft products."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "RTF" ;
+  skos:notation "rtf" ;
+  skos:notation "text/rtf" ;
+  skos:prefLabel "RTF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SCHEMA_XML a skos:Concept ;
+  skos:definition "An XML schema is a description of a type of XML document, typically expressed in terms of constraints on the structure and content of documents of that type, above and beyond the basic syntactical constraints imposed by XML itself."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SCHEMA_XML" ;
+  skos:notation "application/xml" ;
+  skos:notation "xsd" ;
+  skos:prefLabel "XML schema"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SGML a skos:Concept ;
+  skos:definition "SGML – Standard Generalized Markup Language – is a standard for defining generalized markup languages for documents. Generalized markup is based on two postulates: markup should be declarative and rigorous."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SGML" ;
+  skos:notation "sgm" ;
+  skos:notation "sgml" ;
+  skos:notation "text/sgml" ;
+  skos:prefLabel "SGML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SHP a skos:Concept ;
+  skos:definition "SHP – shapefile format – is a popular geospatial vector data format for geographic information system (GIS) software. Esri shapefile is a zip archive that contains at least the shp, shx and dbf files."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SHP" ;
+  skos:notation "application/x-shapefile" ;
+  skos:notation "dbf" ;
+  skos:notation "shp" ;
+  skos:notation "shx" ;
+  skos:prefLabel "Esri Shape"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SKOS_XML a skos:Concept ;
+  skos:definition "SKOS – Simple Knowledge Organization System – is a W3C recommendation designed for representation of thesauri, classification schemes, taxonomies, subject-heading systems or any other type of structured controlled vocabulary. XML – Extensible Markup Language – is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SKOS_XML" ;
+  skos:notation "application/rdf+xml" ;
+  skos:notation "rdf" ;
+  skos:prefLabel "SKOS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SPARQLQ a skos:Concept ;
+  skos:definition "SPARQL – a recursive acronym for SPARQL Protocol and RDF Query Language – is an RDF query language, that is, a semantic query language for databases, able to retrieve and manipulate data stored in Resource Description Framework (RDF) format. It is recognised as one of the key technologies of the semantic web."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SPARQLQ" ;
+  skos:notation "application/sparql-query" ;
+  skos:notation "rq" ;
+  skos:notation "sparqlq" ;
+  skos:prefLabel "SPARQL"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SPARQLQRES a skos:Concept ;
+  skos:definition "Results of a SPARQL query. SPARQL – SPARQL Protocol and RDF Query Language – is an RDF query language, that is, a semantic query language for databases, able to retrieve and manipulate data stored in Resource Description Framework (RDF) format."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SPARQLQRES" ;
+  skos:notation "application/sparql-results+xml" ;
+  skos:notation "sparqlqr" ;
+  skos:notation "srx" ;
+  skos:prefLabel "SPARQL results"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:SVG a skos:Concept ;
+  skos:definition "Open standard for two-dimensional vector graphics."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "SVG" ;
+  skos:notation "image/svg+xml" ;
+  skos:notation "svg" ;
+  skos:notation "svgz" ;
+  skos:prefLabel "SVG"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:TAR a skos:Concept ;
+  skos:definition "TAR – tape archive – is a computer software utility for collecting many files into one archive file for distribution or backup purposes."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "TAR" ;
+  skos:notation "application/x-tar" ;
+  skos:notation "tar" ;
+  skos:prefLabel "TAR"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:TAR_XZ a skos:Concept ;
+  skos:definition "TAR – tape archive – is a computer software utility for collecting many files into one archive file, often referred to as a tarball, for distribution or backup purposes. XZ is a lossless compression program and file format."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "TAR_XZ" ;
+  skos:notation "application/x-compressed" ;
+  skos:notation "tar.xz" ;
+  skos:prefLabel "TAR XZ"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:TIFF a skos:Concept ;
+  skos:definition "TIFF – Tagged Image File Format – is a computer file format for storing raster graphics images, popular among graphic artists, the publishing industry and photographers. TIFF is widely supported by scanning, faxing, word processing, optical character recognition, image manipulation, desktop publishing and page-layout applications. The format was created by Aldus Corporation for use in desktop publishing."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "TIFF" ;
+  skos:notation "image/tiff" ;
+  skos:notation "tif" ;
+  skos:notation "tiff" ;
+  skos:prefLabel "TIFF"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:TSV a skos:Concept ;
+  skos:definition "TSV – tab-separated values – files are a simple text format for storing data in a tabular structure, e.g. database table or spreadsheet data, and a way of exchanging information between databases. Each record in the table is one line of the text file. Each field value of a record is separated from the next by a tab character."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "TSV" ;
+  skos:notation "tab" ;
+  skos:notation "text/tab-separated-values" ;
+  skos:notation "tsv" ;
+  skos:prefLabel "TSV"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:TXT a skos:Concept ;
+  skos:definition "Plain text is the data (e.g. file contents) that represent only characters of readable material but not its graphical representation nor other objects. It may also include a limited number of characters that control simple arrangement of text, such as line breaks or tabulation characters. Plain text is different from formatted text, where style information is included, and from ‘binary files’ in which some portions must be interpreted as binary objects (encoded integers, real numbers, images, etc.)."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "TXT" ;
+  skos:notation "text/plain" ;
+  skos:notation "txt" ;
+  skos:prefLabel "Plain text"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:WFS_SRVC a skos:Concept ;
+  skos:definition "The Open Geospatial Consortium Web Feature Service (WFS) Interface Standard provides an interface allowing requests for geospatial features across the web using platform-independent mechanisms and is independent of the underlying data store."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "WFS_SRVC" ;
+  skos:notation "application/gml+xml" ;
+  skos:notation "text/xml" ;
+  skos:prefLabel "WFS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:WMS_SRVC a skos:Concept ;
+  skos:definition "A Web Map Service (WMS) is a standard protocol developed by the Open Geospatial Consortium (OGC) for serving georeferenced map images over the Internet. These images are typically produced by a map server from data provided by a geographic information system (GIS) database."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "WMS_SRVC" ;
+  skos:notation "application/vnd.ogc.wms_xml" ;
+  skos:notation "text/xml" ;
+  skos:prefLabel "WMS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XHTML a skos:Concept ;
+  skos:definition "XHTML is a family of current and future document types and modules that reproduce, subset and extend HTML 4. XHTML family document types are XML based."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XHTML" ;
+  skos:notation "application/xhtml+xml" ;
+  skos:notation "htm" ;
+  skos:notation "html" ;
+  skos:notation "xht" ;
+  skos:notation "xhtml" ;
+  skos:prefLabel "XHTML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XLS a skos:Concept ;
+  skos:definition "XLS is a proprietary binary file format used for Microsoft Excel spreadsheet which features calculation, graphing tools, pivot tables and a macro programming language."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XLS" ;
+  skos:notation "application/vnd.ms-excel" ;
+  skos:notation "xls" ;
+  skos:prefLabel "Excel XLS"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XLSX a skos:Concept ;
+  skos:definition "XLSX is the default file format for Excel 2007 and later workbook used for Microsoft Excel spreadsheet which features calculation, graphing tools, pivot tables and a macro programming language. XLSX is in reality a ZIP compressed archive with a directory structure of XML text documents."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XLSX" ;
+  skos:notation "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ;
+  skos:notation "xlsx" ;
+  skos:prefLabel "Excel XLSX"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XML a skos:Concept ;
+  skos:definition "XML – Extensible Markup Language – is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The design goals of XML emphasize simplicity, generality and usability across the Internet."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XML" ;
+  skos:notation "application/xml" ;
+  skos:notation "xml" ;
+  skos:prefLabel "XML"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XSLFO a skos:Concept ;
+  skos:definition "XSL-FO – XSL Formatting Objects – is a markup language for XML document formatting that is most often used to generate PDF files. XSL-FO is part of XSL (Extensible Stylesheet Language), a set of W3C technologies designed for the transformation and formatting of XML data."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XSLFO" ;
+  skos:notation "application/xml" ;
+  skos:notation "fo" ;
+  skos:prefLabel "XSL-FO"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:XSLT a skos:Concept ;
+  skos:definition "XSLT – Extensible Stylesheet Language Transformations – is a language for transforming XML documents into other XML documents or other formats such as HTML for web pages, plain text or XSL Formatting Objects, which may subsequently be converted to other formats, such as PDF, PostScript and PNG."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "XSLT" ;
+  skos:notation "application/xslt+xml" ;
+  skos:notation "xsl" ;
+  skos:notation "xslt" ;
+  skos:prefLabel "XSLT"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+file-type:ZIP a skos:Concept ;
+  skos:definition "ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed."@en ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "ZIP" ;
+  skos:notation "application/zip" ;
+  skos:notation "zip" ;
+  skos:prefLabel "ZIP"@en ;
+  skos:topConceptOf tooixtrn:file-type .
+
+language:BUL a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "bg"^^euvoc:ISO_639_1 ;
+  skos:notation "bul"^^euvoc:ISO_639_2B ;
+  skos:notation "bul"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Bulgaars"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:CES a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "ces"^^euvoc:ISO_639_3 ;
+  skos:notation "cs"^^euvoc:ISO_639_1 ;
+  skos:notation "cze"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Tsjechisch"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:DAN a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "da"^^euvoc:ISO_639_1 ;
+  skos:notation "dan"^^euvoc:ISO_639_2B ;
+  skos:notation "dan"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Deens"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:DEU a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "de"^^euvoc:ISO_639_1 ;
+  skos:notation "deu"^^euvoc:ISO_639_3 ;
+  skos:notation "ger"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Duits"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:ELL a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "el"^^euvoc:ISO_639_1 ;
+  skos:notation "ell"^^euvoc:ISO_639_3 ;
+  skos:notation "gre"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Grieks"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:ENG a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "en"^^euvoc:ISO_639_1 ;
+  skos:notation "eng"^^euvoc:ISO_639_2B ;
+  skos:notation "eng"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Engels"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:EST a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "est"^^euvoc:ISO_639_2B ;
+  skos:notation "est"^^euvoc:ISO_639_3 ;
+  skos:notation "et"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Estisch"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:FIN a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "fi"^^euvoc:ISO_639_1 ;
+  skos:notation "fin"^^euvoc:ISO_639_2B ;
+  skos:notation "fin"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Fins"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:FRA a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "fr"^^euvoc:ISO_639_1 ;
+  skos:notation "fra"^^euvoc:ISO_639_3 ;
+  skos:notation "fre"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Frans"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:FRY a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "fry"^^euvoc:ISO_639_2B ;
+  skos:notation "fry"^^euvoc:ISO_639_3 ;
+  skos:notation "fy"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Fries"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:GLE a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "ga"^^euvoc:ISO_639_1 ;
+  skos:notation "gle"^^euvoc:ISO_639_2B ;
+  skos:notation "gle"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Iers"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:HRV a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "hr"^^euvoc:ISO_639_1 ;
+  skos:notation "hrv"^^euvoc:ISO_639_2B ;
+  skos:notation "hrv"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Kroatisch"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:HUN a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "hu"^^euvoc:ISO_639_1 ;
+  skos:notation "hun"^^euvoc:ISO_639_2B ;
+  skos:notation "hun"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Hongaars"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:ITA a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "it"^^euvoc:ISO_639_1 ;
+  skos:notation "ita"^^euvoc:ISO_639_2B ;
+  skos:notation "ita"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Italiaans"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:LAV a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "lav"^^euvoc:ISO_639_2B ;
+  skos:notation "lav"^^euvoc:ISO_639_3 ;
+  skos:notation "lv"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Lets"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:LIT a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "lit"^^euvoc:ISO_639_2B ;
+  skos:notation "lit"^^euvoc:ISO_639_3 ;
+  skos:notation "lt"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Litouws"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:MLT a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "mlt"^^euvoc:ISO_639_2B ;
+  skos:notation "mlt"^^euvoc:ISO_639_3 ;
+  skos:notation "mt"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Maltees"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:NLD a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "dut"^^euvoc:ISO_639_2B ;
+  skos:notation "nl"^^euvoc:ISO_639_1 ;
+  skos:notation "nld"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Nederlands"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:POL a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "pl"^^euvoc:ISO_639_1 ;
+  skos:notation "pol"^^euvoc:ISO_639_2B ;
+  skos:notation "pol"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Pools"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:POR a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "por"^^euvoc:ISO_639_2B ;
+  skos:notation "por"^^euvoc:ISO_639_3 ;
+  skos:notation "pt"^^euvoc:ISO_639_1 ;
+  skos:prefLabel "Portugees"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:RON a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "ro"^^euvoc:ISO_639_1 ;
+  skos:notation "ron"^^euvoc:ISO_639_3 ;
+  skos:notation "rum"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Roemeens"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:SLK a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "sk"^^euvoc:ISO_639_1 ;
+  skos:notation "slk"^^euvoc:ISO_639_3 ;
+  skos:notation "slo"^^euvoc:ISO_639_2B ;
+  skos:prefLabel "Slowaaks"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:SLV a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "sl"^^euvoc:ISO_639_1 ;
+  skos:notation "slv"^^euvoc:ISO_639_2B ;
+  skos:notation "slv"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Sloveens"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:SPA a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "es"^^euvoc:ISO_639_1 ;
+  skos:notation "spa"^^euvoc:ISO_639_2B ;
+  skos:notation "spa"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Spaans"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+language:SWE a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "sv"^^euvoc:ISO_639_1 ;
+  skos:notation "swe"^^euvoc:ISO_639_2B ;
+  skos:notation "swe"^^euvoc:ISO_639_3 ;
+  skos:prefLabel "Zweeds"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+tooixtrn:NetCDF a skos:Concept ;
+  skos:inScheme tooixtrn:file-type ;
+  skos:notation "NetCDF" ;
+  skos:prefLabel "NetCDF" ;
+  skos:topConceptOf tooixtrn:file-type .
+
+tooixtrn:PAP-AW a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "pap-AW" ;
+  skos:prefLabel "Papiamento"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+tooixtrn:PAP-CW a skos:Concept ;
+  skos:inScheme tooixtrn:taal ;
+  skos:notation "pap-CW" ;
+  skos:prefLabel "Papiamentu"@nl ;
+  skos:topConceptOf tooixtrn:taal .
+
+tooixtrn:file-type a skos:ConceptScheme ;
+  skos:prefLabel "file-type"@nl .
+
+tooixtrn:skosCollection_6f2ed5b2 a skos:Collection ;
+  skos:member file-type:7z ;
+  skos:member file-type:CSV ;
+  skos:member file-type:DOC ;
+  skos:member file-type:DOCX ;
+  skos:member file-type:HTML ;
+  skos:member file-type:ODF ;
+  skos:member file-type:ODP ;
+  skos:member file-type:ODS ;
+  skos:member file-type:ODT ;
+  skos:member file-type:PDF ;
+  skos:member file-type:PPS ;
+  skos:member file-type:PPSX ;
+  skos:member file-type:PPT ;
+  skos:member file-type:PPTX ;
+  skos:member file-type:RTF ;
+  skos:member file-type:TXT ;
+  skos:member file-type:XLS ;
+  skos:member file-type:XLSX ;
+  skos:member file-type:ZIP ;
+  skos:prefLabel "Aansluitvoorwaarden PLOOI"@nl .
+
+tooixtrn:skosCollection_7a41d2f1 a skos:Collection ;
+  skos:member file-type:ATOM ;
+  skos:member file-type:AZW ;
+  skos:member file-type:CSS ;
+  skos:member file-type:CSV ;
+  skos:member file-type:DBF ;
+  skos:member file-type:DOC ;
+  skos:member file-type:DOCX ;
+  skos:member file-type:DTD_SGML ;
+  skos:member file-type:DTD_XML ;
+  skos:member file-type:E00 ;
+  skos:member file-type:ECW ;
+  skos:member file-type:EPS ;
+  skos:member file-type:EPUB ;
+  skos:member file-type:FMX2 ;
+  skos:member file-type:FMX3 ;
+  skos:member file-type:FMX4 ;
+  skos:member file-type:GDB ;
+  skos:member file-type:GIF ;
+  skos:member file-type:GML ;
+  skos:member file-type:GZIP ;
+  skos:member file-type:HDF ;
+  skos:member file-type:HTML ;
+  skos:member file-type:INDD ;
+  skos:member file-type:JPEG ;
+  skos:member file-type:JSON ;
+  skos:member file-type:KML ;
+  skos:member file-type:KMZ ;
+  skos:member file-type:MAP_PRVW ;
+  skos:member file-type:MAP_SRVC ;
+  skos:member file-type:MDB ;
+  skos:member file-type:METS ;
+  skos:member file-type:METS_ZIP ;
+  skos:member file-type:MOBI ;
+  skos:member file-type:MOP ;
+  skos:member file-type:MXD ;
+  skos:member file-type:ODF ;
+  skos:member file-type:ODS ;
+  skos:member file-type:ODT ;
+  skos:member file-type:OWL ;
+  skos:member file-type:PDF ;
+  skos:member file-type:PDFA1A ;
+  skos:member file-type:PDFA1B ;
+  skos:member file-type:PDFX ;
+  skos:member file-type:PNG ;
+  skos:member file-type:PPS ;
+  skos:member file-type:PPSX ;
+  skos:member file-type:PPT ;
+  skos:member file-type:PPTX ;
+  skos:member file-type:PS ;
+  skos:member file-type:PSD ;
+  skos:member file-type:RDF_TURTLE ;
+  skos:member file-type:RDF_XML ;
+  skos:member file-type:RSS ;
+  skos:member file-type:RTF ;
+  skos:member file-type:SCHEMA_XML ;
+  skos:member file-type:SGML ;
+  skos:member file-type:SHP ;
+  skos:member file-type:SKOS_XML ;
+  skos:member file-type:SPARQLQ ;
+  skos:member file-type:SPARQLQRES ;
+  skos:member file-type:TAR ;
+  skos:member file-type:TAR_XZ ;
+  skos:member file-type:TIFF ;
+  skos:member file-type:TSV ;
+  skos:member file-type:TXT ;
+  skos:member file-type:WFS_SRVC ;
+  skos:member file-type:WMS_SRVC ;
+  skos:member file-type:XHTML ;
+  skos:member file-type:XLS ;
+  skos:member file-type:XLSX ;
+  skos:member file-type:XML ;
+  skos:member file-type:XSLFO ;
+  skos:member file-type:XSLT ;
+  skos:member file-type:ZIP ;
+  skos:member tooixtrn:NetCDF ;
+  skos:prefLabel "DCAT AP DONL"@nl .
+
+tooixtrn:taal a skos:ConceptScheme ;
+  skos:prefLabel "taal"@nl .
+
+

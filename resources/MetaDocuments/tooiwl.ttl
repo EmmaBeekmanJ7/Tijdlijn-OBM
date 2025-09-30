@@ -1,0 +1,286 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooiwl: <https://identifier.overheid.nl/tooi/def/wl/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+tooiwl:CollectiegebaseerdeConceptwaardelijst a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Collectiegebaseerde conceptwaardelijst"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Conceptwaardelijst ;
+  sh:property tooiwl:CollectiegebaseerdeConceptwaardelijst-collectie ;
+  skos:definition "Een conceptwaardelijst waarvan de concepten geselecteerd zijn op basis van een collectie"@nl .
+
+tooiwl:Conceptwaardelijst a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Conceptwaardelijst"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Waardelijst ;
+  sh:property tooiwl:Conceptwaardelijst-afgeleidVanVersie ;
+  sh:property tooiwl:Conceptwaardelijst-bronversie ;
+  skos:definition "Een waardelijst die afgeleid is van een thesaurus en dus concepten beschrijft"@nl .
+
+tooiwl:Registerwaardelijst a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Registerwaardelijst"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Waardelijst ;
+  skos:definition "Een waardelijst afgeleid uit een register"@nl .
+
+tooiwl:RegisterwaardelijstCompleet a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Registerwaardelijst compleet"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Registerwaardelijst ;
+  skos:definition "Een registerwaardelijst beschrijft voor zover op de zichtdatum bekend in het kennismodel alle resources (van het betreffende type) die op de zichtdatum bestaan , alle resources die in het verleden hebben bestaan tot aan de zichtdatum, en alle resources die in de toekomst zullen bestaan, na de zichtdatum"@nl .
+
+tooiwl:RegisterwaardelijstOpPeildatum a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Registerwaardelijst op peildatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Registerwaardelijst ;
+  sh:property tooiwl:RegisterwaardelijstOpPeildatum-peildatum ;
+  skos:definition "Een registerwaardelijst die alleen die resources beschrijft die op de peildatum bestaan"@nl .
+
+tooiwl:SchemagebaseerdeConceptwaardelijst a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Schemagebaseerde conceptwaardelijst"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiwl:Conceptwaardelijst ;
+  sh:property tooiwl:SchemagebaseerdeConceptwaardelijst-schema ;
+  skos:definition "Een conceptwaardelijst waarvan de concepten geselecteerd zijn op basis van een schema"@nl .
+
+tooiwl:Waardelijst a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Waardelijst"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  rdfs:subClassOf tooiont:Informatieobject ;
+  sh:property tooiwl:Waardelijst-bestandsnaam ;
+  sh:property tooiwl:Waardelijst-derivedFrom ;
+  sh:property tooiwl:Waardelijst-description ;
+  sh:property tooiwl:Waardelijst-publicatiedatum ;
+  sh:property tooiwl:Waardelijst-repository ;
+  sh:property tooiwl:Waardelijst-titel ;
+  sh:property tooiwl:Waardelijst-verantwoordelijke ;
+  sh:property tooiwl:Waardelijst-versionInfo ;
+  sh:property tooiwl:Waardelijst-volgnummer ;
+  skos:definition "Een selectie van informatie in het TOOI-kennismodel die een pecifiek doel dient, in de vorm van een RDF-graaf, een XML-document, en eventueel nog in andere formats"@nl .
+
+tooiwl:Waardelijstdefinitie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Waardelijstdefinitie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:description "Waardelijstdefinities zijn alleen voor intern gebruik in de beheerprocessen. Een waardelijstdefinitie is een instantie van zowel één van de waardelijstsoorten als van `tooiont:Waardelijstdefinitie`. Het is daarom niet nodig om aparte propertyshapes te definiëren voor deze klasse."@nl ;
+  skos:definition "Een eenheid van informatie die gebruikt wordt om het proces waarmee een waardelijst gegenereerd wordt aan te sturen"@nl .
+
+<https://identifier.overheid.nl/tooi/def/wl> a owl:Ontology ;
+  rdfs:label "De Waardelijstontologie van TOOI"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "De waardelijstontologie definieert resources die betrekking hebben op waardelijsten. Deze resources worden alleen gebruikt in de (RDF-varianten van) de waardelijsten, en in de definities van waardelijsten."@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-waardelijstontologie/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language language:NLD ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2025-07-04"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "Waardelijstontologie"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY> ;
+  owl:imports dcterms: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/prov-o#> ;
+  owl:imports sh: ;
+  owl:imports <https://identifier.overheid.nl/tooi/def/ont> ;
+  owl:versionInfo "v1.0 - 25 maart 2021 - Initiële versie"@nl ;
+  owl:versionInfo "v1.1.0 - 13 juni 2023 - Omgezet naar SHACL volgens de huidige conventies binnen TOOI, zodat een deel van de documentatie uit de ontologie gegenereerd kan worden; een ontbrekende propertyshape toegevoegd; een aantal redactionele wijzigingen doorgevoerd in definities, toelichtingen en labels"@nl ;
+  owl:versionInfo "v1.1.1 - 20 december 2023 - Alleen documentatie gewijzigd, feedback-info is op GitLab te vinden"@nl ;
+  owl:versionInfo "v1.1.2 - 12 maart 2024 - Beheerplan toegevoegd aan documentatie."@nl ;
+  owl:versionInfo "v1.1.3 - 17 juni 2024 - Alleen documentatie gewijzigd, fix versielinkjes."@nl ;
+  owl:versionInfo "v1.1.4 - 4 juli 2025 - Alleen documentatie gewijzigd, tooigeo toegevoegd."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.3> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl-1.1.4> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/wl_1.0> ;
+  pav:version "1.1.4" ;
+  vann:preferredNamespacePrefix "tooiwl" ;
+  vann:preferredNamespaceUri tooiwl: .
+
+dcterms:description a rdf:Property ;
+  rdfs:label "Description"@en ;
+  rdfs:isDefinedBy dcterms: .
+
+pav:derivedFrom a owl:ObjectProperty ;
+  rdfs:label "Derived from"@en ;
+  rdfs:isDefinedBy pav: .
+
+tooiwl:collectie a owl:ObjectProperty ;
+  rdfs:label "Collectie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:schema a owl:ObjectProperty ;
+  rdfs:label "Conceptschema"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:afgeleidVanVersie a owl:DatatypeProperty ;
+  rdfs:label "Afgeleid van versie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:bestandsnaam a owl:DatatypeProperty ;
+  rdfs:label "Bestandsnaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:bronversie a owl:DatatypeProperty ;
+  rdfs:label "Bronversie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:repository a owl:DatatypeProperty ;
+  rdfs:label "Repository"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:volgnummer a owl:DatatypeProperty ;
+  rdfs:label "Volgnummer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> .
+
+tooiwl:CollectiegebaseerdeConceptwaardelijst-collectie a sh:PropertyShape ;
+  rdfs:label "CollectiegebaseerdeConceptwaardelijst-collectie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:class skos:Collection ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:path tooiwl:collectie ;
+  skos:definition "De instantie van skos:Collection op basis waarvan de informatie in de waardelijst is geselecteerd"@nl .
+
+tooiwl:Conceptwaardelijst-afgeleidVanVersie a sh:PropertyShape ;
+  rdfs:label "Conceptwaardelijst-afgeleidVanVersie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:maxCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:path tooiwl:afgeleidVanVersie ;
+  skos:definition "De baseURI van de geversioneerde afslag van de thesaurus, dus de pav:currentVersion van de werkversie waar de waardelijst van af is geleid"@nl .
+
+tooiwl:Conceptwaardelijst-bronversie a sh:PropertyShape ;
+  rdfs:label "Conceptwaardelijst-bronversie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiwl:bronversie ;
+  skos:definition "Het versienummer van de thesaurus waar de waardelijst van is afgeleid"@nl .
+
+tooiwl:RegisterwaardelijstOpPeildatum-peildatum a sh:PropertyShape ;
+  rdfs:label "RegisterwaardelijstOpPeildatum-peildatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:peildatum ;
+  skos:definition "De datum waarmee informatie over resources geselecteerd wordt die, voor zover op de zichtdatum bekend, op die datum bestaan."@nl .
+
+tooiwl:SchemagebaseerdeConceptwaardelijst-schema a sh:PropertyShape ;
+  rdfs:label "SchemagebaseerdeConceptwaardelijst-schema"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:class skos:Conceptscheme ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:path tooiwl:schema ;
+  skos:definition "Het conceptschema op basis waarvan de informatie in de conceptwaardelijst geselecteerd is"@nl .
+
+tooiwl:Waardelijst-bestandsnaam a sh:PropertyShape ;
+  rdfs:label "Waardelijst-bestandsnaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:description "De waarde van deze property hoort niet voor te komen in de metadata van een waardelijst"@nl ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiwl:bestandsnaam ;
+  skos:definition "De naam die wordt gebruikt om de graphURI en de bijbehorende bestandsnaam van een waardelijst te genereren"@nl .
+
+tooiwl:Waardelijst-derivedFrom a sh:PropertyShape ;
+  rdfs:label "Waardelijst-derivedFrom"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:path pav:derivedFrom ;
+  skos:definition "De brongraaf (thesaurus, register) waaruit de waardelijst gegenereerd is"@nl .
+
+tooiwl:Waardelijst-description a sh:PropertyShape ;
+  rdfs:label "Waardelijst-description"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path dcterms:description ;
+  skos:definition "Een tekstuele beschrijving van de waardelijst"@nl .
+
+tooiwl:Waardelijst-generatedAtTime a sh:PropertyShape ;
+  rdfs:label "Waardelijst-generatedAtTime"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:dateTime ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path prov:generatedAtTime ;
+  skos:definition "Het tijdstip waarop de waardelijst gegenereerd is (gebaseerd op de systeemtijd)"@nl .
+
+tooiwl:Waardelijst-publicatiedatum a sh:PropertyShape ;
+  rdfs:label "Waardelijst-publicatiedatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:publicatiedatum ;
+  skos:definition "Datum van publicatie"@nl .
+
+tooiwl:Waardelijst-repository a sh:PropertyShape ;
+  rdfs:label "Waardelijst-repository"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiwl:repository ;
+  skos:definition "De repository (graph database) die de brondata levert voor de waardelijst"@nl .
+
+tooiwl:Waardelijst-titel a sh:PropertyShape ;
+  rdfs:label "Waardelijst-titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:titel ;
+  skos:definition "De titel van het informatieobject"@nl .
+
+tooiwl:Waardelijst-verantwoordelijke a sh:PropertyShape ;
+  rdfs:label "Waardelijst-verantwoordelijke"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:class tooiont:Ministerie ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:path tooiont:verantwoordelijke ;
+  skos:definition "Overheidsorganisatie die de wettelijke verantwoordelijkheid draagt voor de inhoud van de waardelijst"@nl .
+
+tooiwl:Waardelijst-versionInfo a sh:PropertyShape ;
+  rdfs:label "Waardelijst-versionInfo"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path owl:versionInfo ;
+  skos:definition "Tekstuele informatie over de versie van de waardelijst"@nl .
+
+tooiwl:Waardelijst-volgnummer a sh:PropertyShape ;
+  rdfs:label "Waardelijst-volgnummer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/wl> ;
+  sh:datatype xsd:integer ;
+  sh:description "Dit is altijd een integer, zonder punten of andere scheidingstekens"@nl ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiwl:volgnummer ;
+  skos:definition "Het nummer van de versie van de waardelijst"@nl .
+
+

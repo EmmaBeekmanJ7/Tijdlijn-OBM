@@ -1,0 +1,50 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ministerie: <https://identifier.overheid.nl/tooi/id/ministerie/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooiwl: <https://identifier.overheid.nl/tooi/def/wl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://identifier.overheid.nl/tooi/set/scw_documentrelatie/1> a owl:Ontology, tooiwl:SchemagebaseerdeConceptwaardelijst;
+  dcterms:description "Waardelijst met soorten documentrelatie.";
+  pav:derivedFrom <https://identifier.overheid.nl/tooi/def/thes/kern>;
+  owl:imports <http://purl.org/pav>, <http://www.w3.org/2004/02/skos/core>, <https://identifier.overheid.nl/tooi/def/ont>,
+    <https://identifier.overheid.nl/tooi/def/wl>;
+  owl:versionInfo "InitiÃ«le waardelijst met heeft bijlage, is reactie op, is uitwerking van, verwijst naar.";
+  prov:generatedAtTime "2022-07-25T17:15:31.033+02:00"^^xsd:dateTime;
+  tooiont:publicatiedatum "2022-07-25";
+  tooiont:titel "Documentrelatie";
+  tooiont:verantwoordelijke ministerie:mnre1034;
+  tooiont:zichtdatum "2022-07-25"^^xsd:date;
+  tooiwl:afgeleidVanVersie "";
+  tooiwl:bronversie "";
+  tooiwl:schema <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie>;
+  tooiwl:volgnummer 1 .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie> a skos:ConceptScheme;
+  skos:prefLabel "documentrelatie"@nl .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/c_05f4a5f3> a skos:Concept, <http://www.w3.org/ns/dcat#Role>;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie>;
+  skos:prefLabel "heeft bijlage"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie> .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/c_07748060> a skos:Concept, <http://www.w3.org/ns/dcat#Role>;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie>;
+  skos:prefLabel "is reactie op"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie> .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/c_24ddfb9b> a skos:Concept, <http://www.w3.org/ns/dcat#Role>;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie>;
+  skos:prefLabel "is uitwerking van"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie> .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/c_75fac459> a skos:Concept, <http://www.w3.org/ns/dcat#Role>;
+  skos:inScheme <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie>;
+  skos:prefLabel "verwijst naar"@nl;
+  skos:topConceptOf <https://identifier.overheid.nl/tooi/def/thes/kern/documentrelatie> .
+ 

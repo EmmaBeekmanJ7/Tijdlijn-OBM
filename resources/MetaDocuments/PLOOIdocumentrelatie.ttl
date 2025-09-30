@@ -1,0 +1,46 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix tooiwep: <https://identifier.overheid.nl/tooi/def/thes/wep/> .
+@prefix ministerie: <https://identifier.overheid.nl/tooi/id/ministerie/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix file-type: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix tooiwl: <https://identifier.overheid.nl/tooi/def/wl/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<https://identifier.overheid.nl/tooi/set/ccw_plooi_documentrelaties/1> a owl:Ontology,
+    tooiwl:CollectiegebaseerdeConceptwaardelijst;
+  owl:imports <http://www.w3.org/2004/02/skos/core>, <https://identifier.overheid.nl/tooi/def/ont>,
+    <https://identifier.overheid.nl/tooi/def/wl>, <http://purl.org/pav>;
+  tooiwl:afgeleidVanVersie "";
+  tooiwl:bronversie "";
+  tooiwl:collectie <https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_3447778e>;
+  pav:derivedFrom <https://identifier.overheid.nl/tooi/def/thes/kern>;
+  dcterms:description "Waardelijst met documentrelaties ten behoeve van PLOOI.";
+  tooiont:publicatiedatum "2024-04-17";
+  tooiont:titel "PLOOI documentrelaties";
+  tooiont:verantwoordelijke ministerie:mnre1034;
+  tooiwl:volgnummer 1;
+  owl:versionInfo "Vereenvoudigde structuur, waarin skos:Collection is vervangen door tooiont:Groeperingsconcept, en skos:member van skos:Collectie naar skos:Concept is vervangen door skos:broader van skos:Concept naar tooiont:Groeperingsconcept";
+  prov:generatedAtTime "2024-04-17T11:33:43.174Z"^^xsd:dateTime;
+  tooiont:zichtdatum "2024-04-17"^^xsd:date .
+
+<https://identifier.overheid.nl/tooi/set/ccw_plooi_documentrelaties/k_3447778e> a
+    tooiont:Groeperingsconcept;
+  skos:prefLabel "PLOOI documentrelatie WooPub"@nl .
+
+<https://identifier.overheid.nl/tooi/def/thes/kern/c_4d1ea9ba> a skos:Concept, <http://www.w3.org/ns/dcat#Role>;
+  skos:broader <https://identifier.overheid.nl/tooi/set/ccw_plooi_documentrelaties/k_3447778e>;
+  skos:prefLabel "is bijlage bij"@nl .
+ 
